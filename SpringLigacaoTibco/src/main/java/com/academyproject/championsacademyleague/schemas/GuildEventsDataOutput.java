@@ -6,7 +6,7 @@
 //
 
 
-package schemas;
+package com.academyproject.championsacademyleague.schemas;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +44,7 @@ import javax.xml.bind.annotation.XmlType;
 public class GuildEventsDataOutput {
 
     @XmlElement(name = "GuildEventsOut", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/GuildEvents/Schema.xsd")
-    protected List<GuildEventsOut> guildEventsOut;
+    protected List<schemas.GuildEventsOut> guildEventsOut;
 
     /**
      * Gets the value of the guildEventsOut property.
@@ -68,9 +68,9 @@ public class GuildEventsDataOutput {
      * 
      * 
      */
-    public List<GuildEventsOut> getGuildEventsOut() {
+    public List<schemas.GuildEventsOut> getGuildEventsOut() {
         if (guildEventsOut == null) {
-            guildEventsOut = new ArrayList<GuildEventsOut>();
+            guildEventsOut = new ArrayList<schemas.GuildEventsOut>();
         }
         return this.guildEventsOut;
     }

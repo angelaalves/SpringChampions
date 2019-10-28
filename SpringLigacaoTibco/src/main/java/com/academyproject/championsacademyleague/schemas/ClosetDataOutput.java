@@ -6,7 +6,7 @@
 //
 
 
-package schemas;
+package com.academyproject.championsacademyleague.schemas;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +44,7 @@ import javax.xml.bind.annotation.XmlType;
 public class ClosetDataOutput {
 
     @XmlElement(name = "ClosetOut", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Closet/Schema.xsd")
-    protected List<ClosetOut> closetOut;
+    protected List<schemas.ClosetOut> closetOut;
 
     /**
      * Gets the value of the closetOut property.
@@ -68,9 +68,9 @@ public class ClosetDataOutput {
      * 
      * 
      */
-    public List<ClosetOut> getClosetOut() {
+    public List<schemas.ClosetOut> getClosetOut() {
         if (closetOut == null) {
-            closetOut = new ArrayList<ClosetOut>();
+            closetOut = new ArrayList<schemas.ClosetOut>();
         }
         return this.closetOut;
     }

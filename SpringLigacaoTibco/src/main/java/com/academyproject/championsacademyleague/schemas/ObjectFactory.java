@@ -6,7 +6,12 @@
 //
 
 
-package schemas;
+package com.academyproject.championsacademyleague.schemas;
+
+import com.academyproject.championsacademyleague.schemas.VideoDataInput;
+import com.academyproject.championsacademyleague.schemas.VideoDataOutput;
+import com.academyproject.championsacademyleague.schemas.VideoInput;
+import com.academyproject.championsacademyleague.schemas.VideoOutput;
 
 import javax.xml.bind.annotation.XmlRegistry;
 
@@ -200,96 +205,96 @@ public class ObjectFactory {
      * Create an instance of {@link PlayerDataInput }
      * 
      */
-    public PlayerDataInput createPlayerDataInput() {
-        return new PlayerDataInput();
+    public schemas.PlayerDataInput createPlayerDataInput() {
+        return new schemas.PlayerDataInput();
     }
 
     /**
      * Create an instance of {@link PlayerIn }
      * 
      */
-    public PlayerIn createPlayerIn() {
-        return new PlayerIn();
+    public schemas.PlayerIn createPlayerIn() {
+        return new schemas.PlayerIn();
     }
 
     /**
      * Create an instance of {@link PlayerDataOutput }
      * 
      */
-    public PlayerDataOutput createPlayerDataOutput() {
-        return new PlayerDataOutput();
+    public schemas.PlayerDataOutput createPlayerDataOutput() {
+        return new schemas.PlayerDataOutput();
     }
 
     /**
      * Create an instance of {@link PlayerOut }
      * 
      */
-    public PlayerOut createPlayerOut() {
-        return new PlayerOut();
+    public schemas.PlayerOut createPlayerOut() {
+        return new schemas.PlayerOut();
     }
 
     /**
      * Create an instance of {@link RewardsDataInput }
      * 
      */
-    public RewardsDataInput createRewardsDataInput() {
-        return new RewardsDataInput();
+    public schemas.RewardsDataInput createRewardsDataInput() {
+        return new schemas.RewardsDataInput();
     }
 
     /**
      * Create an instance of {@link RewardsIn }
      * 
      */
-    public RewardsIn createRewardsIn() {
-        return new RewardsIn();
+    public schemas.RewardsIn createRewardsIn() {
+        return new schemas.RewardsIn();
     }
 
     /**
      * Create an instance of {@link RewardsDataOutput }
      * 
      */
-    public RewardsDataOutput createRewardsDataOutput() {
-        return new RewardsDataOutput();
+    public schemas.RewardsDataOutput createRewardsDataOutput() {
+        return new schemas.RewardsDataOutput();
     }
 
     /**
      * Create an instance of {@link RewardsOut }
      * 
      */
-    public RewardsOut createRewardsOut() {
-        return new RewardsOut();
+    public schemas.RewardsOut createRewardsOut() {
+        return new schemas.RewardsOut();
     }
 
     /**
      * Create an instance of {@link SkinDataInput }
      * 
      */
-    public SkinDataInput createSkinDataInput() {
-        return new SkinDataInput();
+    public schemas.SkinDataInput createSkinDataInput() {
+        return new schemas.SkinDataInput();
     }
 
     /**
      * Create an instance of {@link SkinIn }
      * 
      */
-    public SkinIn createSkinIn() {
-        return new SkinIn();
+    public schemas.SkinIn createSkinIn() {
+        return new schemas.SkinIn();
     }
 
     /**
      * Create an instance of {@link SkinDataOutput }
      * 
      */
-    public SkinDataOutput createSkinDataOutput() {
-        return new SkinDataOutput();
+    public schemas.SkinDataOutput createSkinDataOutput() {
+        return new schemas.SkinDataOutput();
     }
 
     /**
      * Create an instance of {@link SkinOut }
      * 
      */
-    public SkinOut createSkinOut() {
-        return new SkinOut();
+    public schemas.SkinOut createSkinOut() {
+        return new schemas.SkinOut();
     }
 
     /**
@@ -328,32 +333,32 @@ public class ObjectFactory {
      * Create an instance of {@link WatchedVideosDataInput }
      * 
      */
-    public WatchedVideosDataInput createWatchedVideosDataInput() {
-        return new WatchedVideosDataInput();
+    public schemas.WatchedVideosDataInput createWatchedVideosDataInput() {
+        return new schemas.WatchedVideosDataInput();
     }
 
     /**
      * Create an instance of {@link WatchedVideosIn }
      * 
      */
-    public WatchedVideosIn createWatchedVideosIn() {
-        return new WatchedVideosIn();
+    public schemas.WatchedVideosIn createWatchedVideosIn() {
+        return new schemas.WatchedVideosIn();
     }
 
     /**
      * Create an instance of {@link WatchedVideosDataOutput }
      * 
      */
-    public WatchedVideosDataOutput createWatchedVideosDataOutput() {
-        return new WatchedVideosDataOutput();
+    public schemas.WatchedVideosDataOutput createWatchedVideosDataOutput() {
+        return new schemas.WatchedVideosDataOutput();
     }
 
     /**
      * Create an instance of {@link WatchedVideosOut }
      * 
      */
-    public WatchedVideosOut createWatchedVideosOut() {
-        return new WatchedVideosOut();
+    public schemas.WatchedVideosOut createWatchedVideosOut() {
+        return new schemas.WatchedVideosOut();
     }
 
 }

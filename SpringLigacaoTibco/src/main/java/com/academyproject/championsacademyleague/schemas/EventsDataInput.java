@@ -6,7 +6,7 @@
 //
 
 
-package schemas;
+package com.academyproject.championsacademyleague.schemas;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +44,7 @@ import javax.xml.bind.annotation.XmlType;
 public class EventsDataInput {
 
     @XmlElement(name = "EventsIn", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Events/Schema.xsd")
-    protected List<EventsIn> eventsIn;
+    protected List<schemas.EventsIn> eventsIn;
 
     /**
      * Gets the value of the eventsIn property.
@@ -68,9 +68,9 @@ public class EventsDataInput {
      * 
      * 
      */
-    public List<EventsIn> getEventsIn() {
+    public List<schemas.EventsIn> getEventsIn() {
         if (eventsIn == null) {
-            eventsIn = new ArrayList<EventsIn>();
+            eventsIn = new ArrayList<schemas.EventsIn>();
         }
         return this.eventsIn;
     }
