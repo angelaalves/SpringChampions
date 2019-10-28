@@ -6,7 +6,7 @@
 //
 
 
-package schemas;
+package com.academyproject.championsacademyleague.schemas;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +45,9 @@ public class PlayerDataOutput {
 
     @XmlElement(name = "PlayerOut", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Player/Schema.xsd")
     protected List<PlayerOut> playerOut;
+
+    public PlayerDataOutput() {
+    }
 
     /**
      * Gets the value of the playerOut property.

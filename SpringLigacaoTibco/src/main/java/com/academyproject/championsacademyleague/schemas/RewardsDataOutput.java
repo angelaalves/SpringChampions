@@ -6,7 +6,7 @@
 //
 
 
-package schemas;
+package com.academyproject.championsacademyleague.schemas;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +44,7 @@ import javax.xml.bind.annotation.XmlType;
 public class RewardsDataOutput {
 
     @XmlElement(name = "RewardsOut", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Rewards/Schema.xsd")
-    protected List<RewardsOut> rewardsOut;
+    protected List<schemas.RewardsOut> rewardsOut;
 
     /**
      * Gets the value of the rewardsOut property.
@@ -68,9 +68,9 @@ public class RewardsDataOutput {
      * 
      * 
      */
-    public List<RewardsOut> getRewardsOut() {
+    public List<schemas.RewardsOut> getRewardsOut() {
         if (rewardsOut == null) {
-            rewardsOut = new ArrayList<RewardsOut>();
+            rewardsOut = new ArrayList<schemas.RewardsOut>();
         }
         return this.rewardsOut;
     }

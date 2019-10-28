@@ -6,7 +6,7 @@
 //
 
 
-package schemas;
+package com.academyproject.championsacademyleague.schemas;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +45,9 @@ public class PlayerDataInput {
 
     @XmlElement(name = "PlayerIn", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Player/Schema.xsd")
     protected List<PlayerIn> playerIn;
+
+    public PlayerDataInput() {
+    }
 
     /**
      * Gets the value of the playerIn property.

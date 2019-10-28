@@ -12,8 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.ws.client.core.WebServiceTemplate;
 import org.springframework.ws.soap.SoapMessage;
 
-import java.io.DataInput;
-import java.io.DataOutput;
+
 import java.util.List;
 
 @Service

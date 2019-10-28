@@ -54,4 +54,47 @@ public class Constants {
     public String getVideoSOAPCreate() {
         return videoSOAPCreate;
     }
+
+    //Player:
+
+    public String  playerGetAllURL= "http://localhost:8882/Service/Player/PlayerService.serviceagent/PlayerPortGetAllEndpoint1";
+    public String  playerGetURL= "http://localhost:8882/Service/Player/PlayerService.serviceagent/PlayerPortGetEndpoint1";
+    public String  playerUpdateURL= "http://localhost:8882/Service/Player/PlayerService.serviceagent/PlayerPortUpdateEndpoint1";
+    public String  playerCreateURL= "http://localhost:8882/Service/Player/PlayerService.serviceagent/PlayerPortCreateEndpoint1";
+    public String  playerSOAPGetAll = "/Service/Player/PlayerService.serviceagent/PlayerPortGetAllEndpoint1/GetAll";
+    public String  playerSOAPGet = "/Service/Player/PlayerService.serviceagent/PlayerPortGetEndpoint1/Get";
+    public String  playerSOAPUpdate = "/Service/Player/PlayerService.serviceagent/PlayerPortUpdateEndpoint1/Update";
+    public String  playerSOAPCreate = "/Service/Player/PlayerService.serviceagent/PlayerPortCreateEndpoint1/Create";
+
+    public String getPlayerGetAllURL() {
+        return playerGetAllURL;
+    }
+
+    public String getPlayerGetURL() {
+        return playerGetURL;
+    }
+
+    public String getPlayerUpdateURL() {
+        return playerUpdateURL;
+    }
+
+    public String getPlayerCreateURL() {
+        return playerCreateURL;
+    }
+
+    public String getPlayerSOAPGetAll() {
+        return playerSOAPGetAll;
+    }
+
+    public String getPlayerSOAPGet() {
+        return playerSOAPGet;
+    }
+
+    public String getPlayerSOAPUpdate() {
+        return playerSOAPUpdate;
+    }
+
+    public String getPlayerSOAPCreate() {
+        return playerSOAPCreate;
+    }
 }

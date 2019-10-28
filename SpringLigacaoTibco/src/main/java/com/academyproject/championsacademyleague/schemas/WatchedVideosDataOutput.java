@@ -6,7 +6,7 @@
 //
 
 
-package schemas;
+package com.academyproject.championsacademyleague.schemas;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +44,7 @@ import javax.xml.bind.annotation.XmlType;
 public class WatchedVideosDataOutput {
 
     @XmlElement(name = "WatchedVideosOut", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/WatchedVideos/Schema.xsd")
-    protected List<WatchedVideosOut> watchedVideosOut;
+    protected List<schemas.WatchedVideosOut> watchedVideosOut;
 
     /**
      * Gets the value of the watchedVideosOut property.
@@ -68,9 +68,9 @@ public class WatchedVideosDataOutput {
      * 
      * 
      */
-    public List<WatchedVideosOut> getWatchedVideosOut() {
+    public List<schemas.WatchedVideosOut> getWatchedVideosOut() {
         if (watchedVideosOut == null) {
-            watchedVideosOut = new ArrayList<WatchedVideosOut>();
+            watchedVideosOut = new ArrayList<schemas.WatchedVideosOut>();
         }
         return this.watchedVideosOut;
     }

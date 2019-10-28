@@ -51,7 +51,7 @@ public class VideoOutput {
     public VideoOutput() {
     }
 
-    public VideoOutput(String duration, String idVideo, String topic, String videoName) {
+    public VideoOutput(String idVideo, String videoName, String duration, String topic) {
         this.duration = duration;
         this.idVideo = idVideo;
         this.topic = topic;

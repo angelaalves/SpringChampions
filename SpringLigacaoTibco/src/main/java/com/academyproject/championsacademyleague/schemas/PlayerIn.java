@@ -6,7 +6,7 @@
 //
 
 
-package schemas;
+package com.academyproject.championsacademyleague.schemas;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -69,6 +69,23 @@ public class PlayerIn {
     protected String password;
     @XmlAttribute(name = "status")
     protected String status;
+
+    public PlayerIn() {
+    }
+
+    public PlayerIn(String idPlayer, String idGuildFK, String userName, String email, String password, String gender, String userType, String xp, String champiesToGive, String myChampies, String status) {
+        this.champiesToGive = champiesToGive;
+        this.email = email;
+        this.gender = gender;
+        this.idGuildFK = idGuildFK;
+        this.idPlayer = idPlayer;
+        this.myChampies = myChampies;
+        this.userName = userName;
+        this.userType = userType;
+        this.xp = xp;
+        this.password = password;
+        this.status = status;
+    }
 
     /**
      * Gets the value of the champiesToGive property.
