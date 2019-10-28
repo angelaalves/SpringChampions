@@ -35,22 +35,22 @@ public class videoController {
 
     @RequestMapping("Create")
     public List<VideoOutput> getCreateVideos() {
-        //Create code
+
     }
 
     @RequestMapping("Update")
     public List<VideoOutput> getUpdateVideos() {
-        //Create code
+
     }
 
     @RequestMapping("Delete")
     public List<VideoOutput> getDeleteVideos() {
-        //Create code
+
     }
 
     @RequestMapping("Get")
     public List<VideoOutput> getGetVideos() {
-        //Create code
+        
     }
 
 }
