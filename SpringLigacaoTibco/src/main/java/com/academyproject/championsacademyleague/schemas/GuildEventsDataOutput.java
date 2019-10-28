@@ -44,7 +44,7 @@ import javax.xml.bind.annotation.XmlType;
 public class GuildEventsDataOutput {
 
     @XmlElement(name = "GuildEventsOut", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/GuildEvents/Schema.xsd")
-    protected List<schemas.GuildEventsOut> guildEventsOut;
+    protected List<GuildEventsOut> guildEventsOut;
 
     /**
      * Gets the value of the guildEventsOut property.
@@ -68,9 +68,9 @@ public class GuildEventsDataOutput {
      * 
      * 
      */
-    public List<schemas.GuildEventsOut> getGuildEventsOut() {
+    public List<GuildEventsOut> getGuildEventsOut() {
         if (guildEventsOut == null) {
-            guildEventsOut = new ArrayList<schemas.GuildEventsOut>();
+            guildEventsOut = new ArrayList<GuildEventsOut>();
         }
         return this.guildEventsOut;
     }

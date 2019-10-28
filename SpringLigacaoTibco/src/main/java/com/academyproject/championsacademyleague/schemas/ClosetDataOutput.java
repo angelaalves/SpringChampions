@@ -44,7 +44,7 @@ import javax.xml.bind.annotation.XmlType;
 public class ClosetDataOutput {
 
     @XmlElement(name = "ClosetOut", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Closet/Schema.xsd")
-    protected List<schemas.ClosetOut> closetOut;
+    protected List<ClosetOut> closetOut;
 
     /**
      * Gets the value of the closetOut property.
@@ -68,9 +68,9 @@ public class ClosetDataOutput {
      * 
      * 
      */
-    public List<schemas.ClosetOut> getClosetOut() {
+    public List<ClosetOut> getClosetOut() {
         if (closetOut == null) {
-            closetOut = new ArrayList<schemas.ClosetOut>();
+            closetOut = new ArrayList<ClosetOut>();
         }
         return this.closetOut;
     }

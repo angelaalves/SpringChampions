@@ -44,7 +44,7 @@ import javax.xml.bind.annotation.XmlType;
 public class AttendedEventsDataOutput {
 
     @XmlElement(namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/AttendedEvents/Schema.xsd")
-    protected List<schemas.AttendedEventsOut> attendedEventsOut;
+    protected List<AttendedEventsOut> attendedEventsOut;
 
     /**
      * Gets the value of the attendedEventsOut property.
@@ -68,9 +68,9 @@ public class AttendedEventsDataOutput {
      * 
      * 
      */
-    public List<schemas.AttendedEventsOut> getAttendedEventsOut() {
+    public List<AttendedEventsOut> getAttendedEventsOut() {
         if (attendedEventsOut == null) {
-            attendedEventsOut = new ArrayList<schemas.AttendedEventsOut>();
+            attendedEventsOut = new ArrayList<AttendedEventsOut>();
         }
         return this.attendedEventsOut;
     }

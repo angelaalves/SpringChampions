@@ -44,7 +44,7 @@ import javax.xml.bind.annotation.XmlType;
 public class AttendedEventsDataInput {
 
     @XmlElement(namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/AttendedEvents/Schema.xsd")
-    protected List<schemas.AttendedEventsIn> attendedEventsIn;
+    protected List<AttendedEventsIn> attendedEventsIn;
 
     /**
      * Gets the value of the attendedEventsIn property.
@@ -68,9 +68,9 @@ public class AttendedEventsDataInput {
      * 
      * 
      */
-    public List<schemas.AttendedEventsIn> getAttendedEventsIn() {
+    public List<AttendedEventsIn> getAttendedEventsIn() {
         if (attendedEventsIn == null) {
-            attendedEventsIn = new ArrayList<schemas.AttendedEventsIn>();
+            attendedEventsIn = new ArrayList<AttendedEventsIn>();
         }
         return this.attendedEventsIn;
     }

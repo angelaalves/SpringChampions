@@ -44,7 +44,7 @@ import javax.xml.bind.annotation.XmlType;
 public class ClosetDataInput {
 
     @XmlElement(name = "ClosetIn", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Closet/Schema.xsd")
-    protected List<schemas.ClosetIn> closetIn;
+    protected List<ClosetIn> closetIn;
 
     /**
      * Gets the value of the closetIn property.
@@ -68,9 +68,9 @@ public class ClosetDataInput {
      * 
      * 
      */
-    public List<schemas.ClosetIn> getClosetIn() {
+    public List<ClosetIn> getClosetIn() {
         if (closetIn == null) {
-            closetIn = new ArrayList<schemas.ClosetIn>();
+            closetIn = new ArrayList<ClosetIn>();
         }
         return this.closetIn;
     }
