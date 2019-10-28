@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlns.example.com/1571748261987" xmlns:ns0="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Closet/Schema.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap1="http://schemas.xmlsoap.org/wsdl/soap12/" name="Untitled" targetNamespace="http://xmlns.example.com/1571748261987">
+    <wsdl:types>
+        <xs:schema xmlns="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Closet/Schema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Closet/Schema.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:element name="ClosetDataInput">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:ClosetIn" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ClosetDataOutput">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:ClosetOut" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ClosetIn">
+                <xs:complexType>
+                    <xs:attribute name="ID_Skin_FK" type="xs:string"/>
+                    <xs:attribute name="id_player_fk" type="xs:string"/>
+                    <xs:attribute name="status" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ClosetOut">
+                <xs:complexType>
+                    <xs:attribute name="ID_Skin_FK" type="xs:string"/>
+                    <xs:attribute name="id_player_fk" type="xs:string"/>
+                    <xs:attribute name="status" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="Closet">
+        <wsdl:port name="ClosetPortGetAllEndpoint1" binding="tns:ClosetPortGetAllEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Closet/Closet.serviceagent/ClosetPortGetAllEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="ClosetPortUpdateEndpoint1" binding="tns:ClosetPortUpdateEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Closet/Closet.serviceagent/ClosetPortUpdateEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="ClosetPortCreateEndpoint1" binding="tns:ClosetPortCreateEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Closet/Closet.serviceagent/ClosetPortCreateEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="ClosetPortGetEndpoint1" binding="tns:ClosetPortGetEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Closet/Closet.serviceagent/ClosetPortGetEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="ClosetPortDeleteEndpoint1" binding="tns:ClosetPortDeleteEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Closet/Closet.serviceagent/ClosetPortDeleteEndpoint1"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="ClosetPortGetAll">
+        <wsdl:operation name="GetAll">
+            <wsdl:input message="tns:ClosetGetAllInput"/>
+            <wsdl:output message="tns:ClosetGetAllOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="ClosetPortUpdate">
+        <wsdl:operation name="Update">
+            <wsdl:input message="tns:ClosetUpdateInput"/>
+            <wsdl:output message="tns:ClosetUpdateOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="ClosetPortCreate">
+        <wsdl:operation name="Create">
+            <wsdl:input message="tns:ClosetCreateInput"/>
+            <wsdl:output message="tns:ClosetCreateOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="ClosetPortGet">
+        <wsdl:operation name="Get">
+            <wsdl:input message="tns:ClosetGetInput"/>
+            <wsdl:output message="tns:ClosetGetOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="ClosetPortDelete">
+        <wsdl:operation name="Delete">
+            <wsdl:input message="tns:ClosetDeleteInput"/>
+            <wsdl:output message="tns:ClosetDeleteOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="ClosetPortGetAllEndpoint1Binding" type="tns:ClosetPortGetAll">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="GetAll">
+            <soap:operation style="document" soapAction="/Service/Closet/Closet.serviceagent/ClosetPortGetAllEndpoint1/GetAll"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="GetAllIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="GetAllOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="ClosetPortUpdateEndpoint1Binding" type="tns:ClosetPortUpdate">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Update">
+            <soap:operation style="document" soapAction="/Service/Closet/Closet.serviceagent/ClosetPortUpdateEndpoint1/Update"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="UpdateIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="UpdateOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="ClosetPortCreateEndpoint1Binding" type="tns:ClosetPortCreate">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Create">
+            <soap:operation style="document" soapAction="/Service/Closet/Closet.serviceagent/ClosetPortCreateEndpoint1/Create"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="CreateIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="CreateOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="ClosetPortGetEndpoint1Binding" type="tns:ClosetPortGet">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Get">
+            <soap:operation style="document" soapAction="/Service/Closet/Closet.serviceagent/ClosetPortGetEndpoint1/Get"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="GetIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="GetOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="ClosetPortDeleteEndpoint1Binding" type="tns:ClosetPortDelete">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Delete">
+            <soap:operation style="document" soapAction="/Service/Closet/Closet.serviceagent/ClosetPortDeleteEndpoint1/Delete"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="DeleteIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="DeleteOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="ClosetGetAllInput">
+        <wsdl:part name="GetAllIn" element="ns0:ClosetDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="ClosetGetAllOutput">
+        <wsdl:part name="GetAllOut" element="ns0:ClosetDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="ClosetUpdateInput">
+        <wsdl:part name="UpdateIn" element="ns0:ClosetDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="ClosetUpdateOutput">
+        <wsdl:part name="UpdateOut" element="ns0:ClosetDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="ClosetCreateInput">
+        <wsdl:part name="CreateIn" element="ns0:ClosetDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="ClosetCreateOutput">
+        <wsdl:part name="CreateOut" element="ns0:ClosetDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="ClosetGetInput">
+        <wsdl:part name="GetIn" element="ns0:ClosetDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="ClosetGetOutput">
+        <wsdl:part name="GetOut" element="ns0:ClosetDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="ClosetDeleteInput">
+        <wsdl:part name="DeleteIn" element="ns0:ClosetDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="ClosetDeleteOutput">
+        <wsdl:part name="DeleteOut" element="ns0:ClosetDataOutput"/>
+    </wsdl:message>
+</wsdl:definitions>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlns.example.com/1571749505568" xmlns:ns0="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/GuildEvents/Schema.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap1="http://schemas.xmlsoap.org/wsdl/soap12/" name="Untitled" targetNamespace="http://xmlns.example.com/1571749505568">
+    <wsdl:types>
+        <xs:schema xmlns="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/GuildEvents/Schema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/GuildEvents/Schema.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:element name="GuildEventsDataInput">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:GuildEventsIn" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GuildEventsDataOutput">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:GuildEventsOut" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GuildEventsIn">
+                <xs:complexType>
+                    <xs:attribute name="ID_Events_FK" type="xs:string"/>
+                    <xs:attribute name="ID_Guild_FK" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GuildEventsOut">
+                <xs:complexType>
+                    <xs:attribute name="ID_Events_FK" type="xs:string"/>
+                    <xs:attribute name="ID_Guild_FK" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="GuildEvents">
+        <wsdl:port name="GuildEventsPortDeleteEndpoint1" binding="tns:GuildEventsPortDeleteEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortDeleteEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="GuildEventsPortCreateEndpoint1" binding="tns:GuildEventsPortCreateEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortCreateEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="GuildEventsPortGetAllEndpoint1" binding="tns:GuildEventsPortGetAllEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortGetAllEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="GuildEventsPortGetEndpoint1" binding="tns:GuildEventsPortGetEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortGetEndpoint1"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="GuildEventsPortDelete">
+        <wsdl:operation name="Delete">
+            <wsdl:input message="tns:GuildEventsDeleteInput"/>
+            <wsdl:output message="tns:GuildEventsDeleteOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="GuildEventsPortCreate">
+        <wsdl:operation name="Create">
+            <wsdl:input message="tns:GuildEventsCreateInput"/>
+            <wsdl:output message="tns:GuildEventsCreateOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="GuildEventsPortGetAll">
+        <wsdl:operation name="GetAll">
+            <wsdl:input message="tns:GuildEventsGetAllInput"/>
+            <wsdl:output message="tns:GuildEventsGetAllOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="GuildEventsPortGet">
+        <wsdl:operation name="Get">
+            <wsdl:input message="tns:GuildEventsGetInput"/>
+            <wsdl:output message="tns:GuildEventsGetOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="GuildEventsPortDeleteEndpoint1Binding" type="tns:GuildEventsPortDelete">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Delete">
+            <soap:operation style="document" soapAction="/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortDeleteEndpoint1/Delete"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="DeleteIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="DeleteOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="GuildEventsPortCreateEndpoint1Binding" type="tns:GuildEventsPortCreate">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Create">
+            <soap:operation style="document" soapAction="/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortCreateEndpoint1/Create"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="CreateIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="CreateOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="GuildEventsPortGetAllEndpoint1Binding" type="tns:GuildEventsPortGetAll">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="GetAll">
+            <soap:operation style="document" soapAction="/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortGetAllEndpoint1/GetAll"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="GetAllIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="GetAllOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="GuildEventsPortGetEndpoint1Binding" type="tns:GuildEventsPortGet">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Get">
+            <soap:operation style="document" soapAction="/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortGetEndpoint1/Get"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="GetIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="GetOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="GuildEventsDeleteInput">
+        <wsdl:part name="DeleteIn" element="ns0:GuildEventsDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="GuildEventsDeleteOutput">
+        <wsdl:part name="DeleteOut" element="ns0:GuildEventsDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="GuildEventsCreateInput">
+        <wsdl:part name="CreateIn" element="ns0:GuildEventsDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="GuildEventsCreateOutput">
+        <wsdl:part name="CreateOut" element="ns0:GuildEventsDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="GuildEventsGetAllInput">
+        <wsdl:part name="GetAllIn" element="ns0:GuildEventsDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="GuildEventsGetAllOutput">
+        <wsdl:part name="GetAllOut" element="ns0:GuildEventsDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="GuildEventsGetInput">
+        <wsdl:part name="GetIn" element="ns0:GuildEventsDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="GuildEventsGetOutput">
+        <wsdl:part name="GetOut" element="ns0:GuildEventsDataOutput"/>
+    </wsdl:message>
+</wsdl:definitions>

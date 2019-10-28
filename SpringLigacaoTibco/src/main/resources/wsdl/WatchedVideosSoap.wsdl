@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlns.example.com/1571748226856" xmlns:ns0="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/WatchedVideos/Schema.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap1="http://schemas.xmlsoap.org/wsdl/soap12/" name="Untitled" targetNamespace="http://xmlns.example.com/1571748226856">
+    <wsdl:types>
+        <xs:schema xmlns="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/WatchedVideos/Schema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/WatchedVideos/Schema.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:element name="WatchedVideosDataInput">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:WatchedVideosIn" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="WatchedVideosDataOutput">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:WatchedVideosOut" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="WatchedVideosIn">
+                <xs:complexType>
+                    <xs:attribute name="ID_Player_FK" type="xs:string"/>
+                    <xs:attribute name="ID_Video_FK" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="WatchedVideosOut">
+                <xs:complexType>
+                    <xs:attribute name="ID_Player_FK" type="xs:string"/>
+                    <xs:attribute name="ID_Video_FK" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="WatchedVideos">
+        <wsdl:port name="WatchedVideosPortDeleteEndpoint1" binding="tns:WatchedVideosPortDeleteEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortDeleteEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="WatchedVideosPortGetEndpoint1" binding="tns:WatchedVideosPortGetEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortGetEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="WatchedVideosPortCreateEndpoint1" binding="tns:WatchedVideosPortCreateEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortCreateEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="WatchedVideosPortGetAllEndpoint1" binding="tns:WatchedVideosPortGetAllEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortGetAllEndpoint1"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="WatchedVideosPortDelete">
+        <wsdl:operation name="Delete">
+            <wsdl:input message="tns:WatchedVideosDeleteInput"/>
+            <wsdl:output message="tns:WatchedVideosDeleteOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="WatchedVideosPortGet">
+        <wsdl:operation name="Get">
+            <wsdl:input message="tns:WatchedVideosGetInput"/>
+            <wsdl:output message="tns:WatchedVideosGetOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="WatchedVideosPortCreate">
+        <wsdl:operation name="Create">
+            <wsdl:input message="tns:WatchedVideosCreateInput"/>
+            <wsdl:output message="tns:WatchedVideosCreateOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="WatchedVideosPortGetAll">
+        <wsdl:operation name="GetAll">
+            <wsdl:input message="tns:WatchedVideosGetAllInput"/>
+            <wsdl:output message="tns:WatchedVideosGetAllOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="WatchedVideosPortDeleteEndpoint1Binding" type="tns:WatchedVideosPortDelete">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Delete">
+            <soap:operation style="document" soapAction="/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortDeleteEndpoint1/Delete"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="DeleteIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="DeleteOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="WatchedVideosPortGetEndpoint1Binding" type="tns:WatchedVideosPortGet">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Get">
+            <soap:operation style="document" soapAction="/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortGetEndpoint1/Get"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="GetIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="GetOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="WatchedVideosPortCreateEndpoint1Binding" type="tns:WatchedVideosPortCreate">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Create">
+            <soap:operation style="document" soapAction="/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortCreateEndpoint1/Create"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="CreateIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="Createout"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="WatchedVideosPortGetAllEndpoint1Binding" type="tns:WatchedVideosPortGetAll">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="GetAll">
+            <soap:operation style="document" soapAction="/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortGetAllEndpoint1/GetAll"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="GetAllIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="GetAllOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="WatchedVideosDeleteInput">
+        <wsdl:part name="DeleteIn" element="ns0:WatchedVideosDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="WatchedVideosDeleteOutput">
+        <wsdl:part name="DeleteOut" element="ns0:WatchedVideosDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="WatchedVideosGetInput">
+        <wsdl:part name="GetIn" element="ns0:WatchedVideosDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="WatchedVideosGetOutput">
+        <wsdl:part name="GetOut" element="ns0:WatchedVideosDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="WatchedVideosCreateInput">
+        <wsdl:part name="CreateIn" element="ns0:WatchedVideosDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="WatchedVideosCreateOutput">
+        <wsdl:part name="Createout" element="ns0:WatchedVideosDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="WatchedVideosGetAllInput">
+        <wsdl:part name="GetAllIn" element="ns0:WatchedVideosDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="WatchedVideosGetAllOutput">
+        <wsdl:part name="GetAllOut" element="ns0:WatchedVideosDataOutput"/>
+    </wsdl:message>
+</wsdl:definitions>

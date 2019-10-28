@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlns.example.com/1571067179630" xmlns:ns0="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Skin/Schema.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap1="http://schemas.xmlsoap.org/wsdl/soap12/" name="Untitled" targetNamespace="http://xmlns.example.com/1571067179630">
+    <wsdl:types>
+        <xs:schema xmlns="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Skin/Schema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Skin/Schema.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:element name="SkinDataInput">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:skinIn" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="SkinDataOutput">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:skinOut" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="skinIn">
+                <xs:complexType>
+                    <xs:attribute name="ChampiesCost" type="xs:string"/>
+                    <xs:attribute name="ID_Skin" type="xs:string"/>
+                    <xs:attribute name="ImagePath" type="xs:string"/>
+                    <xs:attribute name="MinXP" type="xs:string"/>
+                    <xs:attribute name="SkinName" type="xs:string"/>
+                    <xs:attribute name="SkinType" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="skinOut">
+                <xs:complexType>
+                    <xs:attribute name="ChampiesCost" type="xs:string"/>
+                    <xs:attribute name="ID_Skin" type="xs:string"/>
+                    <xs:attribute name="ImagePath" type="xs:string"/>
+                    <xs:attribute name="MinXP" type="xs:string"/>
+                    <xs:attribute name="SkinName" type="xs:string"/>
+                    <xs:attribute name="SkinType" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="SkinService">
+        <wsdl:port name="SkinPortUpdateEndpoint1" binding="tns:SkinPortUpdateEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Skin/SkinService.serviceagent/SkinPortUpdateEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="SkinPortGetEndpoint1" binding="tns:SkinPortGetEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Skin/SkinService.serviceagent/SkinPortGetEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="SkinPortCreateEndpoint1" binding="tns:SkinPortCreateEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Skin/SkinService.serviceagent/SkinPortCreateEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="SkinPortGetAllEndpoint1" binding="tns:SkinPortGetAllEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Skin/SkinService.serviceagent/SkinPortGetAllEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="SkinPortDeleteEndpoint1" binding="tns:SkinPortDeleteEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Skin/SkinService.serviceagent/SkinPortDeleteEndpoint1"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="SkinPortUpdate">
+        <wsdl:operation name="Update">
+            <wsdl:input message="tns:skinUpdateInput"/>
+            <wsdl:output message="tns:skinUpdateOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="SkinPortGet">
+        <wsdl:operation name="Get">
+            <wsdl:input message="tns:skinGetInput"/>
+            <wsdl:output message="tns:skinGetOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="SkinPortCreate">
+        <wsdl:operation name="Create">
+            <wsdl:input message="tns:skinCreateInput"/>
+            <wsdl:output message="tns:skinCreateOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="SkinPortGetAll">
+        <wsdl:operation name="GetAll">
+            <wsdl:input message="tns:skinGetAllInput"/>
+            <wsdl:output message="tns:skinGetAllOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="SkinPortDelete">
+        <wsdl:operation name="Delete">
+            <wsdl:input message="tns:skinDeleteInput"/>
+            <wsdl:output message="tns:skinDeleteOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="SkinPortUpdateEndpoint1Binding" type="tns:SkinPortUpdate">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Update">
+            <soap:operation style="document" soapAction="/Service/Skin/SkinService.serviceagent/SkinPortUpdateEndpoint1/Update"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="UpdateIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="UpdateOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="SkinPortGetEndpoint1Binding" type="tns:SkinPortGet">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Get">
+            <soap:operation style="document" soapAction="/Service/Skin/SkinService.serviceagent/SkinPortGetEndpoint1/Get"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="GetIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="GetOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="SkinPortCreateEndpoint1Binding" type="tns:SkinPortCreate">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Create">
+            <soap:operation style="document" soapAction="/Service/Skin/SkinService.serviceagent/SkinPortCreateEndpoint1/Create"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="CreateIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="CreateOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="SkinPortGetAllEndpoint1Binding" type="tns:SkinPortGetAll">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="GetAll">
+            <soap:operation style="document" soapAction="/Service/Skin/SkinService.serviceagent/SkinPortGetAllEndpoint1/GetAll"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="GetAllIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="GetAllOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="SkinPortDeleteEndpoint1Binding" type="tns:SkinPortDelete">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Delete">
+            <soap:operation style="document" soapAction="/Service/Skin/SkinService.serviceagent/SkinPortDeleteEndpoint1/Delete"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="DeleteIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="DeleteOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="skinUpdateInput">
+        <wsdl:part name="UpdateIn" element="ns0:SkinDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="skinUpdateOutput">
+        <wsdl:part name="UpdateOut" element="ns0:SkinDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="skinGetInput">
+        <wsdl:part name="GetIn" element="ns0:SkinDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="skinGetOutput">
+        <wsdl:part name="GetOut" element="ns0:SkinDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="skinCreateInput">
+        <wsdl:part name="CreateIn" element="ns0:SkinDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="skinCreateOutput">
+        <wsdl:part name="CreateOut" element="ns0:SkinDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="skinGetAllInput">
+        <wsdl:part name="GetAllIn" element="ns0:SkinDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="skinGetAllOutput">
+        <wsdl:part name="GetAllOut" element="ns0:SkinDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="skinDeleteInput">
+        <wsdl:part name="DeleteIn" element="ns0:SkinDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="skinDeleteOutput">
+        <wsdl:part name="DeleteOut" element="ns0:SkinDataOutput"/>
+    </wsdl:message>
+</wsdl:definitions>

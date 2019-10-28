@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlns.example.com/1571662504657" xmlns:ns0="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Events/Schema.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap1="http://schemas.xmlsoap.org/wsdl/soap12/" name="Untitled" targetNamespace="http://xmlns.example.com/1571662504657">
+    <wsdl:types>
+        <xs:schema xmlns="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Events/Schema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Events/Schema.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:element name="EventsDataInput">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:EventsIn" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="EventsDataOutput">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:EventsOut" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="EventsIn">
+                <xs:complexType>
+                    <xs:attribute name="EventDate" type="xs:string"/>
+                    <xs:attribute name="EventName" type="xs:string"/>
+                    <xs:attribute name="EventType" type="xs:string"/>
+                    <xs:attribute name="ID_Event" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="EventsOut">
+                <xs:complexType>
+                    <xs:attribute name="EventDate" type="xs:string"/>
+                    <xs:attribute name="EventName" type="xs:string"/>
+                    <xs:attribute name="EventType" type="xs:string"/>
+                    <xs:attribute name="ID_Event" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="EventsService">
+        <wsdl:port name="EventsPortUpdateEndpoint1" binding="tns:EventsPortUpdateEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortUpdateEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="EventsPortDeleteEndpoint1" binding="tns:EventsPortDeleteEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortDeleteEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="EventsPortGetEndpoint1" binding="tns:EventsPortGetEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortGetEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="EventsPortCreateEndpoint1" binding="tns:EventsPortCreateEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortCreateEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="EventsPortGetAllEndpoint1" binding="tns:EventsPortGetAllEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortGetAllEndpoint1"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="EventsPortUpdate">
+        <wsdl:operation name="Update">
+            <wsdl:input message="tns:EventsUpdateInput"/>
+            <wsdl:output message="tns:EventsUpdateOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="EventsPortDelete">
+        <wsdl:operation name="Delete">
+            <wsdl:input message="tns:EventsDeleteInput"/>
+            <wsdl:output message="tns:EventsDeleteOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="EventsPortGet">
+        <wsdl:operation name="Get">
+            <wsdl:input message="tns:EventsGetInput"/>
+            <wsdl:output message="tns:EventsGetOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="EventsPortCreate">
+        <wsdl:operation name="Create">
+            <wsdl:input message="tns:EventsCreateInput"/>
+            <wsdl:output message="tns:EventsCreateOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="EventsPortGetAll">
+        <wsdl:operation name="GetAll">
+            <wsdl:input message="tns:EventsGetAllInput"/>
+            <wsdl:output message="tns:EventsGetAllOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="EventsPortUpdateEndpoint1Binding" type="tns:EventsPortUpdate">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Update">
+            <soap:operation style="document" soapAction="/Service/Events/EventsService.serviceagent/EventsPortUpdateEndpoint1/Update"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="UpdateIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="UpdateOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="EventsPortDeleteEndpoint1Binding" type="tns:EventsPortDelete">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Delete">
+            <soap:operation style="document" soapAction="/Service/Events/EventsService.serviceagent/EventsPortDeleteEndpoint1/Delete"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="DeleteIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="DeleteOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="EventsPortGetEndpoint1Binding" type="tns:EventsPortGet">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Get">
+            <soap:operation style="document" soapAction="/Service/Events/EventsService.serviceagent/EventsPortGetEndpoint1/Get"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="GetIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="GetOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="EventsPortCreateEndpoint1Binding" type="tns:EventsPortCreate">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Create">
+            <soap:operation style="document" soapAction="/Service/Events/EventsService.serviceagent/EventsPortCreateEndpoint1/Create"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="CreateIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="CreateOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="EventsPortGetAllEndpoint1Binding" type="tns:EventsPortGetAll">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="GetAll">
+            <soap:operation style="document" soapAction="/Service/Events/EventsService.serviceagent/EventsPortGetAllEndpoint1/GetAll"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="GetAllIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="GetAllOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="EventsUpdateInput">
+        <wsdl:part name="UpdateIn" element="ns0:EventsDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="EventsUpdateOutput">
+        <wsdl:part name="UpdateOut" element="ns0:EventsDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="EventsDeleteInput">
+        <wsdl:part name="DeleteIn" element="ns0:EventsDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="EventsDeleteOutput">
+        <wsdl:part name="DeleteOut" element="ns0:EventsDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="EventsGetInput">
+        <wsdl:part name="GetIn" element="ns0:EventsDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="EventsGetOutput">
+        <wsdl:part name="GetOut" element="ns0:EventsDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="EventsCreateInput">
+        <wsdl:part name="CreateIn" element="ns0:EventsDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="EventsCreateOutput">
+        <wsdl:part name="CreateOut" element="ns0:EventsDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="EventsGetAllInput">
+        <wsdl:part name="GetAllIn" element="ns0:EventsDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="EventsGetAllOutput">
+        <wsdl:part name="GetAllOut" element="ns0:EventsDataOutput"/>
+    </wsdl:message>
+</wsdl:definitions>

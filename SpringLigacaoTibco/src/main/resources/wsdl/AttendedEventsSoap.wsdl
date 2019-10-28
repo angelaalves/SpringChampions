@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlns.example.com/1571662486767" xmlns:ns0="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/AttendedEvents/Schema.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap1="http://schemas.xmlsoap.org/wsdl/soap12/" name="Untitled" targetNamespace="http://xmlns.example.com/1571662486767">
+    <wsdl:types>
+        <xs:schema xmlns="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/AttendedEvents/Schema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/AttendedEvents/Schema.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:element name="attendedEventsDataInput">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:attendedEventsIn" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="attendedEventsDataOutput">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:attendedEventsOut" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="attendedEventsIn">
+                <xs:complexType>
+                    <xs:attribute name="ID_Event_FK" type="xs:string"/>
+                    <xs:attribute name="ID_Player_FK" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="attendedEventsOut">
+                <xs:complexType>
+                    <xs:attribute name="ID_Event_FK" type="xs:string"/>
+                    <xs:attribute name="ID_Player_FK" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="AttendedEventsService">
+        <wsdl:port name="attendedEventsCreateEndpoint1" binding="tns:attendedEventsCreateEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsCreateEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="attendedEventsPortDeleteEndpoint1" binding="tns:attendedEventsPortDeleteEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsPortDeleteEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="attendedEventsPortGetEndpoint1" binding="tns:attendedEventsPortGetEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsPortGetEndpoint1"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="attendedEventsCreate">
+        <wsdl:operation name="Create">
+            <wsdl:input message="tns:attendedEventsCreateInput"/>
+            <wsdl:output message="tns:attendedEventsCreateOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="attendedEventsPortDelete">
+        <wsdl:operation name="Delete">
+            <wsdl:input message="tns:attendedEventsDeleteInput"/>
+            <wsdl:output message="tns:attendedEventsDeleteOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="attendedEventsPortGet">
+        <wsdl:operation name="Get">
+            <wsdl:input message="tns:attendedEventsGetInput"/>
+            <wsdl:output message="tns:attendedEventsGetOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="attendedEventsCreateEndpoint1Binding" type="tns:attendedEventsCreate">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Create">
+            <soap:operation style="document" soapAction="/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsCreateEndpoint1/Create"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="CreateIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="CreateOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="attendedEventsPortDeleteEndpoint1Binding" type="tns:attendedEventsPortDelete">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Delete">
+            <soap:operation style="document" soapAction="/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsPortDeleteEndpoint1/Delete"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="DeleteIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="DeleteOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="attendedEventsPortGetEndpoint1Binding" type="tns:attendedEventsPortGet">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Get">
+            <soap:operation style="document" soapAction="/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsPortGetEndpoint1/Get"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="GetIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="GetOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="attendedEventsCreateInput">
+        <wsdl:part name="CreateIn" element="ns0:attendedEventsDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="attendedEventsCreateOutput">
+        <wsdl:part name="CreateOut" element="ns0:attendedEventsDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="attendedEventsDeleteInput">
+        <wsdl:part name="DeleteIn" element="ns0:attendedEventsDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="attendedEventsDeleteOutput">
+        <wsdl:part name="DeleteOut" element="ns0:attendedEventsDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="attendedEventsGetInput">
+        <wsdl:part name="GetIn" element="ns0:attendedEventsDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="attendedEventsGetOutput">
+        <wsdl:part name="GetOut" element="ns0:attendedEventsDataOutput"/>
+    </wsdl:message>
+</wsdl:definitions>

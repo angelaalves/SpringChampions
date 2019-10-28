@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlns.example.com/1571748252062" xmlns:ns0="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Guild/Schema.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap1="http://schemas.xmlsoap.org/wsdl/soap12/" name="Untitled" targetNamespace="http://xmlns.example.com/1571748252062">
+    <wsdl:types>
+        <xs:schema xmlns="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Guild/Schema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Guild/Schema.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:element name="GuildDataInput">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:GuildIn" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GuildDataOutput">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:GuildOut" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GuildIn">
+                <xs:complexType>
+                    <xs:attribute name="EndDate" type="xs:string"/>
+                    <xs:attribute name="GuildFlag" type="xs:string"/>
+                    <xs:attribute name="GuildName" type="xs:string"/>
+                    <xs:attribute name="ID_Guild" type="xs:string"/>
+                    <xs:attribute name="StartDate" type="xs:string"/>
+                    <xs:attribute name="status" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GuildOut">
+                <xs:complexType>
+                    <xs:attribute name="EndDate" type="xs:string"/>
+                    <xs:attribute name="GuildFlag" type="xs:string"/>
+                    <xs:attribute name="GuildName" type="xs:string"/>
+                    <xs:attribute name="ID_Guild" type="xs:string"/>
+                    <xs:attribute name="StartDate" type="xs:string"/>
+                    <xs:attribute name="status" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="Guild">
+        <wsdl:port name="GuildPortGetEndpoint1" binding="tns:GuildPortGetEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Guild/Guild.serviceagent/GuildPortGetEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="GuildPortDeleteEndpoint1" binding="tns:GuildPortDeleteEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Guild/Guild.serviceagent/GuildPortDeleteEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="GuildPortCreateEndpoint1" binding="tns:GuildPortCreateEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Guild/Guild.serviceagent/GuildPortCreateEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="GuildPortUpdateEndpoint1" binding="tns:GuildPortUpdateEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Guild/Guild.serviceagent/GuildPortUpdateEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="GuildPortGetAllEndpoint1" binding="tns:GuildPortGetAllEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Guild/Guild.serviceagent/GuildPortGetAllEndpoint1"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="GuildPortGet">
+        <wsdl:operation name="Get">
+            <wsdl:input message="tns:GuildGetInput"/>
+            <wsdl:output message="tns:GuildGetOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="GuildPortDelete">
+        <wsdl:operation name="Delete">
+            <wsdl:input message="tns:GuildDeleteInput"/>
+            <wsdl:output message="tns:GuildDeleteOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="GuildPortCreate">
+        <wsdl:operation name="Create">
+            <wsdl:input message="tns:GuildCreateInput"/>
+            <wsdl:output message="tns:GuildCreateOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="GuildPortUpdate">
+        <wsdl:operation name="Update">
+            <wsdl:input message="tns:GuildUpdateInput"/>
+            <wsdl:output message="tns:GuildUpdateOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="GuildPortGetAll">
+        <wsdl:operation name="GetAll">
+            <wsdl:input message="tns:GuildGetAllInput"/>
+            <wsdl:output message="tns:GuildGetAllOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="GuildPortGetEndpoint1Binding" type="tns:GuildPortGet">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Get">
+            <soap:operation style="document" soapAction="/Service/Guild/Guild.serviceagent/GuildPortGetEndpoint1/Get"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="GetIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="GetOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="GuildPortDeleteEndpoint1Binding" type="tns:GuildPortDelete">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Delete">
+            <soap:operation style="document" soapAction="/Service/Guild/Guild.serviceagent/GuildPortDeleteEndpoint1/Delete"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="DeleteIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="DeleteOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="GuildPortCreateEndpoint1Binding" type="tns:GuildPortCreate">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Create">
+            <soap:operation style="document" soapAction="/Service/Guild/Guild.serviceagent/GuildPortCreateEndpoint1/Create"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="CreateIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="CreateOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="GuildPortUpdateEndpoint1Binding" type="tns:GuildPortUpdate">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Update">
+            <soap:operation style="document" soapAction="/Service/Guild/Guild.serviceagent/GuildPortUpdateEndpoint1/Update"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="UpdateIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="UpdateOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="GuildPortGetAllEndpoint1Binding" type="tns:GuildPortGetAll">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="GetAll">
+            <soap:operation style="document" soapAction="/Service/Guild/Guild.serviceagent/GuildPortGetAllEndpoint1/GetAll"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="GetAllIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="GetAllOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="GuildGetInput">
+        <wsdl:part name="GetIn" element="ns0:GuildDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="GuildGetOutput">
+        <wsdl:part name="GetOut" element="ns0:GuildDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="GuildDeleteInput">
+        <wsdl:part name="DeleteIn" element="ns0:GuildDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="GuildDeleteOutput">
+        <wsdl:part name="DeleteOut" element="ns0:GuildDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="GuildCreateInput">
+        <wsdl:part name="CreateIn" element="ns0:GuildDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="GuildCreateOutput">
+        <wsdl:part name="CreateOut" element="ns0:GuildDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="GuildUpdateInput">
+        <wsdl:part name="UpdateIn" element="ns0:GuildDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="GuildUpdateOutput">
+        <wsdl:part name="UpdateOut" element="ns0:GuildDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="GuildGetAllInput">
+        <wsdl:part name="GetAllIn" element="ns0:GuildDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="GuildGetAllOutput">
+        <wsdl:part name="GetAllOut" element="ns0:GuildDataOutput"/>
+    </wsdl:message>
+</wsdl:definitions>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlns.example.com/1571662515172" xmlns:ns0="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Player/Schema.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap1="http://schemas.xmlsoap.org/wsdl/soap12/" name="Untitled" targetNamespace="http://xmlns.example.com/1571662515172">
+    <wsdl:types>
+        <xs:schema xmlns="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Player/Schema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Player/Schema.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:element name="PlayerDataInput">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:PlayerIn" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="PlayerDataOutput">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:PlayerOut" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="PlayerIn">
+                <xs:complexType>
+                    <xs:attribute name="ChampiesToGive" type="xs:string"/>
+                    <xs:attribute name="Email" type="xs:string"/>
+                    <xs:attribute name="Gender" type="xs:string"/>
+                    <xs:attribute name="ID_Guild_FK" type="xs:string"/>
+                    <xs:attribute name="ID_Player" type="xs:string"/>
+                    <xs:attribute name="MyChampies" type="xs:string"/>
+                    <xs:attribute name="UserName" type="xs:string"/>
+                    <xs:attribute name="UserType" type="xs:string"/>
+                    <xs:attribute name="XP" type="xs:string"/>
+                    <xs:attribute name="password" type="xs:string"/>
+                    <xs:attribute name="status" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="PlayerOut">
+                <xs:complexType>
+                    <xs:attribute name="ChampiesToGive" type="xs:string"/>
+                    <xs:attribute name="Email" type="xs:string"/>
+                    <xs:attribute name="Gender" type="xs:string"/>
+                    <xs:attribute name="ID_Guild_FK" type="xs:string"/>
+                    <xs:attribute name="ID_Player" type="xs:string"/>
+                    <xs:attribute name="MyChampies" type="xs:string"/>
+                    <xs:attribute name="UserName" type="xs:string"/>
+                    <xs:attribute name="UserType" type="xs:string"/>
+                    <xs:attribute name="XP" type="xs:string"/>
+                    <xs:attribute name="password" type="xs:string"/>
+                    <xs:attribute name="status" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="PlayerService">
+        <wsdl:port name="PlayerPortUpdateEndpoint1" binding="tns:PlayerPortUpdateEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Player/PlayerService.serviceagent/PlayerPortUpdateEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="PlayerPortGetEndpoint1" binding="tns:PlayerPortGetEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Player/PlayerService.serviceagent/PlayerPortGetEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="PlayerPortCreateEndpoint1" binding="tns:PlayerPortCreateEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Player/PlayerService.serviceagent/PlayerPortCreateEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="PlayerPortGetAllEndpoint1" binding="tns:PlayerPortGetAllEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Player/PlayerService.serviceagent/PlayerPortGetAllEndpoint1"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="PlayerPortUpdate">
+        <wsdl:operation name="Update">
+            <wsdl:input message="tns:PlayerUpdateInput"/>
+            <wsdl:output message="tns:PlayerUpdateOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="PlayerPortGet">
+        <wsdl:operation name="Get">
+            <wsdl:input message="tns:PlayerGetInput"/>
+            <wsdl:output message="tns:PlayerGetOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="PlayerPortCreate">
+        <wsdl:operation name="Create">
+            <wsdl:input message="tns:PlayerCreateInput"/>
+            <wsdl:output message="tns:PlayerCreateOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="PlayerPortGetAll">
+        <wsdl:operation name="GetAll">
+            <wsdl:input message="tns:PlayerGetAllInput"/>
+            <wsdl:output message="tns:PlayerGetAllOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="PlayerPortUpdateEndpoint1Binding" type="tns:PlayerPortUpdate">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Update">
+            <soap:operation style="document" soapAction="/Service/Player/PlayerService.serviceagent/PlayerPortUpdateEndpoint1/Update"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="UpdateIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="CreateOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="PlayerPortGetEndpoint1Binding" type="tns:PlayerPortGet">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Get">
+            <soap:operation style="document" soapAction="/Service/Player/PlayerService.serviceagent/PlayerPortGetEndpoint1/Get"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="GetIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="GetOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="PlayerPortCreateEndpoint1Binding" type="tns:PlayerPortCreate">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Create">
+            <soap:operation style="document" soapAction="/Service/Player/PlayerService.serviceagent/PlayerPortCreateEndpoint1/Create"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="CreateIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="CreateOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="PlayerPortGetAllEndpoint1Binding" type="tns:PlayerPortGetAll">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="GetAll">
+            <soap:operation style="document" soapAction="/Service/Player/PlayerService.serviceagent/PlayerPortGetAllEndpoint1/GetAll"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="GetAllIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="GetAllOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="PlayerUpdateInput">
+        <wsdl:part name="UpdateIn" element="ns0:PlayerDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="PlayerUpdateOutput">
+        <wsdl:part name="CreateOut" element="ns0:PlayerDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="PlayerGetInput">
+        <wsdl:part name="GetIn" element="ns0:PlayerDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="PlayerGetOutput">
+        <wsdl:part name="GetOut" element="ns0:PlayerDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="PlayerCreateInput">
+        <wsdl:part name="CreateIn" element="ns0:PlayerDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="PlayerCreateOutput">
+        <wsdl:part name="CreateOut" element="ns0:PlayerDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="PlayerGetAllInput">
+        <wsdl:part name="GetAllIn" element="ns0:PlayerDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="PlayerGetAllOutput">
+        <wsdl:part name="GetAllOut" element="ns0:PlayerDataOutput"/>
+    </wsdl:message>
+</wsdl:definitions>

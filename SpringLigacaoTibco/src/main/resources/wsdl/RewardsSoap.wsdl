@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlns.example.com/1571748239070" xmlns:ns0="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Rewards/Schema.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap1="http://schemas.xmlsoap.org/wsdl/soap12/" name="Untitled" targetNamespace="http://xmlns.example.com/1571748239070">
+    <wsdl:types>
+        <xs:schema xmlns="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Rewards/Schema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Rewards/Schema.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:element name="RewardsDataInput">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:RewardsIn" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="RewardsDataOutput">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:RewardsOut" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="RewardsIn">
+                <xs:complexType>
+                    <xs:attribute name="Approved" type="xs:string"/>
+                    <xs:attribute name="ChampiesGiven" type="xs:string"/>
+                    <xs:attribute name="DateOfReward" type="xs:string"/>
+                    <xs:attribute name="ID_PlayerGiver_FK" type="xs:string"/>
+                    <xs:attribute name="ID_PlayerReceiver_FK" type="xs:string"/>
+                    <xs:attribute name="ID_Reward" type="xs:string"/>
+                    <xs:attribute name="TimeSpent" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="RewardsOut">
+                <xs:complexType>
+                    <xs:attribute name="Approved" type="xs:string"/>
+                    <xs:attribute name="ChampiesGiven" type="xs:string"/>
+                    <xs:attribute name="DateOfReward" type="xs:string"/>
+                    <xs:attribute name="ID_PlayerGiver_FK" type="xs:string"/>
+                    <xs:attribute name="ID_PlayerReceiver_FK" type="xs:string"/>
+                    <xs:attribute name="ID_Reward" type="xs:string"/>
+                    <xs:attribute name="TimeSpent" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="Rewards">
+        <wsdl:port name="RewardsPortGetEndpoint1" binding="tns:RewardsPortGetEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Rewards/Rewards.serviceagent/RewardsPortGetEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="RewardsPortDeleteEndpoint1" binding="tns:RewardsPortDeleteEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Rewards/Rewards.serviceagent/RewardsPortDeleteEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="RewardsPortUpdateEndpoint1" binding="tns:RewardsPortUpdateEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Rewards/Rewards.serviceagent/RewardsPortUpdateEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="RewardsPortGetAllEndpoint1" binding="tns:RewardsPortGetAllEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Rewards/Rewards.serviceagent/RewardsPortGetAllEndpoint1"/>
+        </wsdl:port>
+        <wsdl:port name="RewardsPortCreateEndpoint1" binding="tns:RewardsPortCreateEndpoint1Binding">
+            <soap:address location="http://localhost:8882/Service/Rewards/Rewards.serviceagent/RewardsPortCreateEndpoint1"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="RewardsPortGet">
+        <wsdl:operation name="Get">
+            <wsdl:input message="tns:RewardsGetInput"/>
+            <wsdl:output message="tns:RewardsGetOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="RewardsPortDelete">
+        <wsdl:operation name="Delete">
+            <wsdl:input message="tns:RewardsDeleteInput"/>
+            <wsdl:output message="tns:RewardsDeleteOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="RewardsPortUpdate">
+        <wsdl:operation name="Update">
+            <wsdl:input message="tns:RewardsUpdateInput"/>
+            <wsdl:output message="tns:RewardsUpdateOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="RewardsPortGetAll">
+        <wsdl:operation name="GetAll">
+            <wsdl:input message="tns:RewardsGetAllInput"/>
+            <wsdl:output message="tns:RewardsGetAllOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="RewardsPortCreate">
+        <wsdl:operation name="Create">
+            <wsdl:input message="tns:RewardsCreateInput"/>
+            <wsdl:output message="tns:RewardsCreateOutput"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="RewardsPortGetEndpoint1Binding" type="tns:RewardsPortGet">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Get">
+            <soap:operation style="document" soapAction="/Service/Rewards/Rewards.serviceagent/RewardsPortGetEndpoint1/Get"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="GetIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="GetOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="RewardsPortDeleteEndpoint1Binding" type="tns:RewardsPortDelete">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Delete">
+            <soap:operation style="document" soapAction="/Service/Rewards/Rewards.serviceagent/RewardsPortDeleteEndpoint1/Delete"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="DeleteIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="DeleteOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="RewardsPortUpdateEndpoint1Binding" type="tns:RewardsPortUpdate">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Update">
+            <soap:operation style="document" soapAction="/Service/Rewards/Rewards.serviceagent/RewardsPortUpdateEndpoint1/Update"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="UpdateIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="UpdateOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="RewardsPortGetAllEndpoint1Binding" type="tns:RewardsPortGetAll">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="GetAll">
+            <soap:operation style="document" soapAction="/Service/Rewards/Rewards.serviceagent/RewardsPortGetAllEndpoint1/GetAll"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="GetAllIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="GetAllOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="RewardsPortCreateEndpoint1Binding" type="tns:RewardsPortCreate">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Create">
+            <soap:operation style="document" soapAction="/Service/Rewards/Rewards.serviceagent/RewardsPortCreateEndpoint1/Create"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="CreateIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="CreateOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="RewardsGetInput">
+        <wsdl:part name="GetIn" element="ns0:RewardsDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="RewardsGetOutput">
+        <wsdl:part name="GetOut" element="ns0:RewardsDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="RewardsDeleteInput">
+        <wsdl:part name="DeleteIn" element="ns0:RewardsDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="RewardsDeleteOutput">
+        <wsdl:part name="DeleteOut" element="ns0:RewardsDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="RewardsUpdateInput">
+        <wsdl:part name="UpdateIn" element="ns0:RewardsDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="RewardsUpdateOutput">
+        <wsdl:part name="UpdateOut" element="ns0:RewardsDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="RewardsGetAllInput">
+        <wsdl:part name="GetAllIn" element="ns0:RewardsDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="RewardsGetAllOutput">
+        <wsdl:part name="GetAllOut" element="ns0:RewardsDataOutput"/>
+    </wsdl:message>
+    <wsdl:message name="RewardsCreateInput">
+        <wsdl:part name="CreateIn" element="ns0:RewardsDataInput"/>
+    </wsdl:message>
+    <wsdl:message name="RewardsCreateOutput">
+        <wsdl:part name="CreateOut" element="ns0:RewardsDataOutput"/>
+    </wsdl:message>
+</wsdl:definitions>
