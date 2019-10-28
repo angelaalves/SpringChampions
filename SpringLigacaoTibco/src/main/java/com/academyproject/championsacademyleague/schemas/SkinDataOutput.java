@@ -6,7 +6,7 @@
 //
 
 
-package schemas;
+package com.academyproject.championsacademyleague.schemas;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +44,7 @@ import javax.xml.bind.annotation.XmlType;
 public class SkinDataOutput {
 
     @XmlElement(namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Skin/Schema.xsd")
-    protected List<SkinOut> skinOut;
+    protected List<schemas.SkinOut> skinOut;
 
     /**
      * Gets the value of the skinOut property.
@@ -68,9 +68,9 @@ public class SkinDataOutput {
      * 
      * 
      */
-    public List<SkinOut> getSkinOut() {
+    public List<schemas.SkinOut> getSkinOut() {
         if (skinOut == null) {
-            skinOut = new ArrayList<SkinOut>();
+            skinOut = new ArrayList<schemas.SkinOut>();
         }
         return this.skinOut;
     }

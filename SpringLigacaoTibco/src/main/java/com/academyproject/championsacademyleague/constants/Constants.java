@@ -54,4 +54,57 @@ public class Constants {
     public String getVideoSOAPCreate() {
         return videoSOAPCreate;
     }
+
+    public String  closetGetAllURL=  "http://localhost:8882/Service/Closet/Closet.serviceagent/ClosetPortGetAllEndpoint1";
+    public String  closetGetURL=  "http://localhost:8882/Service/Closet/Closet.serviceagent/ClosetPortGetEndpoint1";
+    public String  closetUpdateURL=  "http://localhost:8882/Service/Closet/Closet.serviceagent/ClosetPortUpdateEndpoint1";
+    public String  closetDeleteURL= "http://localhost:8882/Service/Closet/Closet.serviceagent/ClosetPortDeleteEndpoint1" ;
+    public String  closetCreateURL= "http://localhost:8882/Service/Closet/Closet.serviceagent/ClosetPortCreateEndpoint1" ;
+    public String  closetSOAPGetAll = "/Service/Closet/Closet.serviceagent/ClosetPortGetAllEndpoint1/GetAll";
+    public String  closetSOAPGet = "/Service/Closet/Closet.serviceagent/ClosetPortGetEndpoint1/Get";
+    public String  closetSOAPUpdate = "/Service/Closet/Closet.serviceagent/ClosetPortUpdateEndpoint1/Update";
+    public String  closetSOAPDelete = "/Service/Closet/Closet.serviceagent/ClosetPortDeleteEndpoint1/Delete";
+    public String  closetSOAPCreate ="/Service/Closet/Closet.serviceagent/ClosetPortCreateEndpoint1/Create";
+
+    public String getClosetGetAllURL() {
+        return closetGetAllURL;
+    }
+
+    public String getClosetGetURL() {
+        return closetGetURL;
+    }
+
+    public String getClosetUpdateURL() {
+        return closetUpdateURL;
+    }
+
+    public String getClosetDeleteURL() {
+        return closetDeleteURL;
+    }
+
+    public String getClosetCreateURL() {
+        return closetCreateURL;
+    }
+
+    public String getClosetSOAPGetAll() {
+        return closetSOAPGetAll;
+    }
+
+    public String getClosetSOAPGet() {
+        return closetSOAPGet;
+    }
+
+    public String getClosetSOAPUpdate() {
+        return closetSOAPUpdate;
+    }
+
+    public String getClosetSOAPDelete() {
+        return closetSOAPDelete;
+    }
+
+    public String getClosetSOAPCreate() {
+        return closetSOAPCreate;
+    }
+
+
 }

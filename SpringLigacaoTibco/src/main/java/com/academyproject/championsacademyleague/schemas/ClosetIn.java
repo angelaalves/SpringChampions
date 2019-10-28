@@ -46,6 +46,14 @@ public class ClosetIn {
     @XmlAttribute(name = "status")
     protected String status;
 
+    public ClosetIn(){
+    }
+
+    public ClosetIn(String idSkinFK, String idPlayerFK, String status){
+        this.idSkinFK=idSkinFK;
+        this.idPlayerFk=idPlayerFK;
+        this.status=status;
+    }
     /**
      * Gets the value of the idSkinFK property.
      * 
