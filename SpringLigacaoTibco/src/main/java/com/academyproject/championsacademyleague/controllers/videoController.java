@@ -12,7 +12,9 @@ import java.util.List;
 @CrossOrigin
 @RestController
 @RequestMapping("videos")
+
 public class videoController {
+
     @Autowired
     public com.academyproject.championsacademyleague.services.videoService videoService;
 
@@ -26,9 +28,28 @@ public class videoController {
 
         VideoDataInput dataIn= new VideoDataInput();
         VideoInput videoIn= new VideoInput("","","","");
-        List<VideoInput> videoInSchema = dataIn.getVideoInput();
-        videoInSchema.add(videoIn);
+        dataIn.getVideoInput().add(videoIn);
         return videoService.getAll(dataIn);
+
+    }
+
+    @RequestMapping("Create")
+    public List<VideoOutput> getCreateVideos() {
+
+    }
+
+    @RequestMapping("Update")
+    public List<VideoOutput> getUpdateVideos() {
+
+    }
+
+    @RequestMapping("Delete")
+    public List<VideoOutput> getDeleteVideos() {
+
+    }
+
+    @RequestMapping("Get")
+    public List<VideoOutput> getGetVideos() {
 
     }
 

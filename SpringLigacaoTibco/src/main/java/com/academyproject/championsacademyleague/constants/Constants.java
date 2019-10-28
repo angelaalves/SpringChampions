@@ -2,35 +2,56 @@ package com.academyproject.championsacademyleague.constants;
 
 public class Constants {
 
-    public String  getAllURL=  "http://localhost:8882/Service/Video/VideoService.serviceagent/GetAllVideoPortEndpoint1";
-    public String  getURL=  "http://localhost:8882/Service/Video/VideoService.serviceagent/GetVideoPortEndpoint1";
-    public String  updateURL=  "http://localhost:8882/Service/Video/VideoService.serviceagent/VideoPortUpdateEndpoint1";
-    public String  deleteURL= "http://localhost:8882/Service/Video/VideoService.serviceagent/DeleteVideoPortEndpoint1" ;
-    public String  createURL= "http://localhost:8882/Service/Video/VideoService.serviceagent/CreateVideoPortEndpoint1" ;
-    public String  SOAPURL = "http://schemas.xmlsoap.org/soap/http";
+    //Videos:
 
-    public String getGetAllURL() {
-        return getAllURL;
+    public String  videoGetAllURL=  "http://localhost:8882/Service/Video/VideoService.serviceagent/GetAllVideoPortEndpoint1";
+    public String  videoGetURL=  "http://localhost:8882/Service/Video/VideoService.serviceagent/GetVideoPortEndpoint1";
+    public String  videoUpdateURL=  "http://localhost:8882/Service/Video/VideoService.serviceagent/UpdateVideoPortEndpoint1";
+    public String  videoDeleteURL= "http://localhost:8882/Service/Video/VideoService.serviceagent/DeleteVideoPortEndpoint1" ;
+    public String  videoCreateURL= "http://localhost:8882/Service/Video/VideoService.serviceagent/CreateVideoPortEndpoint1" ;
+    public String  videoSOAPGetAll = "/Service/Video/VideoService.serviceagent/GetAllVideoPortEndpoint1/GetAll";
+    public String  videoSOAPGet = "/Service/Video/VideoService.serviceagent/GetVideoPortEndpoint1/Get";
+    public String  videoSOAPUpdate = "/Service/Video/VideoService.serviceagent/UpdateVideoPortEndpoint1/Update";
+    public String  videoSOAPDelete = "/Service/Video/VideoService.serviceagent/DeleteVideoPortEndpoint1/Delete";
+    public String  videoSOAPCreate ="/Service/Video/VideoService.serviceagent/CreateVideoPortEndpoint1/Create";
+
+    public String getVideoGetAllURL() {
+        return videoGetAllURL;
     }
 
-    public String getGetURL() {
-        return getURL;
+    public String getVideoGetURL() {
+        return videoGetURL;
     }
 
-    public String getUpdateURL() {
-        return updateURL;
+    public String getVideoUpdateURL() {
+        return videoUpdateURL;
     }
 
-    public String getDeleteURL() {
-        return deleteURL;
+    public String getVideoDeleteURL() {
+        return videoDeleteURL;
     }
 
-    public String getCreateURL() {
-        return createURL;
+    public String getVideoCreateURL() {
+        return videoCreateURL;
     }
 
-    public String getSOAPURL() {
-        return SOAPURL;
+    public String getVideoSOAPGetAll() {
+        return videoSOAPGetAll;
     }
 
+    public String getVideoSOAPGet() {
+        return videoSOAPGet;
+    }
+
+    public String getVideoSOAPUpdate() {
+        return videoSOAPUpdate;
+    }
+
+    public String getVideoSOAPDelete() {
+        return videoSOAPDelete;
+    }
+
+    public String getVideoSOAPCreate() {
+        return videoSOAPCreate;
+    }
 }

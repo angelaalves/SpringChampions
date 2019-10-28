@@ -12,6 +12,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.ws.client.core.WebServiceTemplate;
 import org.springframework.ws.soap.SoapMessage;
 
+import java.io.DataInput;
+import java.io.DataOutput;
 import java.util.List;
 
 @Service
@@ -51,7 +53,7 @@ public class videoService {
      }**/
     public List<VideoOutput> getAll (VideoDataInput request) {
         template = new WebServiceTemplate(marshaller);
-        template.setDefaultUri(cons.getGetAllURL());
+        template.setDefaultUri(cons.getVideoGetAllURL());
         /** SoapActionCallback soapActionCallback = new SoapActionCallback(cons.getSOAPURL());
          DataOutput response = (DataOutput) getWebServiceTemplate()
          .marshalSendAndReceive(request, soapActionCallback );
@@ -59,68 +61,49 @@ public class videoService {
 
          **/
         VideoDataOutput response = (VideoDataOutput) template
-                .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getGetAllURL()));
+                .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getVideoSOAPGetAll()));
 
         return response.getVideoOutput();
     }
-/**
- public List <VideoOut>  get (DataInput request) {
 
+    public List <VideoOutput> get (VideoDataInput request) {
+        template = new WebServiceTemplate(marshaller);
+        template.setDefaultUri(cons.getVideoGetURL());
 
+        VideoDataOutput response = (VideoDataOutput) template
+            .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getVideoSOAPGet()));
 
- template = new WebServiceTemplate(marshaller);
- template.setDefaultUri(cons.getGetURL());
-
- DataOutput response = (DataOutput) template
- .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getSOAPURL()));
-
-
- return response.getVideoOut();
+        return response.getVideoOutput();
  }
 
- public List <VideoOut>  update (DataInput request) {
+    public List <VideoOutput> update (VideoDataInput request) {
+        template = new WebServiceTemplate(marshaller);
+        template.setDefaultUri(cons.getVideoUpdateURL());
 
+        VideoDataOutput response = (VideoDataOutput) template
+            .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getVideoSOAPUpdate()));
 
-
- template = new WebServiceTemplate(marshaller);
- template.setDefaultUri(cons.getUpdateURL());
-
- DataOutput response = (DataOutput) template
- .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getSOAPURL()));
-
-
- return response.getVideoOut();
+        return response.getVideoOutput();
  }
 
- public List <VideoOut> create (DataInput request) {
+    public List <VideoOutput> create (VideoDataInput request) {
+        template = new WebServiceTemplate(marshaller);
+        template.setDefaultUri(cons.getVideoCreateURL());
 
+        VideoDataOutput response = (VideoDataOutput) template
+            .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getVideoSOAPCreate()));
 
-
- template = new WebServiceTemplate(marshaller);
- template.setDefaultUri(cons.getCreateURL());
-
- DataOutput response = (DataOutput) template
- .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getSOAPURL()));
-
-
- return response.getVideoOut();
+        return response.getVideoOutput();
  }
 
- public List <VideoOut> delete (DataInput request) {
+    public List <VideoOutput> delete (VideoDataInput request) {
+        template = new WebServiceTemplate(marshaller);
+        template.setDefaultUri(cons.getVideoDeleteURL());
 
+        VideoDataOutput response = (VideoDataOutput) template
+            .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getVideoSOAPDelete()));
 
-
- template = new WebServiceTemplate(marshaller);
- template.setDefaultUri(cons.getDeleteURL());
-
- DataOutput response = (DataOutput) template
- .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getSOAPURL()));
-
-
- return response.getVideoOut();
+        return response.getVideoOutput();
  }
-
-
- **/
 
 }

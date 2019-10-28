@@ -52,7 +52,7 @@ public class VideoInput {
     public VideoInput() {
     }
 
-    public VideoInput(String duration, String idVideo, String topic, String videoName) {
+    public VideoInput(String idVideo, String videoName, String duration, String topic) {
         this.duration = duration;
         this.idVideo = idVideo;
         this.topic = topic;
