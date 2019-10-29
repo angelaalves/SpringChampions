@@ -98,6 +98,7 @@ public class Constants {
         return playerSOAPCreate;
     }
 
+
     public String  closetGetAllURL=  "http://localhost:8882/Service/Closet/Closet.serviceagent/ClosetPortGetAllEndpoint1";
     public String  closetGetURL=  "http://localhost:8882/Service/Closet/Closet.serviceagent/ClosetPortGetEndpoint1";
     public String  closetUpdateURL=  "http://localhost:8882/Service/Closet/Closet.serviceagent/ClosetPortUpdateEndpoint1";
@@ -149,5 +150,155 @@ public class Constants {
         return closetSOAPCreate;
     }
 
+
+
+    //Rewards:
+
+    public String  rewardsGetAllURL=  "http://localhost:8882/Service/Rewards/Rewards.serviceagent/RewardsPortGetAllEndpoint1";
+    public String  rewardsGetURL=  "http://localhost:8882/Service/Rewards/Rewards.serviceagent/RewardsPortGetEndpoint1";
+    public String  rewardsUpdateURL=  "http://localhost:8882/Service/Rewards/Rewards.serviceagent/RewardsPortUpdateEndpoint1";
+    public String  rewardsDeleteURL= "http://localhost:8882/Service/Rewards/Rewards.serviceagent/RewardsPortDeleteEndpoint1" ;
+    public String  rewardsCreateURL= "http://localhost:8882/Service/Rewards/Rewards.serviceagent/RewardsPortCreateEndpoint1" ;
+    public String  rewardsSOAPGetAll = "/Service/Rewards/Rewards.serviceagent/RewardsPortGetAllEndpoint1/GetAll";
+    public String  rewardsSOAPGet = "/Service/Rewards/Rewards.serviceagent/RewardsPortGetEndpoint1/Get";
+    public String  rewardsSOAPUpdate = "/Service/Rewards/Rewards.serviceagent/RewardsPortUpdateEndpoint1/Update";
+    public String  rewardsSOAPDelete = "/Service/Rewards/Rewards.serviceagent/RewardsPortDeleteEndpoint1/Delete";
+    public String  rewardsSOAPCreate ="/Service/Rewards/Rewards.serviceagent/RewardsPortCreateEndpoint1/Create";
+
+    public String getRewardsGetAllURL() {
+        return rewardsGetAllURL;
+    }
+
+    public String getRewardsGetURL() {
+        return rewardsGetURL;
+    }
+
+    public String getRewardsUpdateURL() {
+        return rewardsUpdateURL;
+    }
+
+    public String getRewardsDeleteURL() {
+        return rewardsDeleteURL;
+    }
+
+    public String getRewardsCreateURL() {
+        return rewardsCreateURL;
+    }
+
+    public String getRewardsSOAPGetAll() {
+        return rewardsSOAPGetAll;
+    }
+
+    public String getRewardsSOAPGet() {
+        return rewardsSOAPGet;
+    }
+
+    public String getRewardsSOAPUpdate() {
+        return rewardsSOAPUpdate;
+    }
+
+    public String getRewardsSOAPDelete() {
+        return rewardsSOAPDelete;
+    }
+
+    public String getRewardsSOAPCreate() {
+        return rewardsSOAPCreate;
+    }
+
+    //Skin:
+
+    public String  skinGetAllURL=  "http://localhost:8882/Service/Skin/SkinService.serviceagent/SkinPortGetAllEndpoint1";
+    public String  skinGetURL=  "http://localhost:8882/Service/Skin/SkinService.serviceagent/SkinPortGetEndpoint1";
+    public String  skinUpdateURL=  "http://localhost:8882/Service/Skin/SkinService.serviceagent/SkinPortUpdateEndpoint1";
+    public String  skinDeleteURL= "http://localhost:8882/Service/Skin/SkinService.serviceagent/SkinPortDeleteEndpoint1" ;
+    public String  skinCreateURL= "http://localhost:8882/Service/Skin/SkinService.serviceagent/SkinPortCreateEndpoint1" ;
+    public String  skinSOAPGetAll = "/Service/Skin/SkinService.serviceagent/SkinPortGetAllEndpoint1/GetAll";
+    public String  skinSOAPGet = "/Service/Skin/SkinService.serviceagent/SkinPortGetEndpoint1/Get";
+    public String  skinSOAPUpdate = "/Service/Skin/SkinService.serviceagent/SkinPortUpdateEndpoint1/Update";
+    public String  skinSOAPDelete = "/Service/Skin/SkinService.serviceagent/SkinPortDeleteEndpoint1/Delete";
+    public String  skinSOAPCreate ="/Service/Skin/SkinService.serviceagent/SkinPortCreateEndpoint1/Create";
+
+    public String getSkinGetAllURL() {
+        return skinGetAllURL;
+    }
+
+    public String getSkinGetURL() {
+        return skinGetURL;
+    }
+
+    public String getSkinUpdateURL() {
+        return skinUpdateURL;
+    }
+
+    public String getSkinDeleteURL() {
+        return skinDeleteURL;
+    }
+
+    public String getSkinCreateURL() {
+        return skinCreateURL;
+    }
+
+    public String getSkinSOAPGetAll() {
+        return skinSOAPGetAll;
+    }
+
+    public String getSkinSOAPGet() {
+        return skinSOAPGet;
+    }
+
+    public String getSkinSOAPUpdate() {
+        return skinSOAPUpdate;
+    }
+
+    public String getSkinSOAPDelete() {
+        return skinSOAPDelete;
+    }
+
+    public String getSkinSOAPCreate() {
+        return skinSOAPCreate;
+    }
+
+    //Watched Videos:
+
+    public String  watchedVideosGetAllURL=  "http://localhost:8882/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortGetAllEndpoint1";
+    public String  watchedVideosGetURL=  "http://localhost:8882/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortGetEndpoint1";
+    public String  watchedVideosDeleteURL= "http://localhost:8882/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortDeleteEndpoint1" ;
+    public String  watchedVideosCreateURL= "http://localhost:8882/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortCreateEndpoint1" ;
+    public String  watchedVideosSOAPGetAll = "/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortGetAllEndpoint1/GetAll";
+    public String  watchedVideosSOAPGet = "/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortGetEndpoint1/Get";
+    public String  watchedVideosSOAPDelete = "/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortDeleteEndpoint1/Delete";
+    public String  watchedVideosSOAPCreate ="/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortCreateEndpoint1/Create";
+
+    public String getWatchedVideosGetAllURL() {
+        return watchedVideosGetAllURL;
+    }
+
+    public String getWatchedVideosGetURL() {
+        return watchedVideosGetURL;
+    }
+
+    public String getWatchedVideosDeleteURL() {
+        return watchedVideosDeleteURL;
+    }
+
+    public String getWatchedVideosCreateURL() {
+        return watchedVideosCreateURL;
+    }
+
+    public String getWatchedVideosSOAPGetAll() {
+        return watchedVideosSOAPGetAll;
+    }
+
+    public String getWatchedVideosSOAPGet() {
+        return watchedVideosSOAPGet;
+    }
+
+    public String getWatchedVideosSOAPDelete() {
+        return watchedVideosSOAPDelete;
+    }
+
+    public String getWatchedVideosSOAPCreate() {
+        return watchedVideosSOAPCreate;
+    }
 
 }

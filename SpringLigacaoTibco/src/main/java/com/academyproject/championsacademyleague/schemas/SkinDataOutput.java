@@ -44,7 +44,11 @@ import javax.xml.bind.annotation.XmlType;
 public class SkinDataOutput {
 
     @XmlElement(namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Skin/Schema.xsd")
-    protected List<schemas.SkinOut> skinOut;
+    protected List<SkinOut> skinOut;
+
+    public SkinDataOutput() {
+
+    }
 
     /**
      * Gets the value of the skinOut property.
@@ -68,9 +72,9 @@ public class SkinDataOutput {
      * 
      * 
      */
-    public List<schemas.SkinOut> getSkinOut() {
+    public List<SkinOut> getSkinOut() {
         if (skinOut == null) {
-            skinOut = new ArrayList<schemas.SkinOut>();
+            skinOut = new ArrayList<SkinOut>();
         }
         return this.skinOut;
     }

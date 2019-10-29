@@ -58,6 +58,20 @@ public class RewardsIn {
     @XmlAttribute(name = "TimeSpent")
     protected String timeSpent;
 
+    public RewardsIn() {
+
+    }
+
+    public RewardsIn(String idReward, String idPlayerGiverFK, String idPlayerReceiverFK, String champiesGiven, String dateOfReward, String approved, String timeSpent) {
+        this.approved = approved;
+        this.champiesGiven = champiesGiven;
+        this.dateOfReward = dateOfReward;
+        this.idPlayerGiverFK = idPlayerGiverFK;
+        this.idPlayerReceiverFK = idPlayerReceiverFK;
+        this.idReward = idReward;
+        this.timeSpent = timeSpent;
+    }
+
     /**
      * Gets the value of the approved property.
      * 

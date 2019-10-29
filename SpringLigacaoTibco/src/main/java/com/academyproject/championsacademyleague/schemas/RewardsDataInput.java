@@ -44,7 +44,11 @@ import javax.xml.bind.annotation.XmlType;
 public class RewardsDataInput {
 
     @XmlElement(name = "RewardsIn", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Rewards/Schema.xsd")
-    protected List<schemas.RewardsIn> rewardsIn;
+    protected List<RewardsIn> rewardsIn;
+
+    public RewardsDataInput() {
+
+    }
 
     /**
      * Gets the value of the rewardsIn property.
@@ -68,9 +72,9 @@ public class RewardsDataInput {
      * 
      * 
      */
-    public List<schemas.RewardsIn> getRewardsIn() {
+    public List<RewardsIn> getRewardsIn() {
         if (rewardsIn == null) {
-            rewardsIn = new ArrayList<schemas.RewardsIn>();
+            rewardsIn = new ArrayList<RewardsIn>();
         }
         return this.rewardsIn;
     }

@@ -55,6 +55,19 @@ public class SkinIn {
     @XmlAttribute(name = "SkinType")
     protected String skinType;
 
+    public SkinIn() {
+
+    }
+
+    public SkinIn(String idSkin, String skinName, String imagePath, String minXP, String champiesCost, String skinType) {
+        this.champiesCost = champiesCost;
+        this.idSkin = idSkin;
+        this.imagePath = imagePath;
+        this.minXP = minXP;
+        this.skinName = skinName;
+        this.skinType = skinType;
+    }
+
     /**
      * Gets the value of the champiesCost property.
      * 

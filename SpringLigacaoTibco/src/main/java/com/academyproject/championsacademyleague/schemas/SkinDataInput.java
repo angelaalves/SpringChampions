@@ -44,7 +44,11 @@ import javax.xml.bind.annotation.XmlType;
 public class SkinDataInput {
 
     @XmlElement(namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Skin/Schema.xsd")
-    protected List<schemas.SkinIn> skinIn;
+    protected List<SkinIn> skinIn;
+
+    public SkinDataInput() {
+
+    }
 
     /**
      * Gets the value of the skinIn property.
@@ -68,9 +72,9 @@ public class SkinDataInput {
      * 
      * 
      */
-    public List<schemas.SkinIn> getSkinIn() {
+    public List<SkinIn> getSkinIn() {
         if (skinIn == null) {
-            skinIn = new ArrayList<schemas.SkinIn>();
+            skinIn = new ArrayList<SkinIn>();
         }
         return this.skinIn;
     }

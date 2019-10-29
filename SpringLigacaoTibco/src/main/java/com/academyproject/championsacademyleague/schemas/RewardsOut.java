@@ -58,6 +58,19 @@ public class RewardsOut {
     protected String timeSpent;
 
 
+    public RewardsOut() {
+
+    }
+
+    public RewardsOut(String idReward, String idPlayerGiverFK, String idPlayerReceiverFK, String champiesGiven, String dateOfReward, String approved, String timeSpent) {
+        this.approved = approved;
+        this.champiesGiven = champiesGiven;
+        this.dateOfReward = dateOfReward;
+        this.idPlayerGiverFK = idPlayerGiverFK;
+        this.idPlayerReceiverFK = idPlayerReceiverFK;
+        this.idReward = idReward;
+        this.timeSpent = timeSpent;
+    }
 
     /**
      * Gets the value of the approved property.

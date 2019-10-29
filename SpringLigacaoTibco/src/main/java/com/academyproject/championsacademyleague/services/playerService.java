@@ -11,12 +11,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.ws.client.core.WebServiceTemplate;
 import org.springframework.ws.soap.SoapMessage;
 
-import java.io.DataOutput;
 import java.util.List;
 
 @Service
 public class playerService {
-    private static final Logger log = LoggerFactory.getLogger(videoService.class);
+    private static final Logger log = LoggerFactory.getLogger(playerService.class);
 
     Constants cons= new Constants();
 
@@ -37,43 +36,34 @@ public class playerService {
         return response.getPlayerOut();
     }
 
-    public List <VideoOutput> get (VideoDataInput request) {
+    public List <PlayerOut> get (PlayerDataInput request) {
         template = new WebServiceTemplate(marshaller);
-        template.setDefaultUri(cons.getVideoGetURL());
+        template.setDefaultUri(cons.getPlayerGetURL());
 
-        VideoDataOutput response = (VideoDataOutput) template
-                .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getVideoSOAPGet()));
+        PlayerDataOutput response = (PlayerDataOutput) template
+                .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getPlayerSOAPGet()));
 
-        return response.getVideoOutput();
+        return response.getPlayerOut();
     }
 
-    public List <VideoOutput> update (VideoDataInput request) {
+    public List <PlayerOut> update (PlayerDataInput request) {
         template = new WebServiceTemplate(marshaller);
-        template.setDefaultUri(cons.getVideoUpdateURL());
+        template.setDefaultUri(cons.getPlayerUpdateURL());
 
-        VideoDataOutput response = (VideoDataOutput) template
-                .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getVideoSOAPUpdate()));
+        PlayerDataOutput response = (PlayerDataOutput) template
+                .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getPlayerSOAPUpdate()));
 
-        return response.getVideoOutput();
+        return response.getPlayerOut();
     }
 
-    public List <VideoOutput> create (VideoDataInput request) {
+    public List <PlayerOut> create (PlayerDataInput request) {
         template = new WebServiceTemplate(marshaller);
-        template.setDefaultUri(cons.getVideoCreateURL());
+        template.setDefaultUri(cons.getPlayerCreateURL());
 
-        VideoDataOutput response = (VideoDataOutput) template
-                .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getVideoSOAPCreate()));
+        PlayerDataOutput response = (PlayerDataOutput) template
+                .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getPlayerSOAPCreate()));
 
-        return response.getVideoOutput();
+        return response.getPlayerOut();
     }
 
-    public List <VideoOutput> delete (VideoDataInput request) {
-        template = new WebServiceTemplate(marshaller);
-        template.setDefaultUri(cons.getVideoDeleteURL());
-
-        VideoDataOutput response = (VideoDataOutput) template
-                .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getVideoSOAPDelete()));
-
-        return response.getVideoOutput();
-    }
 }
