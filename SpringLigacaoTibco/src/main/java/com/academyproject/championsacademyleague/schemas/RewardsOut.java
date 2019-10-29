@@ -57,6 +57,8 @@ public class RewardsOut {
     @XmlAttribute(name = "TimeSpent")
     protected String timeSpent;
 
+
+
     /**
      * Gets the value of the approved property.
      * 
