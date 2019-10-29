@@ -29,7 +29,7 @@ public class attendedEventsController {
         AttendedEventsDataInput dataIn= new AttendedEventsDataInput();
         AttendedEventsIn attendedEventsIn= new AttendedEventsIn("","");
         dataIn.getAttendedEventsIn().add(attendedEventsIn);
-        return attendedEventsService.getAll(dataIn);
+        return attendedEventsService.get(dataIn);
 
     }
 

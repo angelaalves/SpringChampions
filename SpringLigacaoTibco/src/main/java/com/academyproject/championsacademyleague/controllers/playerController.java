@@ -1,8 +1,8 @@
 package com.academyproject.championsacademyleague.controllers;
 
-
-import com.academyproject.championsacademyleague.schemas.*;
-import com.academyproject.championsacademyleague.services.playerService;
+import com.academyproject.championsacademyleague.schemas.PlayerDataInput;
+import com.academyproject.championsacademyleague.schemas.PlayerIn;
+import com.academyproject.championsacademyleague.schemas.PlayerOut;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
