@@ -331,7 +331,6 @@ public class Constants {
         return watchedVideosSOAPCreate;
     }
 
-
     public String  eventsGetAllURL=  "http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortGetAllEndpoint1";
     public String  eventsGetURL=  "http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortGetEndpoint1";
     public String  eventsUpdateURL=  "http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortUpdateEndpoint1";
