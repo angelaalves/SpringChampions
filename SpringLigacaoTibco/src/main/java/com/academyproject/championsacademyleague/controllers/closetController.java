@@ -24,7 +24,7 @@ public class closetController {
      */
 
     @RequestMapping("getAll")
-    public List<ClosetOut> getAllVideos() {
+    public List<ClosetOut> getAllCloset() {
 
         ClosetDataInput dataIn= new ClosetDataInput();
         ClosetIn closetIn= new ClosetIn("","","");
@@ -34,22 +34,22 @@ public class closetController {
     }
 
     @RequestMapping("Create")
-    public List<ClosetOut> getCreateVideos() {
+    public List<ClosetOut> getCreateCloset() {
 
     }
 
     @RequestMapping("Update")
-    public List<ClosetOut> getUpdateVideos() {
+    public List<ClosetOut> getUpdateCloset() {
 
     }
 
     @RequestMapping("Delete")
-    public List<ClosetOut> getDeleteVideos() {
+    public List<ClosetOut> getDeleteCloset() {
 
     }
 
     @RequestMapping("Get")
-    public List<ClosetOut> getGetVideos() {
+    public List<ClosetOut> getGetCloset() {
 
     }
 }

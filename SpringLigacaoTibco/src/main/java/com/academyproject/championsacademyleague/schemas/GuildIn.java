@@ -55,6 +55,17 @@ public class GuildIn {
     @XmlAttribute(name = "status")
     protected String status;
 
+    public GuildIn(){}
+
+    public GuildIn(String endDate, String guildFlag, String guildName, String idGuild, String startDate, String status){
+        this.endDate=endDate;
+        this.guildFlag=guildFlag;
+        this.guildName=guildName;
+        this.idGuild=idGuild;
+        this.startDate=startDate;
+        this.status=status;
+    }
+
     /**
      * Gets the value of the endDate property.
      * 

@@ -43,6 +43,13 @@ public class GuildEventsIn {
     @XmlAttribute(name = "ID_Guild_FK")
     protected String idGuildFK;
 
+    public GuildEventsIn(){
+    }
+
+    public GuildEventsIn(String idEventsFK, String idGuildFK){
+        this.idEventsFK=idEventsFK;
+        this.idGuildFK=idGuildFK;
+    }
     /**
      * Gets the value of the idEventsFK property.
      * 

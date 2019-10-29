@@ -43,6 +43,14 @@ public class AttendedEventsIn {
     @XmlAttribute(name = "ID_Player_FK")
     protected String idPlayerFK;
 
+    public AttendedEventsIn(){
+    }
+
+    public AttendedEventsIn(String idEventFK, String idPlayerFK){
+        this.idEventFK=idEventFK;
+        this.idPlayerFK=idPlayerFK;
+    }
+
     /**
      * Gets the value of the idEventFK property.
      * 

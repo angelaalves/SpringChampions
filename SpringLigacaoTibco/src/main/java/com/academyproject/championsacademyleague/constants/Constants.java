@@ -150,7 +150,37 @@ public class Constants {
         return closetSOAPCreate;
     }
 
+    public String  attendedEventsGetURL=  "http://localhost:8882/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsPortGetEndpoint1";
+    public String  attendedEventsDeleteURL= "http://localhost:8882/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsPortDeleteEndpoint1" ;
+    public String  attendedEventsCreateURL= "http://localhost:8882/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsCreateEndpoint1" ;
+    public String  attendedEventsSOAPGet = "/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsPortGetEndpoint1/Get";
+    public String  attendedEventsSOAPDelete = "/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsPortDeleteEndpoint1/Delete";
+    public String  attendedEventsSOAPCreate ="/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsCreateEndpoint1/Create";
 
+
+    public String getAttendedEventsGetURL() {
+        return attendedEventsGetURL;
+    }
+
+    public String getAttendedEventsDeleteURL() {
+        return attendedEventsDeleteURL;
+    }
+
+    public String getAttendedEventsCreateURL() {
+        return attendedEventsCreateURL;
+    }
+
+    public String getAttendedEventsSOAPGet() {
+        return attendedEventsSOAPGet;
+    }
+
+    public String getAttendedEventsSOAPDelete() {
+        return attendedEventsSOAPDelete;
+    }
+
+    public String getAttendedEventsSOAPCreate() {
+        return attendedEventsSOAPCreate;
+    }
 
     //Rewards:
 
@@ -301,4 +331,147 @@ public class Constants {
         return watchedVideosSOAPCreate;
     }
 
+
+    public String  eventsGetAllURL=  "http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortGetAllEndpoint1";
+    public String  eventsGetURL=  "http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortGetEndpoint1";
+    public String  eventsUpdateURL=  "http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortUpdateEndpoint1";
+    public String  eventsDeleteURL= "http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortDeleteEndpoint1" ;
+    public String  eventsCreateURL= "http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortCreateEndpoint1" ;
+    public String  eventsSOAPGetAll = "/Service/Events/EventsService.serviceagent/EventsPortGetAllEndpoint1/GetAll";
+    public String  eventsSOAPGet = "/Service/Events/EventsService.serviceagent/EventsPortGetEndpoint1/Get";
+    public String  eventsSOAPUpdate = "/Service/Events/EventsService.serviceagent/EventsPortUpdateEndpoint1/Update";
+    public String  eventsSOAPDelete = "/Service/Events/EventsService.serviceagent/EventsPortDeleteEndpoint1/Delete";
+    public String  eventsSOAPCreate ="/Service/Events/EventsService.serviceagent/EventsPortCreateEndpoint1/Create";
+
+    public String getEventsGetAllURL() {
+        return eventsGetAllURL;
+    }
+
+    public String getEventsGetURL() {
+        return eventsGetURL;
+    }
+
+    public String getEventsUpdateURL() {
+        return eventsUpdateURL;
+    }
+
+    public String getEventsDeleteURL() {
+        return eventsDeleteURL;
+    }
+
+    public String getEventsCreateURL() {
+        return eventsCreateURL;
+    }
+
+    public String getEventsSOAPGetAll() {
+        return eventsSOAPGetAll;
+    }
+
+    public String getEventsSOAPGet() {
+        return eventsSOAPGet;
+    }
+
+    public String getEventsSOAPUpdate() {
+        return eventsSOAPUpdate;
+    }
+
+    public String getEventsSOAPDelete() {
+        return eventsSOAPDelete;
+    }
+
+    public String getEventsSOAPCreate() {
+        return eventsSOAPCreate;
+    }
+
+    public String  guildEventsGetAllURL=  "http://localhost:8882/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortGetAllEndpoint1";
+    public String  guildEventsGetURL=  "http://localhost:8882/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortGetEndpoint1";
+    public String  guildEventsDeleteURL= "http://localhost:8882/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortDeleteEndpoint1" ;
+    public String  guildEventsCreateURL= "http://localhost:8882/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortCreateEndpoint1" ;
+    public String  guildEventsSOAPGetAll = "/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortGetAllEndpoint1/GetAll";
+    public String  guildEventsSOAPGet = "/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortGetEndpoint1/Get";
+    public String  guildEventsSOAPDelete = "/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortDeleteEndpoint1/Delete";
+    public String  guildEventsSOAPCreate ="/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortCreateEndpoint1/Create";
+
+    public String getGuildEventsGetAllURL() {
+        return guildEventsGetAllURL;
+    }
+
+    public String getGuildEventsGetURL() {
+        return guildEventsGetURL;
+    }
+
+    public String getGuildEventsDeleteURL() {
+        return guildEventsDeleteURL;
+    }
+
+    public String getGuildEventsCreateURL() {
+        return guildEventsCreateURL;
+    }
+
+    public String getGuildEventsSOAPGetAll() {
+        return guildEventsSOAPGetAll;
+    }
+
+    public String getGuildEventsSOAPGet() {
+        return guildEventsSOAPGet;
+    }
+
+    public String getGuildEventsSOAPDelete() {
+        return guildEventsSOAPDelete;
+    }
+
+    public String getGuildEventsSOAPCreate() {
+        return guildEventsSOAPCreate;
+    }
+
+    public String  guildGetAllURL=  "http://localhost:8882/Service/Guild/Guild.serviceagent/GuildPortGetAllEndpoint1";
+    public String  guildGetURL=  "http://localhost:8882/Service/Guild/Guild.serviceagent/GuildPortGetEndpoint1";
+    public String  guildUpdateURL=  "http://localhost:8882/Service/Guild/Guild.serviceagent/GuildPortUpdateEndpoint1";
+    public String  guildDeleteURL= "http://localhost:8882/Service/Guild/Guild.serviceagent/GuildPortDeleteEndpoint1" ;
+    public String  guildCreateURL= "http://localhost:8882/Service/Guild/Guild.serviceagent/GuildPortCreateEndpoint1" ;
+    public String  guildSOAPGetAll = "/Service/Guild/Guild.serviceagent/GuildPortGetAllEndpoint1/GetAll";
+    public String  guildSOAPGet = "/Service/Guild/Guild.serviceagent/GuildPortGetEndpoint1/Get";
+    public String  guildSOAPUpdate = "/Service/Guild/Guild.serviceagent/GuildPortUpdateEndpoint1/Update";
+    public String  guildSOAPDelete = "/Service/Guild/Guild.serviceagent/GuildPortDeleteEndpoint1/Delete";
+    public String  guildSOAPCreate ="/Service/Guild/Guild.serviceagent/GuildPortCreateEndpoint1/Create";
+
+    public String getGuildGetAllURL() {
+        return guildGetAllURL;
+    }
+
+    public String getGuildGetURL() {
+        return guildGetURL;
+    }
+
+    public String getGuildUpdateURL() {
+        return guildUpdateURL;
+    }
+
+    public String getGuildDeleteURL() {
+        return guildDeleteURL;
+    }
+
+    public String getGuildCreateURL() {
+        return guildCreateURL;
+    }
+
+    public String getGuildSOAPGetAll() {
+        return guildSOAPGetAll;
+    }
+
+    public String getGuildSOAPGet() {
+        return guildSOAPGet;
+    }
+
+    public String getGuildSOAPUpdate() {
+        return guildSOAPUpdate;
+    }
+
+    public String getGuildSOAPDelete() {
+        return guildSOAPDelete;
+    }
+
+    public String getGuildSOAPCreate() {
+        return guildSOAPCreate;
+    }
 }

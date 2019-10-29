@@ -18,7 +18,7 @@ import java.util.List;
 
 @Service
 public class closetService {
-    private static final Logger log = LoggerFactory.getLogger(videoService.class);
+    private static final Logger log = LoggerFactory.getLogger(closetService.class);
 
     Constants cons= new Constants();
 
@@ -53,7 +53,7 @@ public class closetService {
      }**/
     public List<ClosetOut> getAll (ClosetDataInput request) {
         template = new WebServiceTemplate(marshaller);
-        template.setDefaultUri(cons.getVideoGetAllURL());
+        template.setDefaultUri(cons.getClosetGetAllURL());
         /** SoapActionCallback soapActionCallback = new SoapActionCallback(cons.getSOAPURL());
          DataOutput response = (DataOutput) getWebServiceTemplate()
          .marshalSendAndReceive(request, soapActionCallback );
@@ -61,47 +61,47 @@ public class closetService {
 
          **/
         ClosetDataOutput response = (ClosetDataOutput) template
-                .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getVideoSOAPGetAll()));
+                .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getClosetSOAPGetAll()));
 
         return response.getClosetOut();
     }
 
     public List <ClosetOut> get (ClosetDataInput request) {
         template = new WebServiceTemplate(marshaller);
-        template.setDefaultUri(cons.getVideoGetURL());
+        template.setDefaultUri(cons.getClosetGetURL());
 
         ClosetDataOutput response = (ClosetDataOutput) template
-                .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getVideoSOAPGet()));
+                .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getClosetSOAPGet()));
 
         return response.getClosetOut();
     }
 
     public List <ClosetOut> update (ClosetDataInput request) {
         template = new WebServiceTemplate(marshaller);
-        template.setDefaultUri(cons.getVideoUpdateURL());
+        template.setDefaultUri(cons.getClosetUpdateURL());
 
         ClosetDataOutput response = (ClosetDataOutput) template
-                .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getVideoSOAPUpdate()));
+                .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getClosetSOAPUpdate()));
 
         return response.getClosetOut();
     }
 
     public List <ClosetOut> create (ClosetDataInput request) {
         template = new WebServiceTemplate(marshaller);
-        template.setDefaultUri(cons.getVideoCreateURL());
+        template.setDefaultUri(cons.getClosetCreateURL());
 
         ClosetDataOutput response = (ClosetDataOutput) template
-                .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getVideoSOAPCreate()));
+                .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getClosetSOAPCreate()));
 
         return response.getClosetOut();
     }
 
     public List <ClosetOut> delete (ClosetDataInput request) {
         template = new WebServiceTemplate(marshaller);
-        template.setDefaultUri(cons.getVideoDeleteURL());
+        template.setDefaultUri(cons.getClosetDeleteURL());
 
         ClosetDataOutput response = (ClosetDataOutput) template
-                .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getVideoSOAPDelete()));
+                .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getClosetSOAPDelete()));
 
         return response.getClosetOut();
     }
