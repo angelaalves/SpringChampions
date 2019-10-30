@@ -34,7 +34,10 @@ public class closetController {
 /**
     @RequestMapping("Create")
     public List<ClosetOut> getCreateCloset() {
-
+        ClosetDataInput giving=new ClosetDataInput();
+        ClosetIn closetIn=new ClosetIn("", "", "");
+        giving.getClosetIn().add(closetIn);
+        return closetService.create(giving);
     }
 
     @RequestMapping("Update")
