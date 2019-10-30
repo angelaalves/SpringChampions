@@ -26,39 +26,9 @@ public class videoService {
 
     public WebServiceTemplate template;
 
-
-
-    /**
-     public List<VideoOut> getAll (DataInput request) {
-
-     System.out.println("service  getall  Inicio");
-     System.out.println(request.toString());
-     template = new WebServiceTemplate(marshaller);
-     System.out.println("criei o template \n");
-     template.setDefaultUri(cons.getGetAllURL());
-     System.out.println("já busquei o url \n");
-
-
-
-
-     DataOutput response = (DataOutput) template
-     .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getSOAPURL()));
-
-
-
-     System.out.println("service  getall  Fim");
-
-     return response.getVideoOut();
-     }**/
     public List<VideoOutput> getAll (VideoDataInput request) {
         template = new WebServiceTemplate(marshaller);
         template.setDefaultUri(cons.getVideoGetAllURL());
-        /** SoapActionCallback soapActionCallback = new SoapActionCallback(cons.getSOAPURL());
-         DataOutput response = (DataOutput) getWebServiceTemplate()
-         .marshalSendAndReceive(request, soapActionCallback );
-         String responseString = response.getVideoOut().toString();
-
-         **/
         VideoDataOutput response = (VideoDataOutput) template
                 .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getVideoSOAPGetAll()));
 

@@ -1,7 +1,6 @@
 package com.academyproject.championsacademyleague.controllers;
 
 import com.academyproject.championsacademyleague.schemas.*;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,10 +10,11 @@ import java.util.List;
 
 @CrossOrigin
 @RestController
-@RequestMapping("rewards")
-public class rewardsController {
+@RequestMapping("watchedVideos")
+public class watchedVideosController {
+
     @Autowired
-    public com.academyproject.championsacademyleague.services.rewardsService rewardsService;
+    public com.academyproject.championsacademyleague.services.watchedVideosService watchedVideosService;
 
     /**
      * Connection with angular and the exterior
@@ -22,32 +22,30 @@ public class rewardsController {
      */
 
     @RequestMapping("getAll")
-    public List<RewardsOut> getAllRewards() {
+    public List<WatchedVideosOut> getAllWatchedVideos() {
 
-        RewardsDataInput dataIn= new RewardsDataInput();
-        RewardsIn rewardsIn= new RewardsIn("","","","","","","");
-        dataIn.getRewardsIn().add(rewardsIn);
-        return rewardsService.getAll(dataIn);
+        WatchedVideosDataInput dataIn= new WatchedVideosDataInput();
+        WatchedVideosIn watchedVideosIn= new WatchedVideosIn("","");
+        dataIn.getWatchedVideosIn().add(watchedVideosIn);
+        return watchedVideosService.getAll(dataIn);
 
     }
 
     @RequestMapping("Create")
-    public List<RewardsOut> getCreateRewards() {
-
-    }
-
-    @RequestMapping("Update")
-    public List<RewardsOut> getUpdateRewards() {
+    public List<WatchedVideosOut> getCreateWatchedVideos() {
 
     }
 
     @RequestMapping("Get")
-    public List<RewardsOut> getGetRewards() {
+    public List<WatchedVideosOut> getGetWatchedVideos() {
 
     }
 
     @RequestMapping("Delete")
-    public List<RewardsOut> getDeleteRewards() {
+    public List<WatchedVideosOut> getDeleteWatchedVideos() {
 
     }
+
+
+
 }

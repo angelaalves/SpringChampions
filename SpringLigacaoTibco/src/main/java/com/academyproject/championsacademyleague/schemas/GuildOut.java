@@ -55,6 +55,17 @@ public class GuildOut {
     @XmlAttribute(name = "status")
     protected String status;
 
+    public GuildOut(){}
+
+    public GuildOut(String idGuild, String guildName, String startDate, String endDate, String guildFlag, String status) {
+        this.endDate=endDate;
+        this.guildFlag=guildFlag;
+        this.guildName=guildName;
+        this.idGuild=idGuild;
+        this.startDate=startDate;
+        this.status=status;
+    }
+
     /**
      * Gets the value of the endDate property.
      * 

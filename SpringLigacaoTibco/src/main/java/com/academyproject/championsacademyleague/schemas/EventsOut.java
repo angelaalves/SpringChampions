@@ -49,6 +49,15 @@ public class EventsOut {
     @XmlAttribute(name = "ID_Event")
     protected String idEvent;
 
+    public EventsOut(){}
+
+    public EventsOut(String idEvent, String eventName, String eventDate, String eventType) {
+        this.eventDate=eventDate;
+        this.eventName=eventName;
+        this.eventType=eventType;
+        this.idEvent=idEvent;
+    }
+
     /**
      * Gets the value of the eventDate property.
      * 

@@ -44,7 +44,11 @@ import javax.xml.bind.annotation.XmlType;
 public class WatchedVideosDataOutput {
 
     @XmlElement(name = "WatchedVideosOut", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/WatchedVideos/Schema.xsd")
-    protected List<schemas.WatchedVideosOut> watchedVideosOut;
+    protected List<WatchedVideosOut> watchedVideosOut;
+
+    public WatchedVideosDataOutput() {
+
+    }
 
     /**
      * Gets the value of the watchedVideosOut property.
@@ -68,9 +72,9 @@ public class WatchedVideosDataOutput {
      * 
      * 
      */
-    public List<schemas.WatchedVideosOut> getWatchedVideosOut() {
+    public List<WatchedVideosOut> getWatchedVideosOut() {
         if (watchedVideosOut == null) {
-            watchedVideosOut = new ArrayList<schemas.WatchedVideosOut>();
+            watchedVideosOut = new ArrayList<WatchedVideosOut>();
         }
         return this.watchedVideosOut;
     }

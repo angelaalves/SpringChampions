@@ -23,7 +23,7 @@ public class videoController {
      * @return
      */
 
-    @RequestMapping("getAll")
+    @RequestMapping("GetAll")
     public List<VideoOutput> getAllVideos() {
 
         VideoDataInput dataIn= new VideoDataInput();
@@ -45,6 +45,7 @@ public class videoController {
 
     @RequestMapping("Delete")
     public List<VideoOutput> getDeleteVideos() {
+
 
     }
 

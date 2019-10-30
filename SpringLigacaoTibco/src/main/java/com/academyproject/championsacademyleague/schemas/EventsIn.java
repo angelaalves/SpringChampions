@@ -51,7 +51,7 @@ public class EventsIn {
 
     public EventsIn(){}
 
-    public EventsIn(String eventDate, String eventName, String eventType, String idEvent){
+    public EventsIn(String idEvent, String eventName, String eventDate, String eventType) {
         this.eventDate=eventDate;
         this.eventName=eventName;
         this.eventType=eventType;

@@ -10,8 +10,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.ws.client.core.WebServiceTemplate;
 import org.springframework.ws.soap.SoapMessage;
 
-import java.io.DataInput;
-import java.io.DataOutput;
 import java.util.List;
 
 @Service
@@ -23,32 +21,6 @@ public class attendedEventsService {
     @Autowired
     public Jaxb2Marshaller marshaller;
     public WebServiceTemplate template;
-
-
-
-    /**
-     public List<VideoOut> getAll (DataInput request) {
-
-     System.out.println("service  getall  Inicio");
-     System.out.println(request.toString());
-     template = new WebServiceTemplate(marshaller);
-     System.out.println("criei o template \n");
-     template.setDefaultUri(cons.getGetAllURL());
-     System.out.println("já busquei o url \n");
-
-
-
-
-     DataOutput response = (DataOutput) template
-     .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getSOAPURL()));
-
-
-
-     System.out.println("service  getall  Fim");
-
-     return response.getVideoOut();
-     }**/
-
 
     public List <AttendedEventsOut> get (AttendedEventsDataInput request) {
         template = new WebServiceTemplate(marshaller);

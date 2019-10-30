@@ -46,6 +46,15 @@ public class ClosetOut {
     @XmlAttribute(name = "status")
     protected String status;
 
+    public ClosetOut(){
+    }
+
+    public ClosetOut(String idSkinFK, String idPlayerFK, String status){
+        this.idSkinFK=idSkinFK;
+        this.idPlayerFk=idPlayerFK;
+        this.status=status;
+    }
+
     /**
      * Gets the value of the idSkinFK property.
      * 

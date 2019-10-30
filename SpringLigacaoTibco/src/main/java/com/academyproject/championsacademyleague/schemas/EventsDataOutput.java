@@ -46,6 +46,10 @@ public class EventsDataOutput {
     @XmlElement(name = "EventsOut", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Events/Schema.xsd")
     protected List<EventsOut> eventsOut;
 
+    public EventsDataOutput() {
+
+    }
+
     /**
      * Gets the value of the eventsOut property.
      * 

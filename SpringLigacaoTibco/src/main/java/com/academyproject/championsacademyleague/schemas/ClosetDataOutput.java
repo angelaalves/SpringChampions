@@ -46,6 +46,10 @@ public class ClosetDataOutput {
     @XmlElement(name = "ClosetOut", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Closet/Schema.xsd")
     protected List<ClosetOut> closetOut;
 
+    public ClosetDataOutput() {
+
+    }
+
     /**
      * Gets the value of the closetOut property.
      * 

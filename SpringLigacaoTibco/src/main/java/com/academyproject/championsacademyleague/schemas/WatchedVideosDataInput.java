@@ -44,7 +44,11 @@ import javax.xml.bind.annotation.XmlType;
 public class WatchedVideosDataInput {
 
     @XmlElement(name = "WatchedVideosIn", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/WatchedVideos/Schema.xsd")
-    protected List<schemas.WatchedVideosIn> watchedVideosIn;
+    protected List<WatchedVideosIn> watchedVideosIn;
+
+    public WatchedVideosDataInput() {
+
+    }
 
     /**
      * Gets the value of the watchedVideosIn property.
@@ -68,9 +72,9 @@ public class WatchedVideosDataInput {
      * 
      * 
      */
-    public List<schemas.WatchedVideosIn> getWatchedVideosIn() {
+    public List<WatchedVideosIn> getWatchedVideosIn() {
         if (watchedVideosIn == null) {
-            watchedVideosIn = new ArrayList<schemas.WatchedVideosIn>();
+            watchedVideosIn = new ArrayList<WatchedVideosIn>();
         }
         return this.watchedVideosIn;
     }

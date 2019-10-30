@@ -46,6 +46,10 @@ public class ClosetDataInput {
     @XmlElement(name = "ClosetIn", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Closet/Schema.xsd")
     protected List<ClosetIn> closetIn;
 
+    public ClosetDataInput() {
+
+    }
+
     /**
      * Gets the value of the closetIn property.
      * 
