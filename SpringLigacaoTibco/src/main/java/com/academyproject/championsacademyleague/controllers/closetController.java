@@ -54,7 +54,9 @@ public class closetController {
     @RequestMapping("Get")
     public List<ClosetOut> getGetCloset() {
 
+<<<<<<< Updated upstream
 
     }
     **/
+
 }

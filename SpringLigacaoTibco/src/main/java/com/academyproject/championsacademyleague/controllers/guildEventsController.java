@@ -34,6 +34,8 @@ public class guildEventsController {
     @RequestMapping("Get")
     public List<GuildEventsOut> getGetEvents() {
 
+<<<<<<< Updated upstream
     }
     **/
+
 }

@@ -18,7 +18,6 @@ import java.net.*;
 import java.util.List;
 
 @Service
-
 public class videoService  extends WebServiceGatewaySupport {
 
     private static final Logger log = LoggerFactory.getLogger(videoService.class);

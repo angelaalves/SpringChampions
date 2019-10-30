@@ -49,6 +49,8 @@ public class guildController {
     @RequestMapping("Get")
     public List<GuildOut> getGetGuild() {
 
+
     }
     **/
+
 }

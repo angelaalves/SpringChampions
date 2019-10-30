@@ -14,7 +14,6 @@ import org.springframework.ws.soap.SoapMessage;
 import java.util.List;
 
 @Service
-
 public class watchedVideosService  extends WebServiceGatewaySupport {
 
     private static final Logger log = LoggerFactory.getLogger(watchedVideosService.class);

@@ -20,6 +20,7 @@ public class attendedEventsController {
      */
 /**
 
+
     @RequestMapping("Create")
     public List<AttendedEventsOut> getCreateAttendedEvents() {
 
@@ -34,7 +35,7 @@ public class attendedEventsController {
     public List<AttendedEventsOut> getGetAttendedEvents() {
 
     }
-<<<<<<< Updated upstream
+
 **/
 
 }

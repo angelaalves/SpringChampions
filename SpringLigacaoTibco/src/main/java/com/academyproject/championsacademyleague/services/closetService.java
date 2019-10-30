@@ -24,6 +24,7 @@ public class closetService  extends WebServiceGatewaySupport {
 
     @Autowired
     public Jaxb2Marshaller marshaller;
+
     public WebServiceTemplate template;
 
     public List<ClosetOut> getAll (ClosetDataInput request) {
