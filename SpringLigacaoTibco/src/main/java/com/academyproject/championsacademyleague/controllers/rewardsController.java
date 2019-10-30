@@ -30,7 +30,7 @@ public class rewardsController {
         return rewardsService.getAll(dataIn);
 
     }
-
+/**
     @RequestMapping("Create")
     public List<RewardsOut> getCreateRewards() {
 
@@ -50,4 +50,5 @@ public class rewardsController {
     public List<RewardsOut> getDeleteRewards() {
 
     }
+    **/
 }

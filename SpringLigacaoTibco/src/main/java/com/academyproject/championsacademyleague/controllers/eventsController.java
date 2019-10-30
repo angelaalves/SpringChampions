@@ -32,7 +32,7 @@ public class eventsController {
         return EventsService.getAll(dataIn);
 
     }
-
+/**
     @RequestMapping("Create")
     public List<EventsOut> getCreateEvents() {
 
@@ -52,6 +52,6 @@ public class eventsController {
     public List<EventsOut> getGetEvents() {
 
     }
-
+**/
 }
 

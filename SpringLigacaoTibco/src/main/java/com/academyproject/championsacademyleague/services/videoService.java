@@ -10,13 +10,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.stereotype.Service;
 import org.springframework.ws.client.core.WebServiceTemplate;
+import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 import org.springframework.ws.soap.SoapMessage;
 
-
+import java.io.*;
+import java.net.*;
 import java.util.List;
 
 @Service
-public class videoService {
+public class videoService extends WebServiceGatewaySupport {
     private static final Logger log = LoggerFactory.getLogger(videoService.class);
 
     Constants cons= new Constants();

@@ -31,7 +31,7 @@ public class closetController {
         return closetService.getAll(dataIn);
 
     }
-
+/**
     @RequestMapping("Create")
     public List<ClosetOut> getCreateCloset() {
 
@@ -51,4 +51,5 @@ public class closetController {
     public List<ClosetOut> getGetCloset() {
 
     }
+    **/
 }

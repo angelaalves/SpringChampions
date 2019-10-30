@@ -19,7 +19,7 @@ public class attendedEventsController {
      * Connection with angular and the exterior
      * @return
      */
-
+/**
     @RequestMapping("Create")
     public List<AttendedEventsOut> getCreateAttendedEvents() {
 
@@ -34,5 +34,5 @@ public class attendedEventsController {
     public List<AttendedEventsOut> getGetAttendedEvents() {
 
     }
-
+**/
 }

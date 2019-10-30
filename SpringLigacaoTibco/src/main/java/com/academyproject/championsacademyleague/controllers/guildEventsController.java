@@ -19,7 +19,7 @@ public class guildEventsController {
      * @return
      */
 
-
+/**
     @RequestMapping("Create")
     public List<GuildEventsOut> getCreateEvents() {
 
@@ -35,4 +35,5 @@ public class guildEventsController {
     public List<GuildEventsOut> getGetEvents() {
 
     }
+    **/
 }

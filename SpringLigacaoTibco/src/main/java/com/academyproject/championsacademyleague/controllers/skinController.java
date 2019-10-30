@@ -30,7 +30,7 @@ public class skinController {
         return skinService.getAll(dataIn);
 
     }
-
+/**
     @RequestMapping("Create")
     public List<SkinOut> getCreateSkins() {
 
@@ -51,5 +51,5 @@ public class skinController {
 
     }
 
-
+**/
 }

@@ -10,7 +10,7 @@ public class Config {
     public Jaxb2Marshaller marshaller() {
         System.out.println("Marsheller jaxb2");
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
-        marshaller.setPackagesToScan("com.spring.academy.SpringChampionsAcademy.schemas");
+        marshaller.setPackagesToScan("com.academyproject.championsacademyleague.schemas");
         return marshaller;
     }
 }

@@ -30,7 +30,7 @@ public class playerController {
         return playerService.getAll(dataIn);
 
     }
-
+/**
     @RequestMapping("Create")
     public List<PlayerOut> getCreatePlayers() {
 
@@ -45,5 +45,5 @@ public class playerController {
     public List<PlayerOut> getGetPlayers() {
 
     }
-
+**/
 }

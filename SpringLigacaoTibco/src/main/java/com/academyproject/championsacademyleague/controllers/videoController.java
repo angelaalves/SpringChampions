@@ -5,7 +5,9 @@ import com.academyproject.championsacademyleague.schemas.VideoDataInput;
 import com.academyproject.championsacademyleague.schemas.VideoInput;
 import com.academyproject.championsacademyleague.schemas.VideoOutput;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;;
 
 import java.util.List;
 
@@ -23,7 +25,7 @@ public class videoController {
      * @return
      */
 
-    @RequestMapping("GetAll")
+    @RequestMapping("getAll")
     public List<VideoOutput> getAllVideos() {
 
         VideoDataInput dataIn= new VideoDataInput();
@@ -32,7 +34,7 @@ public class videoController {
         return videoService.getAll(dataIn);
 
     }
-
+/**
     @RequestMapping("Create")
     public List<VideoOutput> getCreateVideos() {
 
@@ -42,16 +44,20 @@ public class videoController {
     public List<VideoOutput> getUpdateVideos() {
 
     }
-
+**/
     @RequestMapping("Delete")
     public List<VideoOutput> getDeleteVideos() {
+        VideoDataInput dataIn = new VideoDataInput();
+        VideoInput deleteID = new VideoInput("","","","");
+        dataIn.getVideoInput().add(deleteID);
+        return videoService.delete(dataIn);
 
 
     }
-
+/**
     @RequestMapping("Get")
     public List<VideoOutput> getGetVideos() {
 
     }
-
+**/
 }

@@ -30,7 +30,7 @@ public class guildController {
         return GuildService.getAll(dataIn);
 
     }
-
+/**
     @RequestMapping("Create")
     public List<GuildOut> getCreateGuild() {
 
@@ -50,4 +50,5 @@ public class guildController {
     public List<GuildOut> getGetGuild() {
 
     }
+    **/
 }

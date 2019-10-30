@@ -30,7 +30,7 @@ public class watchedVideosController {
         return watchedVideosService.getAll(dataIn);
 
     }
-
+/**
     @RequestMapping("Create")
     public List<WatchedVideosOut> getCreateWatchedVideos() {
 
@@ -45,7 +45,7 @@ public class watchedVideosController {
     public List<WatchedVideosOut> getDeleteWatchedVideos() {
 
     }
-
+**/
 
 
 }

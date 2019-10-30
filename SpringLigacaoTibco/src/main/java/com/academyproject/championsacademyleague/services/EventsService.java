@@ -10,12 +10,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.stereotype.Service;
 import org.springframework.ws.client.core.WebServiceTemplate;
+import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 import org.springframework.ws.soap.SoapMessage;
 
 import java.util.List;
 
 @Service
-public class EventsService {
+public class EventsService extends WebServiceGatewaySupport {
     private static final Logger log = LoggerFactory.getLogger(EventsService.class);
 
     Constants cons= new Constants();
