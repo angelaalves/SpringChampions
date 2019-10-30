@@ -14,7 +14,9 @@ import org.springframework.ws.soap.SoapMessage;
 import java.util.List;
 
 @Service
-public class skinService extends WebServiceGatewaySupport {
+
+public class skinService  extends WebServiceGatewaySupport {
+
     private static final Logger log = LoggerFactory.getLogger(skinService.class);
 
     Constants cons= new Constants();

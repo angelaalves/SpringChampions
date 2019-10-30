@@ -17,7 +17,7 @@ public class guildEventsController {
     /**
      * Connection with angular and the exterior
      * @return
-     */
+
 
 /**
     @RequestMapping("Create")

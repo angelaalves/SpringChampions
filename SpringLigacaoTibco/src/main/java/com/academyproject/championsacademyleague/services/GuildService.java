@@ -1,5 +1,6 @@
 package com.academyproject.championsacademyleague.services;
 
+
 import com.academyproject.championsacademyleague.constants.Constants;
 import com.academyproject.championsacademyleague.schemas.*;
 import org.slf4j.Logger;
@@ -14,7 +15,9 @@ import org.springframework.ws.soap.SoapMessage;
 import java.util.List;
 
 @Service
-public class GuildService extends WebServiceGatewaySupport {
+
+public class GuildService  extends WebServiceGatewaySupport {
+
     private static final Logger log = LoggerFactory.getLogger(GuildService.class);
 
     Constants cons= new Constants();

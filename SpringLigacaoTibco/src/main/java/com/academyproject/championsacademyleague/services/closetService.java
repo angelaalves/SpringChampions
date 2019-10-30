@@ -16,14 +16,14 @@ import org.springframework.ws.soap.SoapMessage;
 import java.util.List;
 
 @Service
-public class closetService extends WebServiceGatewaySupport{
+public class closetService  extends WebServiceGatewaySupport {
+
     private static final Logger log = LoggerFactory.getLogger(closetService.class);
 
     Constants cons= new Constants();
 
     @Autowired
     public Jaxb2Marshaller marshaller;
-
     public WebServiceTemplate template;
 
     public List<ClosetOut> getAll (ClosetDataInput request) {

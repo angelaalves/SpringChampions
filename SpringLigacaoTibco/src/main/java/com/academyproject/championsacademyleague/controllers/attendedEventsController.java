@@ -9,17 +9,17 @@ import java.util.List;
 @CrossOrigin
 @RestController
 @RequestMapping("attendedEvents")
-
 public class attendedEventsController {
 
-    @Autowired
-    public com.academyproject.championsacademyleague.services.attendedEventsService attendedEventsService;
+   // @Autowired
+    //public com.academyproject.championsacademyleague.services.attendedEventsService attendedEventsService;
 
     /**
      * Connection with angular and the exterior
      * @return
      */
 /**
+
     @RequestMapping("Create")
     public List<AttendedEventsOut> getCreateAttendedEvents() {
 
@@ -34,5 +34,7 @@ public class attendedEventsController {
     public List<AttendedEventsOut> getGetAttendedEvents() {
 
     }
+<<<<<<< Updated upstream
 **/
+
 }

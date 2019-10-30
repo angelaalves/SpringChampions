@@ -3,6 +3,7 @@ package com.academyproject.championsacademyleague.controllers;
 import com.academyproject.championsacademyleague.schemas.ClosetDataInput;
 import com.academyproject.championsacademyleague.schemas.ClosetIn;
 import com.academyproject.championsacademyleague.schemas.ClosetOut;
+import com.academyproject.championsacademyleague.services.closetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,7 +16,7 @@ import java.util.List;
 public class closetController {
 
     @Autowired
-    public com.academyproject.championsacademyleague.services.closetService closetService;
+    public closetService closetService;
 
     /**
      * Connection with angular and the exterior
@@ -39,7 +40,7 @@ public class closetController {
         giving.getClosetIn().add(closetIn);
         return closetService.create(giving);
     }
-
+/*
     @RequestMapping("Update")
     public List<ClosetOut> getUpdateCloset() {
 
@@ -52,6 +53,7 @@ public class closetController {
 
     @RequestMapping("Get")
     public List<ClosetOut> getGetCloset() {
+
 
     }
     **/
