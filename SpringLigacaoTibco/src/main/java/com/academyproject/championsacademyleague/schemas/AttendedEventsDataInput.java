@@ -46,6 +46,10 @@ public class AttendedEventsDataInput {
     @XmlElement(namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/AttendedEvents/Schema.xsd")
     protected List<AttendedEventsIn> attendedEventsIn;
 
+    public AttendedEventsDataInput() {
+
+    }
+
     /**
      * Gets the value of the attendedEventsIn property.
      * 

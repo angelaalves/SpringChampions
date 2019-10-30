@@ -57,7 +57,7 @@ public class GuildIn {
 
     public GuildIn(){}
 
-    public GuildIn(String endDate, String guildFlag, String guildName, String idGuild, String startDate, String status){
+    public GuildIn(String idGuild, String guildName, String startDate, String endDate, String guildFlag, String status) {
         this.endDate=endDate;
         this.guildFlag=guildFlag;
         this.guildName=guildName;

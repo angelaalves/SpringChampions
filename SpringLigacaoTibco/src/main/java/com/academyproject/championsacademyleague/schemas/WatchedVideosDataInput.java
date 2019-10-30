@@ -46,6 +46,11 @@ public class WatchedVideosDataInput {
     @XmlElement(name = "WatchedVideosIn", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/WatchedVideos/Schema.xsd")
     protected List<WatchedVideosIn> watchedVideosIn;
 
+    public WatchedVideosDataInput() {
+
+    }
+
+
     /**
      * Gets the value of the watchedVideosIn property.
      * 

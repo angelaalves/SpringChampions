@@ -1,7 +1,6 @@
 package com.academyproject.championsacademyleague.controllers;
 
 import com.academyproject.championsacademyleague.schemas.*;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,10 +10,11 @@ import java.util.List;
 
 @CrossOrigin
 @RestController
-@RequestMapping("rewards")
-public class rewardsController {
+@RequestMapping("skins")
+public class skinController {
+
     @Autowired
-    public com.academyproject.championsacademyleague.services.rewardsService rewardsService;
+    public com.academyproject.championsacademyleague.services.skinService skinService;
 
     /**
      * Connection with angular and the exterior
@@ -22,32 +22,34 @@ public class rewardsController {
      */
 
     @RequestMapping("getAll")
-    public List<RewardsOut> getAllRewards() {
+    public List<SkinOut> getAllSkins() {
 
-        RewardsDataInput dataIn= new RewardsDataInput();
-        RewardsIn rewardsIn= new RewardsIn("","","","","","","");
-        dataIn.getRewardsIn().add(rewardsIn);
-        return rewardsService.getAll(dataIn);
+        SkinDataInput dataIn= new SkinDataInput();
+        SkinIn skinIn= new SkinIn("","","","","","");
+        dataIn.getSkinIn().add(skinIn);
+        return skinService.getAll(dataIn);
 
     }
 
     @RequestMapping("Create")
-    public List<RewardsOut> getCreateRewards() {
+    public List<SkinOut> getCreateSkins() {
 
     }
 
     @RequestMapping("Update")
-    public List<RewardsOut> getUpdateRewards() {
+    public List<SkinOut> getUpdateSkins() {
 
     }
 
     @RequestMapping("Get")
-    public List<RewardsOut> getGetRewards() {
+    public List<SkinOut> getGetSkin() {
 
     }
 
     @RequestMapping("Delete")
-    public List<RewardsOut> getDeleteRewards() {
+    public List<SkinOut> getDeleteSkin() {
 
     }
+
+
 }

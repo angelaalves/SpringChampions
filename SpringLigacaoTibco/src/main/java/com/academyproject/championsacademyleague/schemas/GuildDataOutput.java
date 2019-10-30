@@ -46,6 +46,10 @@ public class GuildDataOutput {
     @XmlElement(name = "GuildOut", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Guild/Schema.xsd")
     protected List<GuildOut> guildOut;
 
+    public GuildDataOutput() {
+
+    }
+
     /**
      * Gets the value of the guildOut property.
      * 

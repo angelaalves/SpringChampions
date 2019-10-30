@@ -382,18 +382,14 @@ public class Constants {
         return eventsSOAPCreate;
     }
 
-    public String  guildEventsGetAllURL=  "http://localhost:8882/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortGetAllEndpoint1";
+    //GuildEvents:
+
     public String  guildEventsGetURL=  "http://localhost:8882/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortGetEndpoint1";
     public String  guildEventsDeleteURL= "http://localhost:8882/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortDeleteEndpoint1" ;
     public String  guildEventsCreateURL= "http://localhost:8882/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortCreateEndpoint1" ;
-    public String  guildEventsSOAPGetAll = "/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortGetAllEndpoint1/GetAll";
     public String  guildEventsSOAPGet = "/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortGetEndpoint1/Get";
     public String  guildEventsSOAPDelete = "/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortDeleteEndpoint1/Delete";
     public String  guildEventsSOAPCreate ="/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortCreateEndpoint1/Create";
-
-    public String getGuildEventsGetAllURL() {
-        return guildEventsGetAllURL;
-    }
 
     public String getGuildEventsGetURL() {
         return guildEventsGetURL;
@@ -407,9 +403,6 @@ public class Constants {
         return guildEventsCreateURL;
     }
 
-    public String getGuildEventsSOAPGetAll() {
-        return guildEventsSOAPGetAll;
-    }
 
     public String getGuildEventsSOAPGet() {
         return guildEventsSOAPGet;

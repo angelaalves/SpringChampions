@@ -46,6 +46,10 @@ public class GuildEventsDataInput {
     @XmlElement(name = "GuildEventsIn", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/GuildEvents/Schema.xsd")
     protected List<GuildEventsIn> guildEventsIn;
 
+    public GuildEventsDataInput() {
+
+    }
+
     /**
      * Gets the value of the guildEventsIn property.
      * 

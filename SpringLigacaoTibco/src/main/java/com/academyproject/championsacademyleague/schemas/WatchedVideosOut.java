@@ -43,6 +43,15 @@ public class WatchedVideosOut {
     @XmlAttribute(name = "ID_Video_FK")
     protected String idVideoFK;
 
+    public WatchedVideosOut() {
+
+    }
+
+    public WatchedVideosOut(String idVideoFK, String idPlayerFK) {
+        this.idPlayerFK = idPlayerFK;
+        this.idVideoFK = idVideoFK;
+    }
+
     /**
      * Gets the value of the idPlayerFK property.
      * 

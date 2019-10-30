@@ -46,7 +46,7 @@ public class GuildEventsIn {
     public GuildEventsIn(){
     }
 
-    public GuildEventsIn(String idEventsFK, String idGuildFK){
+    public GuildEventsIn(String idGuildFK, String idEventsFK){
         this.idEventsFK=idEventsFK;
         this.idGuildFK=idGuildFK;
     }
