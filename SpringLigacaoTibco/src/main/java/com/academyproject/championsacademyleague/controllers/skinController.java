@@ -40,6 +40,7 @@ public class skinController {
         return skinService.create(dataIn);
     }
 
+
     @RequestMapping("Create")
     public List<SkinOut> getCreateSkins(String skinName, String imagePath, String minXP, String champiesCost, String skinType) {
         SkinDataInput dataIn=new SkinDataInput();
@@ -74,5 +75,4 @@ public class skinController {
         return skinService.delete(dataIn);
 
     }
-
 }

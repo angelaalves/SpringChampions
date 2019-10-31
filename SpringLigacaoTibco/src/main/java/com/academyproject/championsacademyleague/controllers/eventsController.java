@@ -23,22 +23,14 @@ public class eventsController {
      * @return
      */
 
-   /**
+
     @RequestMapping("getAll")
     public List<EventsOut> getAllEvents() {
-
-<<<<<<< Updated upstream
-
-    }
-
-    @RequestMapping("create")
-    public List<EventsOut> getCreateEvents() {
-
 
     }
 
     @RequestMapping("update")
-=======
+    public List<EventsOut> getUpdateEvents(){
         EventsDataInput dataIn= new EventsDataInput();
         EventsIn eventsIn= new EventsIn("","","","");
         dataIn.getEventsIn().add(eventsIn);
@@ -54,13 +46,6 @@ public class eventsController {
         System.out.println(dataIn.toString());
         return EventsService.create(dataIn);
     }
-/**
-    @RequestMapping("Update")
->>>>>>> Stashed changes
-    public List<EventsOut> getUpdateEvents() {
-
-
-    }
 
     @RequestMapping("delete")
     public List<EventsOut> getDeleteEvent() {
@@ -73,6 +58,6 @@ public class eventsController {
 
 
     }
-**/
+
 }
 
