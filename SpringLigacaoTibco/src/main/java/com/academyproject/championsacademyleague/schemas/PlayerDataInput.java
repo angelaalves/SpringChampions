@@ -10,6 +10,7 @@ package com.academyproject.championsacademyleague.schemas;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -46,34 +47,14 @@ public class PlayerDataInput {
     @XmlElement(name = "PlayerIn", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Player/Schema.xsd")
     protected List<PlayerIn> playerIn;
 
-    public PlayerDataInput(){}
+    public PlayerDataInput() {
+
+    }
 
     public PlayerDataInput(List<PlayerIn> playerIn) {
         this.playerIn = playerIn;
     }
 
-    /**
-     * Gets the value of the playerIn property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the playerIn property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getPlayerIn().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link PlayerIn }
-     * 
-     * 
-     */
     public List<PlayerIn> getPlayerIn() {
         if (playerIn == null) {
             playerIn = new ArrayList<PlayerIn>();

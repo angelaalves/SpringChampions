@@ -8,9 +8,14 @@
 
 package com.academyproject.championsacademyleague.schemas;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.*;
+
 
 
 /**
@@ -23,7 +28,7 @@ import javax.xml.bind.annotation.*;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element ref="{http://www.tibco.com/schemas/TheChampionsAcademyLeague/Schemas/Schema.xsd}videoOutput" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Video/Schema.xsd}videoOutput" maxOccurs="unbounded" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -43,7 +48,6 @@ public class VideoDataOutput {
     protected List<VideoOutput> videoOutput;
 
     public VideoDataOutput(){
-
     }
 
     public VideoDataOutput(List<VideoOutput> videoOutput) {

@@ -8,9 +8,14 @@
 
 package com.academyproject.championsacademyleague.schemas;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.*;
+
 
 
 /**
@@ -23,7 +28,7 @@ import javax.xml.bind.annotation.*;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element ref="{http://www.tibco.com/schemas/TheChampionsAcademyLeague/Schemas/Schema.xsd}videoInput" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://www.tibco.com/schemas/TheChampionsAcademyLeague/Video/Schema.xsd}videoInput" maxOccurs="unbounded" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,10 +41,11 @@ import javax.xml.bind.annotation.*;
 @XmlType(name = "", propOrder = {
     "videoInput"
 })
+
 @XmlRootElement(name = "VideoDataInput", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Video/Schema.xsd")
 public class VideoDataInput {
 
-    @XmlElement(namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Video/Schema.xsd")
+    @XmlElement(name = "VideoInput", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Video/Schema.xsd")
     protected List<VideoInput> videoInput;
 
     public VideoDataInput(){}
@@ -47,29 +53,6 @@ public class VideoDataInput {
     public VideoDataInput(List<VideoInput> videoInput) {
         this.videoInput = videoInput;
     }
-
-    /**
-     * Gets the value of the videoInput property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the videoInput property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getVideoInput().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link VideoInput }
-     * 
-     * 
-     */
     public List<VideoInput> getVideoInput() {
         if (videoInput == null) {
             videoInput = new ArrayList<VideoInput>();

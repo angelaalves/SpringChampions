@@ -38,7 +38,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "rewardsIn"
+        "rewardsIn"
 })
 @XmlRootElement(name = "RewardsDataInput", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Rewards/Schema.xsd")
 public class RewardsDataInput {

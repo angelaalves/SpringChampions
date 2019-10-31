@@ -30,20 +30,35 @@ public class playerController {
         return playerService.getAll(dataIn);
 
     }
-/**
+
     @RequestMapping("Create")
-    public List<PlayerOut> getCreatePlayers() {
+    public List<PlayerOut> getCreatePlayers(String idPlayer, String idGuildFK, String userName, String email, String password, String gender, String userType, String xp, String champiesToGive, String myChampies, String status) {
+
+        PlayerDataInput dataIn= new PlayerDataInput();
+        PlayerIn playerIn= new PlayerIn(idPlayer, idGuildFK, userName, email, password, gender, userType, xp, champiesToGive, myChampies, status);
+        dataIn.getPlayerIn().add(playerIn);
+        return playerService.create(dataIn);
 
     }
 
     @RequestMapping("Update")
-    public List<PlayerOut> getUpdatePlayers() {
+    public List<PlayerOut> getUpdatePlayers(String idPlayer, String idGuildFK, String userName, String email, String password, String gender, String userType, String xp, String champiesToGive, String myChampies, String status) {
+
+        PlayerDataInput dataIn= new PlayerDataInput();
+        PlayerIn playerIn= new PlayerIn(idPlayer, idGuildFK, userName, email, password, gender, userType, xp, champiesToGive, myChampies, status);
+        dataIn.getPlayerIn().add(playerIn);
+        return playerService.update(dataIn);
 
     }
 
     @RequestMapping("Get")
-    public List<PlayerOut> getGetPlayers() {
+    public List<PlayerOut> getGetPlayers(String idPlayer, String idGuildFK, String userName, String email, String password, String gender, String userType, String xp, String champiesToGive, String myChampies, String status) {
+
+        PlayerDataInput dataIn= new PlayerDataInput();
+        PlayerIn playerIn= new PlayerIn(idPlayer, idGuildFK, userName, email, password, gender, userType, xp, champiesToGive, myChampies, status);
+        dataIn.getPlayerIn().add(playerIn);
+        return playerService.get(dataIn);
 
     }
-**/
+
 }
