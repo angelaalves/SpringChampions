@@ -98,6 +98,7 @@ public class Constants {
         return playerSOAPCreate;
     }
 
+//Closet:
 
     public String  closetGetAllURL=  "http://localhost:8882/Service/Closet/Closet.serviceagent/ClosetPortGetAllEndpoint1";
     public String  closetGetURL=  "http://localhost:8882/Service/Closet/Closet.serviceagent/ClosetPortGetEndpoint1";
@@ -149,6 +150,8 @@ public class Constants {
     public String getClosetSOAPCreate() {
         return closetSOAPCreate;
     }
+
+    //AttendedEvents:
 
     public String  attendedEventsGetURL=  "http://localhost:8882/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsPortGetEndpoint1";
     public String  attendedEventsDeleteURL= "http://localhost:8882/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsPortDeleteEndpoint1" ;
@@ -331,6 +334,8 @@ public class Constants {
         return watchedVideosSOAPCreate;
     }
 
+    //Events:
+
     public String  eventsGetAllURL=  "http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortGetAllEndpoint1";
     public String  eventsGetURL=  "http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortGetEndpoint1";
     public String  eventsUpdateURL=  "http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortUpdateEndpoint1";
@@ -415,6 +420,8 @@ public class Constants {
     public String getGuildEventsSOAPCreate() {
         return guildEventsSOAPCreate;
     }
+
+    //Guild:
 
     public String  guildGetAllURL=  "http://localhost:8882/Service/Guild/Guild.serviceagent/GuildPortGetAllEndpoint1";
     public String  guildGetURL=  "http://localhost:8882/Service/Guild/Guild.serviceagent/GuildPortGetEndpoint1";
