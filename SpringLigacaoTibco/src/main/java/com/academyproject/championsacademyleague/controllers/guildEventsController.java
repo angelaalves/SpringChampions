@@ -17,7 +17,7 @@ public class guildEventsController {
     /**
      * Connection with angular and the exterior
      * @return
-     */
+
 
 /**
     @RequestMapping("Create")
@@ -34,6 +34,8 @@ public class guildEventsController {
     @RequestMapping("Get")
     public List<GuildEventsOut> getGetEvents() {
 
+<<<<<<< Updated upstream
     }
     **/
+
 }

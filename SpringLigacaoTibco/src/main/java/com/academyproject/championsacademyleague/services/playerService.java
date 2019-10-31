@@ -15,7 +15,8 @@ import org.springframework.ws.soap.SoapMessage;
 import java.util.List;
 
 @Service
-public class playerService extends WebServiceGatewaySupport {
+public class playerService  extends WebServiceGatewaySupport {
+
     private static final Logger log = LoggerFactory.getLogger(playerService.class);
 
     Constants cons= new Constants();
