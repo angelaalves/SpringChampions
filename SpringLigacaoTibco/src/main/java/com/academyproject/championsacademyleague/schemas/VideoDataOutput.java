@@ -44,7 +44,9 @@ public class VideoDataOutput {
 
     protected List<VideoOutput> videoOutput;
 
-    public VideoDataOutput(){}
+    public VideoDataOutput(){
+
+    }
 
     public VideoDataOutput(List<VideoOutput> videoOutput) {
         this.videoOutput = videoOutput;
