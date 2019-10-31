@@ -37,7 +37,7 @@ public class EventsService  extends WebServiceGatewaySupport {
         return response.getEventsOut();
     }
 
-    public List <EventsOut> get (EventsDataInput request) {
+    public List<EventsOut> get (EventsDataInput request) {
         template = new WebServiceTemplate(marshaller);
         template.setDefaultUri(cons.getEventsGetURL());
 
@@ -47,7 +47,7 @@ public class EventsService  extends WebServiceGatewaySupport {
         return response.getEventsOut();
     }
 
-    public List <EventsOut> update (EventsDataInput request) {
+    public List<EventsOut> update (EventsDataInput request) {
         template = new WebServiceTemplate(marshaller);
         template.setDefaultUri(cons.getEventsUpdateURL());
 
@@ -57,7 +57,7 @@ public class EventsService  extends WebServiceGatewaySupport {
         return response.getEventsOut();
     }
 
-    public List <EventsOut> create (EventsDataInput request) {
+    public List<EventsOut> create (EventsDataInput request) {
         template = new WebServiceTemplate(marshaller);
         template.setDefaultUri(cons.getEventsCreateURL());
 
@@ -67,7 +67,7 @@ public class EventsService  extends WebServiceGatewaySupport {
         return response.getEventsOut();
     }
 
-    public List <EventsOut> delete (EventsDataInput request) {
+    public List<EventsOut> delete (EventsDataInput request) {
         template = new WebServiceTemplate(marshaller);
         template.setDefaultUri(cons.getEventsDeleteURL());
 

@@ -25,7 +25,7 @@ public class skinController {
     public List<SkinOut> getAllSkins() {
 
         SkinDataInput dataIn= new SkinDataInput();
-        SkinIn skinIn= new SkinIn("","","","","","");
+        SkinIn skinIn= new SkinIn("","","", "", "","");
         dataIn.getSkinIn().add(skinIn);
         return skinService.getAll(dataIn);
 
@@ -35,10 +35,17 @@ public class skinController {
     public List<SkinOut> getCreateSkins(String idSkin, String skinName, String imagePath, String minXP, String champiesCost, String skinType) {
 
         SkinDataInput dataIn = new SkinDataInput();
-        SkinIn createIn= new SkinIn(idSkin, skinName, imagePath, minXP, champiesCost, skinType);
+        SkinIn createIn = new SkinIn(idSkin, skinName, imagePath, minXP, champiesCost, skinType);
         dataIn.getSkinIn().add(createIn);
         return skinService.create(dataIn);
+    }
 
+    @RequestMapping("Create")
+    public List<SkinOut> getCreateSkins(String skinName, String imagePath, String minXP, String champiesCost, String skinType) {
+        SkinDataInput dataIn=new SkinDataInput();
+        SkinIn skinIn=new SkinIn("",skinName, imagePath, minXP, champiesCost, skinType);
+        dataIn.getSkinIn().add(skinIn);
+        return skinService.create(dataIn);
     }
 
     @RequestMapping("Update")
@@ -67,6 +74,5 @@ public class skinController {
         return skinService.delete(dataIn);
 
     }
-
 
 }

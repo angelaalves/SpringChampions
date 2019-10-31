@@ -37,7 +37,7 @@ public class skinService  extends WebServiceGatewaySupport {
         return response.getSkinOut();
     }
 
-    public List <SkinOut> get (SkinDataInput request) {
+    public List<SkinOut> get (SkinDataInput request) {
         template = new WebServiceTemplate(marshaller);
         template.setDefaultUri(cons.getSkinGetURL());
 
@@ -47,7 +47,7 @@ public class skinService  extends WebServiceGatewaySupport {
         return response.getSkinOut();
     }
 
-    public List <SkinOut> update (SkinDataInput request) {
+    public List<SkinOut> update (SkinDataInput request) {
         template = new WebServiceTemplate(marshaller);
         template.setDefaultUri(cons.getSkinUpdateURL());
 
@@ -57,7 +57,7 @@ public class skinService  extends WebServiceGatewaySupport {
         return response.getSkinOut();
     }
 
-    public List <SkinOut> create (SkinDataInput request) {
+    public List<SkinOut> create (SkinDataInput request) {
         template = new WebServiceTemplate(marshaller);
         template.setDefaultUri(cons.getSkinCreateURL());
 
@@ -67,7 +67,7 @@ public class skinService  extends WebServiceGatewaySupport {
         return response.getSkinOut();
     }
 
-    public List <SkinOut> delete (SkinDataInput request) {
+    public List<SkinOut> delete (SkinDataInput request) {
         template = new WebServiceTemplate(marshaller);
         template.setDefaultUri(cons.getSkinDeleteURL());
 

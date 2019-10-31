@@ -32,7 +32,7 @@ public class closetController {
         return closetService.getAll(dataIn);
 
     }
-/**
+
     @RequestMapping("Create")
     public List<ClosetOut> getCreateCloset() {
         ClosetDataInput giving=new ClosetDataInput();
@@ -40,7 +40,7 @@ public class closetController {
         giving.getClosetIn().add(closetIn);
         return closetService.create(giving);
     }
-/*
+/**
     @RequestMapping("Update")
     public List<ClosetOut> getUpdateCloset() {
 
@@ -54,7 +54,7 @@ public class closetController {
     @RequestMapping("Get")
     public List<ClosetOut> getGetCloset() {
 
-<<<<<<< Updated upstream
+
 
     }
     **/
