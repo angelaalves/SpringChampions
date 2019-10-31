@@ -8,6 +8,7 @@
 
 package com.academyproject.championsacademyleague.schemas;
 
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -15,7 +16,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
 import java.util.List;
-
 
 
 /**
@@ -42,10 +42,12 @@ import java.util.List;
     "videoInput"
 })
 
+
 @XmlRootElement(name = "VideoDataInput", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Video/Schema.xsd")
 public class VideoDataInput {
 
     @XmlElement(name = "VideoInput", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Video/Schema.xsd")
+
     protected List<VideoInput> videoInput;
 
     public VideoDataInput(){}

@@ -45,6 +45,7 @@ import javax.xml.bind.annotation.XmlType;
 public class PlayerDataInput {
 
     @XmlElement(name = "PlayerIn", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Player/Schema.xsd")
+
     protected List<PlayerIn> playerIn;
 
     public PlayerDataInput() {
