@@ -4,16 +4,16 @@ public class Constants {
 
     //Videos:
 
-    public String  videoGetAllURL=  "http://localhost:8882/Service/Video/VideoService.serviceagent/GetAllVideoPortEndpoint1";
-    public String  videoGetURL=  "http://localhost:8882/Service/Video/VideoService.serviceagent/GetVideoPortEndpoint1";
-    public String  videoUpdateURL=  "http://localhost:8882/Service/Video/VideoService.serviceagent/UpdateVideoPortEndpoint1";
-    public String  videoDeleteURL= "http://localhost:8882/Service/Video/VideoService.serviceagent/DeleteVideoPortEndpoint1" ;
-    public String  videoCreateURL= "http://localhost:8882/Service/Video/VideoService.serviceagent/CreateVideoPortEndpoint1" ;
-    public String  videoSOAPGetAll = "/Service/Video/VideoService.serviceagent/GetAllVideoPortEndpoint1/GetAll";
-    public String  videoSOAPGet = "/Service/Video/VideoService.serviceagent/GetVideoPortEndpoint1/Get";
-    public String  videoSOAPUpdate = "/Service/Video/VideoService.serviceagent/UpdateVideoPortEndpoint1/Update";
-    public String  videoSOAPDelete = "/Service/Video/VideoService.serviceagent/DeleteVideoPortEndpoint1/Delete";
-    public String  videoSOAPCreate ="/Service/Video/VideoService.serviceagent/CreateVideoPortEndpoint1/Create";
+    public String  videoGetAllURL=  "http://localhost:8882/Service/Video/VideoService.serviceagent/VideoPortGetAllEndpoint1";
+    public String  videoGetURL=  "http://localhost:8882/Service/Video/VideoService.serviceagent/VideoPortGetEndpoint1";
+    public String  videoUpdateURL=  "http://localhost:8882/Service/Video/VideoService.serviceagent/VideoPortUpdateEndpoint1";
+    public String  videoDeleteURL= "http://localhost:8882/Service/Video/VideoService.serviceagent/VideoPortDeleteEndpoint1" ;
+    public String  videoCreateURL= "http://localhost:8882/Service/Video/VideoService.serviceagent/VideoPortCreateEndpoint1" ;
+    public String  videoSOAPGetAll = "/Service/Video/VideoService.serviceagent/VideoPortGetAllEndpoint1/GetAll";
+    public String  videoSOAPGet = "/Service/Video/VideoService.serviceagent/VideoPortGetEndpoint1/Get";
+    public String  videoSOAPUpdate = "/Service/Video/VideoService.serviceagent/VideoPortUpdateEndpoint1/Update";
+    public String  videoSOAPDelete = "/Service/Video/VideoService.serviceagent/VideoPortDeleteEndpoint1/Delete";
+    public String  videoSOAPCreate ="/Service/Video/VideoService.serviceagent/VideoPortCreateEndpoint1/Create";
 
     public String getVideoGetAllURL() {
         return videoGetAllURL;
