@@ -23,12 +23,12 @@ public class eventsController {
      * @return
      */
 
-
+/**
     @RequestMapping("getAll")
     public List<EventsOut> getAllEvents() {
 
     }
-
+**/
     @RequestMapping("update")
     public List<EventsOut> getUpdateEvents(){
         EventsDataInput dataIn= new EventsDataInput();
@@ -46,7 +46,7 @@ public class eventsController {
         System.out.println(dataIn.toString());
         return EventsService.create(dataIn);
     }
-
+/**
     @RequestMapping("delete")
     public List<EventsOut> getDeleteEvent() {
 
@@ -58,6 +58,6 @@ public class eventsController {
 
 
     }
-
+**/
 }
 

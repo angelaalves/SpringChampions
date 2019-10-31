@@ -1,6 +1,9 @@
 package com.academyproject.championsacademyleague.controllers;
 
-import com.academyproject.championsacademyleague.schemas.*;
+
+import com.academyproject.championsacademyleague.schemas.SkinDataInput;
+import com.academyproject.championsacademyleague.schemas.SkinIn;
+import com.academyproject.championsacademyleague.schemas.SkinOut;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,21 +26,10 @@ public class skinController {
 
     @RequestMapping("getAll")
     public List<SkinOut> getAllSkins() {
-
         SkinDataInput dataIn= new SkinDataInput();
         SkinIn skinIn= new SkinIn("","","", "", "","");
         dataIn.getSkinIn().add(skinIn);
         return skinService.getAll(dataIn);
-
-    }
-
-    @RequestMapping("Create")
-    public List<SkinOut> getCreateSkins(String idSkin, String skinName, String imagePath, String minXP, String champiesCost, String skinType) {
-
-        SkinDataInput dataIn = new SkinDataInput();
-        SkinIn createIn = new SkinIn(idSkin, skinName, imagePath, minXP, champiesCost, skinType);
-        dataIn.getSkinIn().add(createIn);
-        return skinService.create(dataIn);
     }
 
 
