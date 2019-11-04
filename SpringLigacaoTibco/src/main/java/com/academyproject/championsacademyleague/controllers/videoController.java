@@ -26,37 +26,48 @@ public class videoController {
 
     @RequestMapping("getAll")
     public List<VideoOutput> getAllVideos() {
-
         VideoDataInput dataIn= new VideoDataInput();
         VideoInput videoIn= new VideoInput("","","","");
         dataIn.getVideoInput().add(videoIn);
         return videoService.getAll(dataIn);
 
     }
-/**
+
     @RequestMapping("Create")
-    public List<VideoOutput> getCreateVideos() {
+    public List<VideoOutput> getCreateVideos(String idVideo, String videoName, String duration, String topic) {
+        VideoDataInput dataIn= new VideoDataInput();
+        VideoInput videoIn= new VideoInput(idVideo,videoName,duration,topic);
+        dataIn.getVideoInput().add(videoIn);
+        return videoService.create(dataIn);
 
     }
 
     @RequestMapping("Update")
-    public List<VideoOutput> getUpdateVideos() {
+    public List<VideoOutput> getUpdateVideos(String idVideo, String videoName, String duration, String topic) {
+        VideoDataInput dataIn= new VideoDataInput();
+        VideoInput videoIn= new VideoInput(idVideo,videoName,duration,topic);
+        dataIn.getVideoInput().add(videoIn);
+        return videoService.update(dataIn);
 
     }
-**/
+
     @RequestMapping("Delete")
-    public List<VideoOutput> getDeleteVideos() {
+    public List<VideoOutput> getDeleteVideos(String idVideo) {
         VideoDataInput dataIn = new VideoDataInput();
-        VideoInput deleteID = new VideoInput("","","","");
+        VideoInput deleteID = new VideoInput(idVideo,"","","");
         dataIn.getVideoInput().add(deleteID);
         return videoService.delete(dataIn);
 
 
     }
-/**
+
     @RequestMapping("Get")
-    public List<VideoOutput> getGetVideos() {
+    public List<VideoOutput> getGetVideos(String idVideo, String videoName, String topic) {
+        VideoDataInput dataIn= new VideoDataInput();
+        VideoInput videoIn= new VideoInput(idVideo,videoName, "",topic);
+        dataIn.getVideoInput().add(videoIn);
+        return videoService.get(dataIn);
 
     }
-**/
+
 }
