@@ -15,9 +15,9 @@ import java.util.List;
 
 @Service
 
-public class GuildEventsService  extends WebServiceGatewaySupport {
+public class guildEventsService extends WebServiceGatewaySupport {
 
-    private static final Logger log = LoggerFactory.getLogger(GuildEventsService.class);
+    private static final Logger log = LoggerFactory.getLogger(guildEventsService.class);
 
     Constants cons= new Constants();
 

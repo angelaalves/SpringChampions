@@ -1,6 +1,9 @@
 package com.academyproject.championsacademyleague.controllers;
 
+import com.academyproject.championsacademyleague.schemas.GuildDataInput;
 import com.academyproject.championsacademyleague.schemas.GuildEventsOut;
+import com.academyproject.championsacademyleague.schemas.GuildIn;
+import com.academyproject.championsacademyleague.services.guildEventsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,17 +15,20 @@ import java.util.List;
 public class guildEventsController {
 
     @Autowired
-    public com.academyproject.championsacademyleague.services.GuildEventsService GuildEventsService;
+    public guildEventsService guildEventsService;
 
     /**
      * Connection with angular and the exterior
      * @return
 
+**/
 
-/**
     @RequestMapping("Create")
     public List<GuildEventsOut> getCreateEvents() {
-
+        GuildDataInput dataIn= new GuildDataInput();
+        GuildIn guildIn= new GuildIn("","","","","","");
+        dataIn.getGuildIn().add(guildIn);
+        return GuildService.getAll(dataIn);
     }
 
 
@@ -34,8 +40,8 @@ public class guildEventsController {
     @RequestMapping("Get")
     public List<GuildEventsOut> getGetEvents() {
 
-<<<<<<< Updated upstream
+
     }
-    **/
+
 
 }

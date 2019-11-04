@@ -16,9 +16,9 @@ import org.springframework.ws.soap.SoapMessage;
 import java.util.List;
 
 @Service
-public class EventsService  extends WebServiceGatewaySupport {
+public class eventsService extends WebServiceGatewaySupport {
 
-    private static final Logger log = LoggerFactory.getLogger(EventsService.class);
+    private static final Logger log = LoggerFactory.getLogger(eventsService.class);
 
     Constants cons= new Constants();
 
