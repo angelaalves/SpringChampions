@@ -15,9 +15,9 @@ import org.springframework.ws.soap.SoapMessage;
 import java.util.List;
 
 @Service
-public class GuildService  extends WebServiceGatewaySupport {
+public class guildService extends WebServiceGatewaySupport {
 
-    private static final Logger log = LoggerFactory.getLogger(GuildService.class);
+    private static final Logger log = LoggerFactory.getLogger(guildService.class);
 
     Constants cons= new Constants();
 

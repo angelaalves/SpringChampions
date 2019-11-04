@@ -32,31 +32,36 @@ public class closetController {
         return closetService.getAll(dataIn);
 
     }
-
     @RequestMapping("Create")
-    public List<ClosetOut> getCreateCloset() {
+    public List<ClosetOut> getCreateCloset(String idSkinFK, String idPlayerFk, String status) {
         ClosetDataInput giving=new ClosetDataInput();
-        ClosetIn closetIn=new ClosetIn("", "", "");
+        ClosetIn closetIn=new ClosetIn(idSkinFK, idPlayerFk, status);
         giving.getClosetIn().add(closetIn);
         return closetService.create(giving);
     }
-/**
     @RequestMapping("Update")
-    public List<ClosetOut> getUpdateCloset() {
-
+    public List<ClosetOut> getUpdateCloset(String idSkinFK, String idPlayerFk, String status) {
+        ClosetDataInput giving=new ClosetDataInput();
+        ClosetIn closetIn=new ClosetIn(idSkinFK, idPlayerFk, status);
+        giving.getClosetIn().add(closetIn);
+        return closetService.create(giving);
     }
 
     @RequestMapping("Delete")
-    public List<ClosetOut> getDeleteCloset() {
-
+    public List<ClosetOut> getDeleteCloset(String idSkinFK, String idPlayerFk) {
+        ClosetDataInput giving=new ClosetDataInput();
+        ClosetIn closetIn=new ClosetIn(idSkinFK, idPlayerFk, "");
+        giving.getClosetIn().add(closetIn);
+        return closetService.create(giving);
     }
 
     @RequestMapping("Get")
-    public List<ClosetOut> getGetCloset() {
-
-
-
+    public List<ClosetOut> getGetCloset(String idSkinFK, String idPlayerFk, String status) {
+        ClosetDataInput giving=new ClosetDataInput();
+        ClosetIn closetIn=new ClosetIn(idSkinFK, idPlayerFk, status);
+        giving.getClosetIn().add(closetIn);
+        return closetService.create(giving);
     }
-    **/
+
 
 }

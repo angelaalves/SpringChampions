@@ -31,17 +31,17 @@ public class attendedEventsController {
     }
 
     @RequestMapping("Delete")
-    public List<AttendedEventsOut> getDeleteAttendedEvents() {
+    public List<AttendedEventsOut> getDeleteAttendedEvents(String idEventsFK, String idPlayerFK) {
         AttendedEventsDataInput dataIn= new AttendedEventsDataInput();
-        AttendedEventsIn attendedEventsIn= new AttendedEventsIn("","");
+        AttendedEventsIn attendedEventsIn= new AttendedEventsIn(idEventsFK,idPlayerFK);
         dataIn.getAttendedEventsIn().add(attendedEventsIn);
         return attendedEventsService.delete(dataIn);
     }
 
     @RequestMapping("Get")
-    public List<AttendedEventsOut> getGetAttendedEvents() {
+    public List<AttendedEventsOut> getGetAttendedEvents(String idEventsFK, String idPlayerFK) {
         AttendedEventsDataInput dataIn= new AttendedEventsDataInput();
-        AttendedEventsIn attendedEventsIn= new AttendedEventsIn("","");
+        AttendedEventsIn attendedEventsIn= new AttendedEventsIn(idEventsFK,idPlayerFK);
         dataIn.getAttendedEventsIn().add(attendedEventsIn);
         return attendedEventsService.get(dataIn);
     }
