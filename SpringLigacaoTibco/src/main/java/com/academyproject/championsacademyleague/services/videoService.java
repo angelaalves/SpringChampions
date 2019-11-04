@@ -32,9 +32,10 @@ public class videoService  extends WebServiceGatewaySupport {
     public List<VideoOutput> getAll (VideoDataInput request) {
         template = new WebServiceTemplate(marshaller);
         template.setDefaultUri(cons.getVideoGetAllURL());
+        System.out.println("before video data output");
         VideoDataOutput response = (VideoDataOutput) template
                 .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getVideoSOAPGetAll()));
-
+        System.out.println("after video data output");
         return response.getVideoOutput();
     }
 
@@ -46,7 +47,7 @@ public class videoService  extends WebServiceGatewaySupport {
             .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getVideoSOAPGet()));
 
         return response.getVideoOutput();
- }
+    }
 
     public List <VideoOutput> update (VideoDataInput request) {
         template = new WebServiceTemplate(marshaller);
@@ -56,7 +57,7 @@ public class videoService  extends WebServiceGatewaySupport {
             .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getVideoSOAPUpdate()));
 
         return response.getVideoOutput();
- }
+    }
 
     public List <VideoOutput> create (VideoDataInput request) {
         template = new WebServiceTemplate(marshaller);
@@ -66,7 +67,7 @@ public class videoService  extends WebServiceGatewaySupport {
             .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getVideoSOAPCreate()));
 
         return response.getVideoOutput();
- }
+    }
 
     public List <VideoOutput> delete (VideoDataInput request) {
         template = new WebServiceTemplate(marshaller);
@@ -76,6 +77,5 @@ public class videoService  extends WebServiceGatewaySupport {
             .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getVideoSOAPDelete()));
 
         return response.getVideoOutput();
- }
-
+    }
 }
