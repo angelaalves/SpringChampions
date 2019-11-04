@@ -29,13 +29,13 @@ public class guildEventsController {
         return guildEventsService.create(dataIn);
     }
 
-/**
+
     @RequestMapping("Delete")
     public List<GuildEventsOut> getDeleteGuildEvents(String idGuildFK, String idEventsFK) {
         GuildEventsDataInput dataIn= new GuildEventsDataInput();
         GuildEventsIn eventsIn= new GuildEventsIn(idGuildFK,idEventsFK);
         dataIn.getGuildEventsIn().add(eventsIn);
-        return guildEventsService.create(dataIn);
+        return guildEventsService.delete(dataIn);
     }
 
     @RequestMapping("Get")
@@ -43,8 +43,7 @@ public class guildEventsController {
         GuildEventsDataInput dataIn= new GuildEventsDataInput();
         GuildEventsIn eventsIn= new GuildEventsIn(idGuildFK,idEventsFK);
         dataIn.getGuildEventsIn().add(eventsIn);
-        return guildEventsService.create(dataIn);
+        return guildEventsService.get(dataIn);
     }
 
-**/
 }

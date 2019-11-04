@@ -25,7 +25,6 @@ public class closetController {
 
     @RequestMapping("getAll")
     public List<ClosetOut> getAllCloset() {
-
         ClosetDataInput dataIn= new ClosetDataInput();
         ClosetIn closetIn= new ClosetIn("","","");
         dataIn.getClosetIn().add(closetIn);
