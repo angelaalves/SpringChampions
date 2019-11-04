@@ -341,13 +341,14 @@ public class Constants {
     public String  eventsUpdateURL=  "http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortUpdateEndpoint1";
     public String  eventsDeleteURL= "http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortDeleteEndpoint1" ;
     public String  eventsCreateURL= "http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortCreateEndpoint1" ;
-    public String  eventsSOAPGetAll = "/Service/Events/eventsService.serviceagent/EventsPortGetAllEndpoint1/GetAll";
-    public String  eventsSOAPGet = "/Service/Events/eventsService.serviceagent/EventsPortGetEndpoint1/Get";
-    public String  eventsSOAPUpdate = "/Service/Events/eventsService.serviceagent/EventsPortUpdateEndpoint1/Update";
-    public String  eventsSOAPDelete = "/Service/Events/eventsService.serviceagent/EventsPortDeleteEndpoint1/Delete";
-    public String  eventsSOAPCreate ="/Service/Events/eventsService.serviceagent/EventsPortCreateEndpoint1/Create";
+    public String  eventsSOAPGetAll = "/Service/Events/EventsService.serviceagent/EventsPortGetAllEndpoint1/GetAll";
+    public String  eventsSOAPGet = "/Service/Events/EventsService.serviceagent/EventsPortGetEndpoint1/Get";
+    public String  eventsSOAPUpdate = "/Service/Events/EventsService.serviceagent/EventsPortUpdateEndpoint1/Update";
+    public String  eventsSOAPDelete = "/Service/Events/EventsService.serviceagent/EventsPortDeleteEndpoint1/Delete";
+    public String  eventsSOAPCreate ="/Service/Events/EventsService.serviceagent/EventsPortCreateEndpoint1/Create";
 
     public String getEventsGetAllURL() {
+        System.out.println("\n "+ "\n " + "\n " + "EventGetAllUrl Soap"+"\n " + "\n "+ "\n ");
         return eventsGetAllURL;
     }
 

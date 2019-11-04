@@ -30,7 +30,6 @@ public class eventsService extends WebServiceGatewaySupport {
     public List<EventsOut> getAll (EventsDataInput request) {
         template = new WebServiceTemplate(marshaller);
         template.setDefaultUri(cons.getEventsGetAllURL());
-
         EventsDataOutput response = (EventsDataOutput) template
                 .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getEventsSOAPGetAll()));
 
@@ -40,7 +39,6 @@ public class eventsService extends WebServiceGatewaySupport {
     public List<EventsOut> get (EventsDataInput request) {
         template = new WebServiceTemplate(marshaller);
         template.setDefaultUri(cons.getEventsGetURL());
-
         EventsDataOutput response = (EventsDataOutput) template
                 .marshalSendAndReceive(request, message -> ((SoapMessage)message).setSoapAction(cons.getEventsSOAPGet()));
 

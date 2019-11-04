@@ -67,7 +67,7 @@ public class PlayerOut {
     protected String xp;
     @XmlAttribute(name = "password")
     protected String password;
-    @XmlAttribute(name = "status")
+    @XmlAttribute(name = "Status")
     protected String status;
 
     public PlayerOut(){}

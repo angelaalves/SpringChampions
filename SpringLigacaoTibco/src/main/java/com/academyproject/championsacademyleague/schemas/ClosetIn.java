@@ -41,7 +41,7 @@ public class ClosetIn {
 
     @XmlAttribute(name = "ID_Skin_FK")
     protected String idSkinFK;
-    @XmlAttribute(name = "id_player_fk")
+    @XmlAttribute(name = "ID_Player_FK")
     protected String idPlayerFk;
     @XmlAttribute(name = "status")
     protected String status;
