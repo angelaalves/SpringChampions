@@ -29,7 +29,7 @@ public class guildEventsController {
         return guildEventsService.create(dataIn);
     }
 
-
+/**
     @RequestMapping("Delete")
     public List<GuildEventsOut> getDeleteGuildEvents(String idGuildFK, String idEventsFK) {
         GuildEventsDataInput dataIn= new GuildEventsDataInput();
@@ -46,5 +46,5 @@ public class guildEventsController {
         return guildEventsService.create(dataIn);
     }
 
-
+**/
 }
