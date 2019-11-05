@@ -43,7 +43,6 @@ public class playerController {
 
     @RequestMapping("Update")
     public List<PlayerOut> getUpdatePlayers(String idPlayer, String idGuildFK, String userName, String email, String password, String gender, String userType, String xp, String champiesToGive, String myChampies, String status) {
-
         PlayerDataInput dataIn= new PlayerDataInput();
         PlayerIn playerIn= new PlayerIn(idPlayer, idGuildFK, userName, email, password, gender, userType, xp, champiesToGive, myChampies, status);
         dataIn.getPlayerIn().add(playerIn);
@@ -58,5 +57,9 @@ public class playerController {
         dataIn.getPlayerIn().add(playerIn);
         return playerService.get(dataIn);
     }
-
+/**
+    public int verifyLogin(String email, String password){
+        PlayerDataInput dataIn=new PlayerDataInput();
+    }
+ **/
 }
