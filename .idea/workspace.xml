@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3f65d195-9eaa-4412-b9b2-4507da25a5cf" name="Default Changelist" comment="" />
+    <list default="true" id="3f65d195-9eaa-4412-b9b2-4507da25a5cf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/SpringLigacaoTibco/src/main/java/com/academyproject/championsacademyleague/schemas/EventsDataInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringLigacaoTibco/src/main/java/com/academyproject/championsacademyleague/schemas/EventsDataInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringLigacaoTibco/src/main/java/com/academyproject/championsacademyleague/schemas/EventsDataOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringLigacaoTibco/src/main/java/com/academyproject/championsacademyleague/schemas/EventsDataOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringLigacaoTibco/src/main/java/com/academyproject/championsacademyleague/schemas/EventsIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringLigacaoTibco/src/main/java/com/academyproject/championsacademyleague/schemas/EventsIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringLigacaoTibco/src/main/java/com/academyproject/championsacademyleague/schemas/EventsOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringLigacaoTibco/src/main/java/com/academyproject/championsacademyleague/schemas/EventsOut.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

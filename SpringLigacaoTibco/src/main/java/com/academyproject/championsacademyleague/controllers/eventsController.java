@@ -33,7 +33,7 @@ public class eventsController {
         return eventsService.getAll(dataIn);
     }
 
-    @RequestMapping("update")
+    @RequestMapping("Update")
     public List<EventsOut> getUpdateEvents(String idEvent, String eventName, String eventDate, String eventType){
         EventsDataInput dataIn= new EventsDataInput();
         EventsIn eventsIn= new EventsIn(idEvent,eventName,eventDate,eventType);

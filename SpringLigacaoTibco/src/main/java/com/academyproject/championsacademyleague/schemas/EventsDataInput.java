@@ -43,11 +43,13 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "EventsDataInput", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Events/Schema.xsd")
 public class EventsDataInput {
 
-    @XmlElement(name = "EventsIn", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Events/Schema.xsd")
+    @XmlElement(namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Events/Schema.xsd")
     protected List<EventsIn> eventsIn;
 
 
-    public EventsDataInput(){}
+    public EventsDataInput(){
+
+    }
 
     public EventsDataInput(List<EventsIn> eventsIn) {
         this.eventsIn = eventsIn;
