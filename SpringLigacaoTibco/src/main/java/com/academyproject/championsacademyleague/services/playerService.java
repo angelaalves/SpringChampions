@@ -38,7 +38,7 @@ public class playerService  extends WebServiceGatewaySupport {
         return response.getPlayerOut();
     }
 
-    public List <PlayerOut> get (PlayerDataInput request) {
+    public List<PlayerOut> get (PlayerDataInput request) {
         template = new WebServiceTemplate(marshaller);
         template.setDefaultUri(cons.getPlayerGetURL());
 
