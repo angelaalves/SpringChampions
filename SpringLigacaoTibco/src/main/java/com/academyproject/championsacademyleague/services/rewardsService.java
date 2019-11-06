@@ -1,6 +1,7 @@
 package com.academyproject.championsacademyleague.services;
 
 import com.academyproject.championsacademyleague.constants.Constants;
+import com.academyproject.championsacademyleague.constants.Time;
 import com.academyproject.championsacademyleague.schemas.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +12,8 @@ import org.springframework.ws.client.core.WebServiceTemplate;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 import org.springframework.ws.soap.SoapMessage;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -77,4 +80,25 @@ public class rewardsService  extends WebServiceGatewaySupport {
         return response.getRewardsOut();
     }
 
+    public boolean registry(String playerGiver, String playerReceiver, Time time){
+        playerService playerService=new playerService();
+        List<PlayerOut> playersList=playerService.getAll(new PlayerDataInput());
+        RewardsDataInput registry=new RewardsDataInput();
+        PlayerOut giver=new PlayerOut();
+        PlayerOut receiver=new PlayerOut();
+        int value=new timeValue().timeToValue(time);
+        for (int i=0; i<playersList.size(); i++){
+            if(playersList.get(i).getUserName().equals(playerGiver)){
+                giver = playersList.get(i);
+            }else if(playersList.get(i).getUserName().equals(playerReceiver)){
+                receiver=playersList.get(i);
+            }
+        }
+        if(giver.getIDPlayer()==null || receiver.getIDPlayer()==null)
+            return false;
+        RewardsIn registryInfo=new RewardsIn("", giver.getIDPlayer(), receiver.getIDPlayer(), String.valueOf(value), String.valueOf(new Date()), String.valueOf(1), String.valueOf(time));
+        registry.getRewardsIn().add(registryInfo);
+        create(registry);
+        return true;
+    }
 }

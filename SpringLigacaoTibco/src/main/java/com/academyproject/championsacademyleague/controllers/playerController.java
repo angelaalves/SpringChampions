@@ -1,9 +1,7 @@
 package com.academyproject.championsacademyleague.controllers;
 
 import com.academyproject.championsacademyleague.constants.Time;
-import com.academyproject.championsacademyleague.schemas.PlayerDataInput;
-import com.academyproject.championsacademyleague.schemas.PlayerIn;
-import com.academyproject.championsacademyleague.schemas.PlayerOut;
+import com.academyproject.championsacademyleague.schemas.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +14,8 @@ public class playerController {
 
     @Autowired
     public com.academyproject.championsacademyleague.services.playerService playerService;
+    @Autowired
+    public com.academyproject.championsacademyleague.services.rewardsService rewardService;
 
     /**
      * Connection with angular and the exterior
@@ -70,6 +70,7 @@ public class playerController {
 
     @RequestMapping("Reward")
     public boolean rewardPlayer(String playerGiver, String playerReceiver, String time){
+        rewardService.registry(playerGiver, playerReceiver, Time.valueOf(time));
         return playerService.giveChampies(playerGiver, playerReceiver, Time.valueOf(time));
     }
 }
