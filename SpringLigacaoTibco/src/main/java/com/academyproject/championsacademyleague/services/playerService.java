@@ -74,20 +74,7 @@ public class playerService  extends WebServiceGatewaySupport {
         List<PlayerOut> playersList=getAll(new PlayerDataInput());
         PlayerOut giver=new PlayerOut();
         PlayerOut receiver=new PlayerOut();
-        int value=0;
-        switch(time){
-            case SHORT:
-                value=1;
-                break;
-            case MEDIUM:
-                value=2;
-                break;
-            case LONG:
-                value=3;
-                break;
-            default:
-                break;
-        }
+        int value=new timeValue().timeToValue(time);
         for(int i=0; i< playersList.size(); i++){
             if(playersList.get(i).getUserName().equals(playerGiver)){
                 giver=playersList.get(i);
@@ -106,7 +93,7 @@ public class playerService  extends WebServiceGatewaySupport {
             inputGiver.getPlayerIn().add(giverIn);
             update(inputGiver);
 
-            receiver.setChampiesToGive(String.valueOf(Integer.valueOf(receiver.getChampiesToGive())+value));
+            receiver.setMyChampies(String.valueOf(Integer.valueOf(receiver.getMyChampies())+value));
             PlayerIn receiverIn=new PlayerIn(receiver.getIDPlayer(), receiver.getIDGuildFK(), receiver.getUserName(), receiver.getEmail(), receiver.getPassword(), receiver.getGender(), receiver.getUserType(), receiver.getXP(), receiver.getChampiesToGive(), receiver.getMyChampies(), receiver.getStatus());
             PlayerDataInput inputReceiver=new PlayerDataInput();
             inputReceiver.getPlayerIn().add(receiverIn);
