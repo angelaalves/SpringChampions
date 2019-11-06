@@ -3,7 +3,7 @@ package com.academyproject.championsacademyleague.services;
 import com.academyproject.championsacademyleague.constants.Constants;
 import com.academyproject.championsacademyleague.schemas.VideoDataInput;
 import com.academyproject.championsacademyleague.schemas.VideoDataOutput;
-import com.academyproject.championsacademyleague.schemas.VideoOutput;
+import com.academyproject.championsacademyleague.schemas.videoOutput;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +13,6 @@ import org.springframework.ws.client.core.WebServiceTemplate;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 import org.springframework.ws.soap.SoapMessage;
 
-import java.io.*;
-import java.net.*;
 import java.util.List;
 
 @Service
@@ -29,7 +27,7 @@ public class videoService  extends WebServiceGatewaySupport {
 
     public WebServiceTemplate template;
 
-    public List<VideoOutput> getAll (VideoDataInput request) {
+    public List<videoOutput> getAll (VideoDataInput request) {
         template = new WebServiceTemplate(marshaller);
         template.setDefaultUri(cons.getVideoGetAllURL());
         System.out.println("before video data output");
@@ -39,7 +37,7 @@ public class videoService  extends WebServiceGatewaySupport {
         return response.getVideoOutput();
     }
 
-    public List <VideoOutput> get (VideoDataInput request) {
+    public List <videoOutput> get (VideoDataInput request) {
         template = new WebServiceTemplate(marshaller);
         template.setDefaultUri(cons.getVideoGetURL());
 
@@ -49,7 +47,7 @@ public class videoService  extends WebServiceGatewaySupport {
         return response.getVideoOutput();
     }
 
-    public List <VideoOutput> update (VideoDataInput request) {
+    public List <videoOutput> update (VideoDataInput request) {
         template = new WebServiceTemplate(marshaller);
         template.setDefaultUri(cons.getVideoUpdateURL());
 
@@ -59,7 +57,7 @@ public class videoService  extends WebServiceGatewaySupport {
         return response.getVideoOutput();
     }
 
-    public List <VideoOutput> create (VideoDataInput request) {
+    public List <videoOutput> create (VideoDataInput request) {
         template = new WebServiceTemplate(marshaller);
         template.setDefaultUri(cons.getVideoCreateURL());
 
@@ -69,7 +67,7 @@ public class videoService  extends WebServiceGatewaySupport {
         return response.getVideoOutput();
     }
 
-    public List <VideoOutput> delete (VideoDataInput request) {
+    public List <videoOutput> delete (VideoDataInput request) {
         template = new WebServiceTemplate(marshaller);
         template.setDefaultUri(cons.getVideoDeleteURL());
 

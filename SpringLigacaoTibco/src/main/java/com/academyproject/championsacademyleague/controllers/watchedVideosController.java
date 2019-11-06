@@ -23,29 +23,38 @@ public class watchedVideosController {
 
     @RequestMapping("getAll")
     public List<WatchedVideosOut> getAllWatchedVideos() {
-
         WatchedVideosDataInput dataIn= new WatchedVideosDataInput();
         WatchedVideosIn watchedVideosIn= new WatchedVideosIn("","");
         dataIn.getWatchedVideosIn().add(watchedVideosIn);
         return watchedVideosService.getAll(dataIn);
 
     }
-/**
+
     @RequestMapping("Create")
-    public List<WatchedVideosOut> getCreateWatchedVideos() {
+    public List<WatchedVideosOut> getCreateWatchedVideos(String idVideoFK, String idPlayerFK) {
+        WatchedVideosDataInput dataIn= new WatchedVideosDataInput();
+        WatchedVideosIn watchedVideosIn= new WatchedVideosIn(idVideoFK,idPlayerFK);
+        dataIn.getWatchedVideosIn().add(watchedVideosIn);
+        return watchedVideosService.create(dataIn);
 
     }
 
     @RequestMapping("Get")
-    public List<WatchedVideosOut> getGetWatchedVideos() {
+    public List<WatchedVideosOut> getGetWatchedVideos(String idVideoFK, String idPlayerFK) {
+        WatchedVideosDataInput dataIn= new WatchedVideosDataInput();
+        WatchedVideosIn watchedVideosIn= new WatchedVideosIn(idVideoFK,idPlayerFK);
+        dataIn.getWatchedVideosIn().add(watchedVideosIn);
+        return watchedVideosService.get(dataIn);
 
     }
 
     @RequestMapping("Delete")
-    public List<WatchedVideosOut> getDeleteWatchedVideos() {
+    public List<WatchedVideosOut> getDeleteWatchedVideos(String idVideoFK, String idPlayerFK) {
+        WatchedVideosDataInput dataIn= new WatchedVideosDataInput();
+        WatchedVideosIn watchedVideosIn= new WatchedVideosIn(idVideoFK,idPlayerFK);
+        dataIn.getWatchedVideosIn().add(watchedVideosIn);
+        return watchedVideosService.delete(dataIn);
 
     }
-<<<<<<< Updated upstream
-**/
 
 }

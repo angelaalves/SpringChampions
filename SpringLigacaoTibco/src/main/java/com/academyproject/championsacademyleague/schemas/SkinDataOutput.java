@@ -77,6 +77,7 @@ public class SkinDataOutput {
     public List<SkinOut> getSkinOut() {
         if (skinOut == null) {
             skinOut = new ArrayList<SkinOut>();
+            System.out.println("the skinOut is null");
         }
         return this.skinOut;
     }

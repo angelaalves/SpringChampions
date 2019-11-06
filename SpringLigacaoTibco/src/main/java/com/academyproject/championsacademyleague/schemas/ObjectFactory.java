@@ -301,11 +301,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link VideoInput }
+     * Create an instance of {@link videoInput }
      * 
      */
-    public VideoInput createVideoInput() {
-        return new VideoInput();
+    public videoInput createVideoInput() {
+        return new videoInput();
     }
 
     /**
@@ -317,11 +317,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link VideoOutput }
+     * Create an instance of {@link videoOutput }
      * 
      */
-    public VideoOutput createVideoOutput() {
-        return new VideoOutput();
+    public videoOutput createVideoOutput() {
+        return new videoOutput();
     }
 
     /**

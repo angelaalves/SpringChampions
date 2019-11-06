@@ -1,8 +1,6 @@
 package com.academyproject.championsacademyleague.controllers;
 
-import com.academyproject.championsacademyleague.schemas.GuildDataInput;
-import com.academyproject.championsacademyleague.schemas.GuildEventsOut;
-import com.academyproject.championsacademyleague.schemas.GuildIn;
+import com.academyproject.championsacademyleague.schemas.*;
 import com.academyproject.championsacademyleague.services.guildEventsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,24 +22,28 @@ public class guildEventsController {
 **/
 
     @RequestMapping("Create")
-    public List<GuildEventsOut> getCreateEvents() {
-        GuildDataInput dataIn= new GuildDataInput();
-        GuildIn guildIn= new GuildIn("","","","","","");
-        dataIn.getGuildIn().add(guildIn);
-        return GuildService.getAll(dataIn);
+    public List<GuildEventsOut> getCreateGuildEvents(String idGuildFK, String idEventsFK) {
+        GuildEventsDataInput dataIn= new GuildEventsDataInput();
+        GuildEventsIn eventsIn= new GuildEventsIn(idGuildFK,idEventsFK);
+        dataIn.getGuildEventsIn().add(eventsIn);
+        return guildEventsService.create(dataIn);
     }
 
 
     @RequestMapping("Delete")
-    public List<GuildEventsOut> getDeleteEvent() {
-
+    public List<GuildEventsOut> getDeleteGuildEvents(String idGuildFK, String idEventsFK) {
+        GuildEventsDataInput dataIn= new GuildEventsDataInput();
+        GuildEventsIn eventsIn= new GuildEventsIn(idGuildFK,idEventsFK);
+        dataIn.getGuildEventsIn().add(eventsIn);
+        return guildEventsService.delete(dataIn);
     }
 
     @RequestMapping("Get")
-    public List<GuildEventsOut> getGetEvents() {
-
-
+    public List<GuildEventsOut> getGetGuildEvents(String idGuildFK, String idEventsFK) {
+        GuildEventsDataInput dataIn= new GuildEventsDataInput();
+        GuildEventsIn eventsIn= new GuildEventsIn(idGuildFK,idEventsFK);
+        dataIn.getGuildEventsIn().add(eventsIn);
+        return guildEventsService.get(dataIn);
     }
-
 
 }

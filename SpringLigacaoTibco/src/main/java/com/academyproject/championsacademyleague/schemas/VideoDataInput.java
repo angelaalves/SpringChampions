@@ -44,18 +44,18 @@ import java.util.List;
 @XmlRootElement(name = "VideoDataInput", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Video/Schema.xsd")
 public class VideoDataInput {
 
-    @XmlElement(name = "VideoInput", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Video/Schema.xsd")
+    @XmlElement(namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Video/Schema.xsd")
 
-    protected List<VideoInput> videoInput;
+    protected List<videoInput> videoInput;
 
     public VideoDataInput(){}
 
-    public VideoDataInput(List<VideoInput> videoInput) {
+    public VideoDataInput(List<videoInput> videoInput) {
         this.videoInput = videoInput;
     }
-    public List<VideoInput> getVideoInput() {
+    public List<videoInput> getVideoInput() {
         if (videoInput == null) {
-            videoInput = new ArrayList<VideoInput>();
+            videoInput = new ArrayList<videoInput>();
         }
         return this.videoInput;
     }

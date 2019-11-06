@@ -2,8 +2,8 @@ package com.academyproject.championsacademyleague.controllers;
 
 
 import com.academyproject.championsacademyleague.schemas.VideoDataInput;
-import com.academyproject.championsacademyleague.schemas.VideoInput;
-import com.academyproject.championsacademyleague.schemas.VideoOutput;
+import com.academyproject.championsacademyleague.schemas.videoInput;
+import com.academyproject.championsacademyleague.schemas.videoOutput;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,38 +25,49 @@ public class videoController {
      */
 
     @RequestMapping("getAll")
-    public List<VideoOutput> getAllVideos() {
-
+    public List<videoOutput> getAllVideos() {
         VideoDataInput dataIn= new VideoDataInput();
-        VideoInput videoIn= new VideoInput("","","","");
+        videoInput videoIn= new videoInput("","","","");
         dataIn.getVideoInput().add(videoIn);
         return videoService.getAll(dataIn);
 
     }
-/**
+
     @RequestMapping("Create")
-    public List<VideoOutput> getCreateVideos() {
+    public List<videoOutput> getCreateVideos(String idVideo, String videoName, String duration, String topic) {
+        VideoDataInput dataIn= new VideoDataInput();
+        videoInput videoIn= new videoInput(idVideo,videoName,duration,topic);
+        dataIn.getVideoInput().add(videoIn);
+        return videoService.create(dataIn);
 
     }
 
     @RequestMapping("Update")
-    public List<VideoOutput> getUpdateVideos() {
+    public List<videoOutput> getUpdateVideos(String idVideo, String videoName, String duration, String topic) {
+        VideoDataInput dataIn= new VideoDataInput();
+        videoInput videoIn= new videoInput(idVideo,videoName,duration,topic);
+        dataIn.getVideoInput().add(videoIn);
+        return videoService.update(dataIn);
 
     }
-**/
+
     @RequestMapping("Delete")
-    public List<VideoOutput> getDeleteVideos() {
+    public List<videoOutput> getDeleteVideos(String idVideo) {
         VideoDataInput dataIn = new VideoDataInput();
-        VideoInput deleteID = new VideoInput("","","","");
+        videoInput deleteID = new videoInput(idVideo,"","","");
         dataIn.getVideoInput().add(deleteID);
         return videoService.delete(dataIn);
 
 
     }
-/**
+
     @RequestMapping("Get")
-    public List<VideoOutput> getGetVideos() {
+    public List<videoOutput> getGetVideos(String idVideo, String videoName, String topic) {
+        VideoDataInput dataIn= new VideoDataInput();
+        videoInput videoIn= new videoInput(idVideo,videoName, "",topic);
+        dataIn.getVideoInput().add(videoIn);
+        return videoService.get(dataIn);
 
     }
-**/
+
 }

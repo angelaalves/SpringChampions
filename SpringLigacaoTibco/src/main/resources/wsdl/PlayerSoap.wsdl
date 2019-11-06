@@ -29,7 +29,7 @@
                     <xs:attribute name="UserType" type="xs:string"/>
                     <xs:attribute name="XP" type="xs:string"/>
                     <xs:attribute name="password" type="xs:string"/>
-                    <xs:attribute name="status" type="xs:string"/>
+                    <xs:attribute name="Status" type="xs:string"/>
                 </xs:complexType>
             </xs:element>
             <xs:element name="PlayerOut">
@@ -44,7 +44,7 @@
                     <xs:attribute name="UserType" type="xs:string"/>
                     <xs:attribute name="XP" type="xs:string"/>
                     <xs:attribute name="password" type="xs:string"/>
-                    <xs:attribute name="status" type="xs:string"/>
+                    <xs:attribute name="Status" type="xs:string"/>
                 </xs:complexType>
             </xs:element>
         </xs:schema>

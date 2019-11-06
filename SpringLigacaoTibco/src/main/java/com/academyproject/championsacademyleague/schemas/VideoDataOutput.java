@@ -49,12 +49,12 @@ import java.util.List;
 public class VideoDataOutput {
 
     @XmlElement(namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Video/Schema.xsd")
-    protected List<VideoOutput> videoOutput;
+    protected List<videoOutput> videoOutput;
 
     public VideoDataOutput(){
     }
 
-    public VideoDataOutput(List<VideoOutput> videoOutput) {
+    public VideoDataOutput(List<videoOutput> videoOutput) {
         this.videoOutput = videoOutput;
     }
 
@@ -76,13 +76,14 @@ public class VideoDataOutput {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link VideoOutput }
+     * {@link videoOutput }
      * 
      * 
      */
-    public List<VideoOutput> getVideoOutput() {
+    public List<videoOutput> getVideoOutput() {
         if (videoOutput == null) {
-            videoOutput = new ArrayList<VideoOutput>();
+            videoOutput = new ArrayList<videoOutput>();
+            System.out.println("the videoOutput is empty");
         }
         return this.videoOutput;
     }

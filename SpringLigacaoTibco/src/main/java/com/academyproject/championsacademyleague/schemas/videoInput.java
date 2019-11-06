@@ -37,8 +37,8 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
-@XmlRootElement(name = "videoOutput", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Video/Schema.xsd")
-public class VideoOutput {
+@XmlRootElement(name = "videoInput", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Video/Schema.xsd")
+public class videoInput {
 
     @XmlAttribute(name = "Duration")
     protected String duration;
@@ -49,9 +49,10 @@ public class VideoOutput {
     @XmlAttribute(name = "VideoName")
     protected String videoName;
 
-    public VideoOutput(){}
+    public videoInput(){
+    }
 
-    public VideoOutput(String idVideo, String videoName, String duration, String topic){
+    public videoInput(String idVideo, String videoName, String duration, String topic){
         this.idVideo=idVideo;
         this.videoName=videoName;
         this.duration=duration;

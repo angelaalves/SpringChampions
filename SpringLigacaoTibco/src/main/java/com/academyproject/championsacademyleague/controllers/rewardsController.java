@@ -23,34 +23,44 @@ public class rewardsController {
 
     @RequestMapping("getAll")
     public List<RewardsOut> getAllRewards() {
-
         RewardsDataInput dataIn= new RewardsDataInput();
         RewardsIn rewardsIn= new RewardsIn("","","","","","","");
         dataIn.getRewardsIn().add(rewardsIn);
         return rewardsService.getAll(dataIn);
 
     }
-/**
-    @RequestMapping("Create")
-    public List<RewardsOut> getCreateRewards() {
 
+    @RequestMapping("Create")
+    public List<RewardsOut> getCreateRewards(String idReward, String idPlayerGiverFK, String idPlayerReceiverFK, String champiesGiven, String dateOfReward, String approved, String timeSpent) {
+        RewardsDataInput dataIn= new RewardsDataInput();
+        RewardsIn rewardsIn= new RewardsIn(idReward,idPlayerGiverFK,idPlayerReceiverFK,champiesGiven,dateOfReward, approved,timeSpent);
+        dataIn.getRewardsIn().add(rewardsIn);
+        return rewardsService.create(dataIn);
     }
 
     @RequestMapping("Update")
-    public List<RewardsOut> getUpdateRewards() {
-
+    public List<RewardsOut> getUpdateRewards(String idReward, String idPlayerGiverFK, String idPlayerReceiverFK, String champiesGiven, String dateOfReward, String approved, String timeSpent) {
+        RewardsDataInput dataIn= new RewardsDataInput();
+        RewardsIn rewardsIn= new RewardsIn(idReward,idPlayerGiverFK,idPlayerReceiverFK,champiesGiven,dateOfReward, approved,timeSpent);
+        dataIn.getRewardsIn().add(rewardsIn);
+        return rewardsService.update(dataIn);
     }
 
     @RequestMapping("Get")
-    public List<RewardsOut> getGetRewards() {
-
+    public List<RewardsOut> getGetRewards(String idReward, String idPlayerGiverFK, String idPlayerReceiverFK, String champiesGiven, String dateOfReward, String approved, String timeSpent) {
+        RewardsDataInput dataIn= new RewardsDataInput();
+        RewardsIn rewardsIn= new RewardsIn(idReward,idPlayerGiverFK,idPlayerReceiverFK,champiesGiven,dateOfReward, approved,timeSpent);
+        dataIn.getRewardsIn().add(rewardsIn);
+        return rewardsService.get(dataIn);
     }
 
     @RequestMapping("Delete")
-    public List<RewardsOut> getDeleteRewards() {
-
-
+    public List<RewardsOut> getDeleteRewards(String idReward) {
+        RewardsDataInput dataIn= new RewardsDataInput();
+        RewardsIn rewardsIn= new RewardsIn(idReward,"","","","","","");
+        dataIn.getRewardsIn().add(rewardsIn);
+        return rewardsService.delete(dataIn);
     }
-    **/
+
 
 }
