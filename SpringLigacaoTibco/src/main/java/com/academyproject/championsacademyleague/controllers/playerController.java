@@ -60,7 +60,7 @@ public class playerController {
     }
     @RequestMapping("Login")
     public PlayerOut verifyLogin(String email, String password){
-        List<PlayerOut> info=getGetPlayers("", "", email, email, "", "", "", "", "", "", "");
+        List<PlayerOut> info=getGetPlayers("", "", "", email, "", "", "", "", "", "", "");
         if(info.get(0).getPassword().equals(password)){
             System.out.println(info.get(0).getPassword());
             return info.get(0);
