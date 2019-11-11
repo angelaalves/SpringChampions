@@ -12,6 +12,7 @@ import org.springframework.ws.client.core.WebServiceTemplate;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 import org.springframework.ws.soap.SoapMessage;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -25,7 +26,8 @@ public class rewardsService  extends WebServiceGatewaySupport {
 
     @Autowired
     public Jaxb2Marshaller marshaller;
-
+    @Autowired
+    public com.academyproject.championsacademyleague.services.playerService playerService;
     public WebServiceTemplate template;
 
 
@@ -81,7 +83,6 @@ public class rewardsService  extends WebServiceGatewaySupport {
     }
 
     public boolean registry(String playerGiver, String playerReceiver, Time time){
-        playerService playerService=new playerService();
         List<PlayerOut> playersList=playerService.getAll(new PlayerDataInput());
         RewardsDataInput registry=new RewardsDataInput();
         PlayerOut giver=new PlayerOut();
@@ -96,7 +97,7 @@ public class rewardsService  extends WebServiceGatewaySupport {
         }
         if(giver.getIDPlayer()==null || receiver.getIDPlayer()==null)
             return false;
-        RewardsIn registryInfo=new RewardsIn("", giver.getIDPlayer(), receiver.getIDPlayer(), String.valueOf(value), String.valueOf(new Date()), String.valueOf(1), String.valueOf(time));
+        RewardsIn registryInfo=new RewardsIn("", giver.getIDPlayer(), receiver.getIDPlayer(), String.valueOf(value), new dateFormatter().DateFormatter(), String.valueOf(1), String.valueOf(time));
         registry.getRewardsIn().add(registryInfo);
         create(registry);
         return true;
