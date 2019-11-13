@@ -97,8 +97,7 @@ public class rewardsService  extends WebServiceGatewaySupport {
         }
         if(giver.getIDPlayer()==null || receiver.getIDPlayer()==null)
             return false;
-        SimpleDateFormat formatter=new SimpleDateFormat("yyyy-MM-dd");
-        RewardsIn registryInfo=new RewardsIn("", giver.getIDPlayer(), receiver.getIDPlayer(), String.valueOf(value), String.valueOf(formatter.format(new Date())), String.valueOf(1), String.valueOf(time));
+        RewardsIn registryInfo=new RewardsIn("", giver.getIDPlayer(), receiver.getIDPlayer(), String.valueOf(value), new dateFormatter().DateFormatter(), String.valueOf(1), String.valueOf(time));
         registry.getRewardsIn().add(registryInfo);
         create(registry);
         return true;

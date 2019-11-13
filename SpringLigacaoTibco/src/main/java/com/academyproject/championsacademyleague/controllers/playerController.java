@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("players")
 public class playerController {
@@ -59,8 +59,8 @@ public class playerController {
         return playerService.get(dataIn);
     }
     @RequestMapping("Login")
-    public PlayerOut verifyLogin(String email, String password){
-        List<PlayerOut> info=getGetPlayers("", "", "", email, "", "", "", "", "", "", "");
+    public PlayerOut verifyLogin(@RequestParam String email, @RequestParam String password){
+        List<PlayerOut> info=getGetPlayers("", "", email, email, "", "", "", "", "", "", "");
         if(info.get(0).getPassword().equals(password)){
             System.out.println(info.get(0).getPassword());
             return info.get(0);
