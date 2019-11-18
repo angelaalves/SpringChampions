@@ -41,19 +41,19 @@
     </wsdl:types>
     <wsdl:service name="SkinService">
         <wsdl:port name="SkinPortUpdateEndpoint1" binding="tns:SkinPortUpdateEndpoint1Binding">
-            <soap:address location="http://localhost:8888/Service/Skin/SkinService.serviceagent/SkinPortUpdateEndpoint1"/>
+            <soap:address location="http://localhost:8882/Service/Skin/SkinService.serviceagent/SkinPortUpdateEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="SkinPortGetEndpoint1" binding="tns:SkinPortGetEndpoint1Binding">
-            <soap:address location="http://localhost:8888/Service/Skin/SkinService.serviceagent/SkinPortGetEndpoint1"/>
+            <soap:address location="http://localhost:8882/Service/Skin/SkinService.serviceagent/SkinPortGetEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="SkinPortCreateEndpoint1" binding="tns:SkinPortCreateEndpoint1Binding">
-            <soap:address location="http://localhost:8888/Service/Skin/SkinService.serviceagent/SkinPortCreateEndpoint1"/>
+            <soap:address location="http://localhost:8882/Service/Skin/SkinService.serviceagent/SkinPortCreateEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="SkinPortGetAllEndpoint1" binding="tns:SkinPortGetAllEndpoint1Binding">
-            <soap:address location="http://localhost:8888/Service/Skin/SkinService.serviceagent/SkinPortGetAllEndpoint1"/>
+            <soap:address location="http://localhost:8882/Service/Skin/SkinService.serviceagent/SkinPortGetAllEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="SkinPortDeleteEndpoint1" binding="tns:SkinPortDeleteEndpoint1Binding">
-            <soap:address location="http://localhost:8888/Service/Skin/SkinService.serviceagent/SkinPortDeleteEndpoint1"/>
+            <soap:address location="http://localhost:8882/Service/Skin/SkinService.serviceagent/SkinPortDeleteEndpoint1"/>
         </wsdl:port>
     </wsdl:service>
     <wsdl:portType name="SkinPortUpdate">
