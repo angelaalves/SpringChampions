@@ -1,4 +1,4 @@
-package com.academyproject.championsacademyleague.services;
+package com.academyproject.championsacademyleague.Others;
 
 import com.academyproject.championsacademyleague.constants.Time;
 import org.springframework.stereotype.Component;
