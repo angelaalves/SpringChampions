@@ -1,5 +1,6 @@
 package com.academyproject.championsacademyleague.services;
 
+import com.academyproject.championsacademyleague.Configurations.timeValue;
 import com.academyproject.championsacademyleague.constants.Constants;
 
 import com.academyproject.championsacademyleague.constants.Time;
@@ -13,7 +14,6 @@ import org.springframework.ws.client.core.WebServiceTemplate;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 import org.springframework.ws.soap.SoapMessage;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -70,6 +70,13 @@ public class playerService  extends WebServiceGatewaySupport {
         return response.getPlayerOut();
     }
 
+    public PlayerOut getPlayerByEmail(String email){
+        PlayerIn playerIn=new PlayerIn("", "", "", email, "", "", "", "", "", "", "");
+        PlayerDataInput request=new PlayerDataInput();
+        request.getPlayerIn().add(playerIn);
+        List<PlayerOut> player=get(request);
+        return player.get(0);
+    }
     public boolean giveChampies(String playerGiver, String playerReceiver, Time time){
         List<PlayerOut> playersList=getAll(new PlayerDataInput());
         PlayerOut giver=new PlayerOut();

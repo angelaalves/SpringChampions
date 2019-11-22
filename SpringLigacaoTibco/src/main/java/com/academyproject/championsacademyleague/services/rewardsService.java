@@ -1,5 +1,6 @@
 package com.academyproject.championsacademyleague.services;
 
+import com.academyproject.championsacademyleague.Configurations.timeValue;
 import com.academyproject.championsacademyleague.constants.Constants;
 import com.academyproject.championsacademyleague.constants.Time;
 import com.academyproject.championsacademyleague.schemas.*;
@@ -12,9 +13,6 @@ import org.springframework.ws.client.core.WebServiceTemplate;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 import org.springframework.ws.soap.SoapMessage;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Service

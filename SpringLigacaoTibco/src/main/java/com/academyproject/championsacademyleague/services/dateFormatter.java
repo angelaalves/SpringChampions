@@ -12,4 +12,8 @@ public class dateFormatter {
         SimpleDateFormat formatter=new SimpleDateFormat("yyyy-MM-dd");
         return String.valueOf(formatter.format(new Date()));
     }
+    public String timeFormatter(){
+        SimpleDateFormat formatter=new SimpleDateFormat("hh:mm");
+        return String.valueOf(formatter.format(new Date()));
+    }
 }
