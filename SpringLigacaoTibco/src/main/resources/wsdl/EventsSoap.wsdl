@@ -37,19 +37,19 @@
     </wsdl:types>
     <wsdl:service name="EventsService">
         <wsdl:port name="EventsPortUpdateEndpoint1" binding="tns:EventsPortUpdateEndpoint1Binding">
-            <soap:address location="http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortUpdateEndpoint1"/>
+            <soap:address location="http://192.168.0.84:8882/Service/Events/EventsService.serviceagent/EventsPortUpdateEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="EventsPortDeleteEndpoint1" binding="tns:EventsPortDeleteEndpoint1Binding">
-            <soap:address location="http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortDeleteEndpoint1"/>
+            <soap:address location="http://192.168.0.84:8882/Service/Events/EventsService.serviceagent/EventsPortDeleteEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="EventsPortGetEndpoint1" binding="tns:EventsPortGetEndpoint1Binding">
-            <soap:address location="http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortGetEndpoint1"/>
+            <soap:address location="http://192.168.0.84:8882/Service/Events/EventsService.serviceagent/EventsPortGetEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="EventsPortCreateEndpoint1" binding="tns:EventsPortCreateEndpoint1Binding">
-            <soap:address location="http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortCreateEndpoint1"/>
+            <soap:address location="http://192.168.0.84:8882/Service/Events/EventsService.serviceagent/EventsPortCreateEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="EventsPortGetAllEndpoint1" binding="tns:EventsPortGetAllEndpoint1Binding">
-            <soap:address location="http://localhost:8882/Service/Events/EventsService.serviceagent/EventsPortGetAllEndpoint1"/>
+            <soap:address location="http://192.168.0.84:8882/Service/Events/EventsService.serviceagent/EventsPortGetAllEndpoint1"/>
         </wsdl:port>
     </wsdl:service>
     <wsdl:portType name="EventsPortUpdate">
