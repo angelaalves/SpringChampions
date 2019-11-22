@@ -20,7 +20,7 @@ public class PlayerDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         PlayerOut playerOut=this.playerService.getPlayerByEmail(s);
-        PlayerType player= new PlayerType(playerOut.getUserName(), playerOut.getPassword(), Status.valueOf(playerOut.getStatus()), "", "");
+        PlayerType player= new PlayerType(playerOut.getUserName(), playerOut.getPassword(), Status.valueOf(playerOut.getStatus()), playerOut.getUserType(), "");
         UserPrincipal playerPrincipal= new UserPrincipal(player);
         return playerPrincipal;
 

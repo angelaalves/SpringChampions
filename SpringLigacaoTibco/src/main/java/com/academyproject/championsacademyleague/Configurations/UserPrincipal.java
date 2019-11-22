@@ -65,5 +65,8 @@ import java.util.List;
         public boolean isEnabled() {
             return this.player.getActive() == Status.Active;
         }
+        public PlayerType getPlayer(){
+            return player;
+        }
     }
 
