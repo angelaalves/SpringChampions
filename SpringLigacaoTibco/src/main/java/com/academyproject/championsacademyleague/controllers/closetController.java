@@ -67,14 +67,14 @@ public class closetController {
     }
 
     @RequestMapping("activeSkins")
-    public List<SkinOut> getActiveSkin(String idPlayerFK){
-        List<SkinOut> activeSkinResults=new ArrayList<SkinOut>();
-        SkinOut hair=null;
-        SkinOut skinColor=null;
-        SkinOut top=null;
-        SkinOut bottom=null;
-        SkinOut shoes=null;
-        SkinOut others=null;
+    public List<String> getActiveSkin(String idPlayerFK){
+        List<String> activeSkinResults=new ArrayList<String>();
+        String hair=null;
+        String skinColor=null;
+        String top=null;
+        String bottom=null;
+        String shoes=null;
+        String others=null;
         ClosetDataInput search=new ClosetDataInput();
         ClosetIn closetIn=new ClosetIn("", idPlayerFK, "");
         search.getClosetIn().add(closetIn);
@@ -86,22 +86,22 @@ public class closetController {
                 searchSkin.getSkinIn().add(skinIn);
                 switch (skinService.get(searchSkin).get(0).getSkinType()){
                     case "Hair":
-                        hair=skinService.get(searchSkin).get(0);
+                        hair=skinService.get(searchSkin).get(0).getImagePath();
                         break;
                     case "SkinColor":
-                        skinColor=skinService.get(searchSkin).get(0);
+                        skinColor=skinService.get(searchSkin).get(0).getImagePath();
                         break;
                     case "Top":
-                        top=skinService.get(searchSkin).get(0);
+                        top=skinService.get(searchSkin).get(0).getImagePath();
                         break;
                     case "Bottom":
-                        bottom=skinService.get(searchSkin).get(0);
+                        bottom=skinService.get(searchSkin).get(0).getImagePath();
                         break;
                     case "Shoes":
-                        shoes=skinService.get(searchSkin).get(0);
+                        shoes=skinService.get(searchSkin).get(0).getImagePath();
                         break;
                     case "Others":
-                        others=skinService.get(searchSkin).get(0);
+                        others=skinService.get(searchSkin).get(0).getImagePath();
                         break;
                     default:
                         break;
