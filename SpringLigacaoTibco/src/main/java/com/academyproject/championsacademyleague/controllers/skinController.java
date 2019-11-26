@@ -51,7 +51,7 @@ public class skinController {
     }
 
     @RequestMapping("Get")
-    public List<SkinOut> getGetSkin(String idSkin, String skinName, String imagePath, String minXP, String champiesCost, String skinType) {
+        public List<SkinOut> getGetSkin(String idSkin, String skinName, String imagePath, String minXP, String champiesCost, String skinType) {
         SkinDataInput dataIn = new SkinDataInput();
         SkinIn getIn= new SkinIn(idSkin, skinName, imagePath, minXP, champiesCost, skinType);
         dataIn.getSkinIn().add(getIn);

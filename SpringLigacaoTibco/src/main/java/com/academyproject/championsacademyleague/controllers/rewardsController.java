@@ -31,7 +31,7 @@ public class rewardsController {
     }
 
     @RequestMapping("Create")
-    public List<RewardsOut> getCreateRewards(String idReward, String idPlayerGiverFK, String idPlayerReceiverFK, String champiesGiven, String dateOfReward, String approved, String timeSpent) {
+        public List<RewardsOut> getCreateRewards(String idReward, String idPlayerGiverFK, String idPlayerReceiverFK, String champiesGiven, String dateOfReward, String approved, String timeSpent) {
         RewardsDataInput dataIn= new RewardsDataInput();
         RewardsIn rewardsIn= new RewardsIn(idReward,idPlayerGiverFK,idPlayerReceiverFK,champiesGiven,dateOfReward, approved,timeSpent);
         dataIn.getRewardsIn().add(rewardsIn);
@@ -61,6 +61,4 @@ public class rewardsController {
         dataIn.getRewardsIn().add(rewardsIn);
         return rewardsService.delete(dataIn);
     }
-
-
 }

@@ -53,6 +53,7 @@ public class VideoDataInput {
     public VideoDataInput(List<videoInput> videoInput) {
         this.videoInput = videoInput;
     }
+
     public List<videoInput> getVideoInput() {
         if (videoInput == null) {
             videoInput = new ArrayList<videoInput>();

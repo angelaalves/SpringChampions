@@ -10,7 +10,7 @@ public class NotificationService {
     public SessionService sessionService;
 
     public void send(NotificationView notification){
-        String to=notification.getTo();
+        String to = notification.getTo();
         //colocar na base de dados e enviar ao player destinatario
 
 
