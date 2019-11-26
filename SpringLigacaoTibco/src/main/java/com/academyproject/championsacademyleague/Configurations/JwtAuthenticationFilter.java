@@ -1,6 +1,7 @@
 package com.academyproject.championsacademyleague.Configurations;
 
 import com.academyproject.championsacademyleague.constants.LoginViewModel;
+import com.academyproject.championsacademyleague.controllers.NotificationController;
 import com.academyproject.championsacademyleague.services.SessionService;
 import com.academyproject.championsacademyleague.services.dateFormatter;
 import com.auth0.jwt.JWT;
@@ -77,5 +78,6 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         out.flush();
         sessionService.loggingPlayer(principal.getPlayer());
         System.out.println(sessionService.getPlayersLogged());
+        //new NotificationController().warn();
     }
 }

@@ -1,10 +1,12 @@
 package com.academyproject.championsacademyleague.controllers;
 
+import com.academyproject.championsacademyleague.constants.Time;
 import com.academyproject.championsacademyleague.schemas.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -15,6 +17,8 @@ import java.util.List;
 public class rewardsController {
     @Autowired
     public com.academyproject.championsacademyleague.services.rewardsService rewardsService;
+    @Autowired
+    public com.academyproject.championsacademyleague.services.playerService playerService;
 
     /**
      * Connection with angular and the exterior
@@ -61,4 +65,25 @@ public class rewardsController {
         dataIn.getRewardsIn().add(rewardsIn);
         return rewardsService.delete(dataIn);
     }
+    @RequestMapping("Approve")
+    public boolean approveReward(@RequestParam String idReward){
+        List<RewardsOut> rewards=getGetRewards(idReward, "", "", "", "", "", "");
+        String[] date=rewards.get(0).getDateOfReward().split("T");
+        getUpdateRewards(rewards.get(0).getIDReward(), rewards.get(0).getIDPlayerGiverFK(), rewards.get(0).getIDPlayerReceiverFK(), rewards.get(0).getChampiesGiven(), date[0], "1", rewards.get(0).getTimeSpent());
+        PlayerOut playerGiver=playerService.getPlayerByID(rewards.get(0).getIDPlayerGiverFK());
+        PlayerOut playerReceiver=playerService.getPlayerByID(rewards.get(0).getIDPlayerReceiverFK());
+        return playerService.giveChampies(playerGiver.getUserName(), playerReceiver.getUserName(), Time.valueOf(rewards.get(0).getTimeSpent()));
+    }
+
+    @RequestMapping("Disapprove")
+    public void disapprove(String idReward){
+        List<RewardsOut> rewards=getGetRewards(idReward, "", "", "", "", "", "");
+        getUpdateRewards(rewards.get(0).getIDReward(), rewards.get(0).getIDPlayerGiverFK(), rewards.get(0).getIDPlayerReceiverFK(), "0", rewards.get(0).getDateOfReward(), "0", rewards.get(0).getTimeSpent());
+    }
+
+    @RequestMapping("Reward")
+    public boolean rewardPlayer(String playerGiver, String playerReceiver, String time){
+        return rewardsService.registry(playerGiver, playerReceiver, Time.valueOf(time));
+    }
+
 }

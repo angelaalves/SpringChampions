@@ -95,7 +95,7 @@ public class rewardsService  extends WebServiceGatewaySupport {
         }
         if(giver.getIDPlayer()==null || receiver.getIDPlayer()==null)
             return false;
-        RewardsIn registryInfo=new RewardsIn("", giver.getIDPlayer(), receiver.getIDPlayer(), String.valueOf(value), new dateFormatter().DateFormatter(), String.valueOf(1), String.valueOf(time));
+        RewardsIn registryInfo=new RewardsIn("", giver.getIDPlayer(), receiver.getIDPlayer(), String.valueOf(value), new dateFormatter().DateFormatter(), String.valueOf(0), String.valueOf(time));
         registry.getRewardsIn().add(registryInfo);
         create(registry);
         return true;

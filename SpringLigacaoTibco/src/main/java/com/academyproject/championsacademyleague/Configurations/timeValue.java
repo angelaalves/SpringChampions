@@ -9,13 +9,13 @@ public class timeValue {
     public int timeToValue(Time time){
         int value=0;
         switch(time){
-            case SHORT:
+            case Short:
                 value=1;
                 break;
-            case MEDIUM:
+            case Medium:
                 value=2;
                 break;
-            case LONG:
+            case Long:
                 value=3;
                 break;
             default:

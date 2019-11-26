@@ -77,6 +77,13 @@ public class playerService  extends WebServiceGatewaySupport {
         List<PlayerOut> player=get(request);
         return player.get(0);
     }
+    public PlayerOut getPlayerByID(String idPlayer){
+        PlayerIn playerIn=new PlayerIn(idPlayer, "", "", "", "", "", "", "", "", "", "");
+        PlayerDataInput request=new PlayerDataInput();
+        request.getPlayerIn().add(playerIn);
+        List<PlayerOut> player=get(request);
+        return player.get(0);
+    }
     public boolean giveChampies(String playerGiver, String playerReceiver, Time time){
         List<PlayerOut> playersList=getAll(new PlayerDataInput());
         PlayerOut giver=new PlayerOut();

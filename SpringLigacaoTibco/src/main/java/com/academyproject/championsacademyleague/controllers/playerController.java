@@ -18,8 +18,6 @@ public class playerController {
 
     @Autowired
     public com.academyproject.championsacademyleague.services.playerService playerService;
-    @Autowired
-    public com.academyproject.championsacademyleague.services.rewardsService rewardService;
 
     /**
      * Connection with angular and the exterior
@@ -73,12 +71,6 @@ public class playerController {
             return info.get(0);
         }
         return new PlayerOut();
-    }
-
-    @RequestMapping("Reward")
-    public boolean rewardPlayer(String playerGiver, String playerReceiver, String time){
-        rewardService.registry(playerGiver, playerReceiver, Time.valueOf(time));
-        return playerService.giveChampies(playerGiver, playerReceiver, Time.valueOf(time));
     }
 
     PasswordEncoder passwordEncoder(){return new BCryptPasswordEncoder();}
