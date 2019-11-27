@@ -474,4 +474,95 @@ public class Constants {
     public String getGuildSOAPCreate() {
         return guildSOAPCreate;
     }
+
+    //Notifications
+
+    public String  notificationGetAllURL=  "http://192.168.0.86:8882/Service/Notifications/NotificationsService.serviceagent/notificationsGetAllEndpoint1";
+    public String  notificationGetURL=  "http://192.168.0.86:8882/Service/Notifications/NotificationsService.serviceagent/notificationsGetEndpoint1";
+    public String  notificationDeleteURL= "http://192.168.0.86:8882/Service/Notifications/NotificationsService.serviceagent/notificationsDeleteEndpoint1";
+    public String  notificationCreateURL= "http://192.168.0.86:8882/Service/Notifications/NotificationsService.serviceagent/notificationsCreateEndpoint1" ;
+    public String  notificationSOAPGetAll = "/Service/Notifications/NotificationsService.serviceagent/notificationsGetAllEndpoint1/GetAll";
+    public String  notificationSOAPGet = "/Service/Notifications/NotificationsService.serviceagent/notificationsGetEndpoint1/Get";
+    public String  notificationSOAPDelete = "/Service/Notifications/NotificationsService.serviceagent/notificationsDeleteEndpoint1/Delete";
+    public String  notificationSOAPCreate ="/Service/Notifications/NotificationsService.serviceagent/notificationsCreateEndpoint1/Create";
+
+
+    public String getNotificationGetAllURL() {
+        return notificationGetAllURL;
+    }
+
+    public String getNotificationGetURL() {
+        return notificationGetURL;
+    }
+
+    public String getNotificationDeleteURL() {
+        return notificationDeleteURL;
+    }
+
+    public String getNotificationCreateURL() {
+        return notificationCreateURL;
+    }
+
+    public String getNotificationSOAPGetAll() {
+        return notificationSOAPGetAll;
+    }
+
+    public String getNotificationSOAPGet() {
+        return notificationSOAPGet;
+    }
+
+    public String getNotificationSOAPDelete() {
+        return notificationSOAPDelete;
+    }
+
+    public String getNotificationSOAPCreate() { return notificationSOAPCreate; }
+
+    //Notification receivers
+
+    public String  notificationReceiversGetAllURL=  "http://localhost:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetAllEndpoint1";
+    public String  notificationReceiversGetURL=  "http://localhost:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetEndpoint1";
+    public String  notificationReceiversDeleteURL= "http://localhost:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversDeleteEndpoint1";
+    public String  notificationReceiversCreateURL= "http://localhost:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversCreateEndpoint1";
+    public String  notificationReceiversUpdateURL= "http://localhost:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversUpdateEndpoint1";
+    public String  notificationReceiversSOAPGetAll = "/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetAllEndpoint1/GetAll";
+    public String  notificationReceiversSOAPGet = "/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetEndpoint1/Get";
+    public String  notificationReceiversSOAPDelete = "/Service/NotificationReceivers/Service.serviceagent/notificationReceiversDeleteEndpoint1/Delete";
+    public String  notificationReceiversSOAPCreate = "/Service/NotificationReceivers/Service.serviceagent/notificationReceiversCreateEndpoint1/Create";
+    public String  notificationReceiversSOAPUpdate = "/Service/NotificationReceivers/Service.serviceagent/notificationReceiversUpdateEndpoint1/Update";
+
+    public String getNotificationReceiversGetAllURL() {
+        return notificationReceiversGetAllURL;
+    }
+
+    public String getNotificationReceiversGetURL() {
+        return notificationReceiversGetURL;
+    }
+
+    public String getNotificationReceiversDeleteURL() {
+        return notificationReceiversDeleteURL;
+    }
+
+    public String getNotificationReceiversCreateURL() {
+        return notificationReceiversCreateURL;
+    }
+
+    public String getNotificationReceiversUpdateURL() {
+        return notificationReceiversUpdateURL;
+    }
+
+    public String getNotificationReceiversSOAPGetAll() {
+        return notificationReceiversSOAPGetAll;
+    }
+
+    public String getNotificationReceiversSOAPGet() {
+        return notificationReceiversSOAPGet;
+    }
+
+    public String getNotificationReceiversSOAPDelete() {
+        return notificationReceiversSOAPDelete;
+    }
+
+    public String getNotificationReceiversSOAPCreate() { return notificationReceiversSOAPCreate; }
+
+    public String getNotificationReceiversSOAPUpdate() { return notificationReceiversSOAPUpdate; }
 }

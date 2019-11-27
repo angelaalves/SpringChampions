@@ -41,7 +41,6 @@ import java.util.List;
     "videoInput"
 })
 
-
 @XmlRootElement(name = "VideoDataInput", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Video/Schema.xsd")
 public class VideoDataInput {
 
@@ -54,6 +53,7 @@ public class VideoDataInput {
     public VideoDataInput(List<videoInput> videoInput) {
         this.videoInput = videoInput;
     }
+
     public List<videoInput> getVideoInput() {
         if (videoInput == null) {
             videoInput = new ArrayList<videoInput>();

@@ -23,8 +23,8 @@ public class guildEventsController {
 
     @RequestMapping("Create")
     public List<GuildEventsOut> getCreateGuildEvents(String idGuildFK, String idEventsFK) {
-        GuildEventsDataInput dataIn= new GuildEventsDataInput();
-        GuildEventsIn eventsIn= new GuildEventsIn(idGuildFK,idEventsFK);
+        GuildEventsDataInput dataIn = new GuildEventsDataInput();
+        GuildEventsIn eventsIn = new GuildEventsIn(idGuildFK, idEventsFK);
         dataIn.getGuildEventsIn().add(eventsIn);
         return guildEventsService.create(dataIn);
     }
@@ -45,5 +45,4 @@ public class guildEventsController {
         dataIn.getGuildEventsIn().add(eventsIn);
         return guildEventsService.get(dataIn);
     }
-
 }

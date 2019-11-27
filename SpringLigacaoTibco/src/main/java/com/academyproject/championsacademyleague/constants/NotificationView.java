@@ -7,22 +7,19 @@ import java.util.Date;
 public class NotificationView {
     private String from="";
     private String to="";
-    private String purpose="";
     private String date="";
     private String hour="";
 
 
-    public NotificationView(String from, String to, String purpose){
+    public NotificationView(String from, String to){
         this.from=from;
         this.to=to;
-        this.purpose=purpose;
         this.date=new dateFormatter().DateFormatter();
         this.hour=new dateFormatter().timeFormatter();
     }
-    public NotificationView(String from, String to, String purpose, String date, String hour){
+    public NotificationView(String from, String to, String date, String hour){
         this.from=from;
         this.to=to;
-        this.purpose=purpose;
         this.date=date;
         this.hour=hour;
     }
@@ -33,10 +30,6 @@ public class NotificationView {
 
     public String getTo() {
         return to;
-    }
-
-    public String getPurpose() {
-        return purpose;
     }
 
     public String getDate() {

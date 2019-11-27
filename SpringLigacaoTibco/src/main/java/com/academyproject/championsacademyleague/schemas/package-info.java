@@ -6,4 +6,4 @@
 //
 
 @javax.xml.bind.annotation.XmlSchema(namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Schemas/Schema.xsd", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package schemas;
+package com.academyproject.championsacademyleague.schemas;

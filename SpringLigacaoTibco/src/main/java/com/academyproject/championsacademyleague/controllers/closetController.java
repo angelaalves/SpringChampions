@@ -116,5 +116,4 @@ public class closetController {
         activeSkinResults.add(others);
         return activeSkinResults;
     }
-
 }
