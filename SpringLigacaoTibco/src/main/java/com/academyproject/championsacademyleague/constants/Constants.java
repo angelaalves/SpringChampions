@@ -519,11 +519,11 @@ public class Constants {
 
     //Notification receivers
 
-    public String  notificationReceiversGetAllURL=  "http://localhost:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetAllEndpoint1";
-    public String  notificationReceiversGetURL=  "http://localhost:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetEndpoint1";
-    public String  notificationReceiversDeleteURL= "http://localhost:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversDeleteEndpoint1";
-    public String  notificationReceiversCreateURL= "http://localhost:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversCreateEndpoint1";
-    public String  notificationReceiversUpdateURL= "http://localhost:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversUpdateEndpoint1";
+    public String  notificationReceiversGetAllURL=  "http://192.168.0.86:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetAllEndpoint1";
+    public String  notificationReceiversGetURL=  "http://192.168.0.86:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetEndpoint1";
+    public String  notificationReceiversDeleteURL= "http://192.168.0.86:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversDeleteEndpoint1";
+    public String  notificationReceiversCreateURL= "http://192.168.0.86:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversCreateEndpoint1";
+    public String  notificationReceiversUpdateURL= "http://192.168.0.86:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversUpdateEndpoint1";
     public String  notificationReceiversSOAPGetAll = "/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetAllEndpoint1/GetAll";
     public String  notificationReceiversSOAPGet = "/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetEndpoint1/Get";
     public String  notificationReceiversSOAPDelete = "/Service/NotificationReceivers/Service.serviceagent/notificationReceiversDeleteEndpoint1/Delete";
