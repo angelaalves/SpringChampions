@@ -24,7 +24,7 @@
                     <xs:attribute name="GuildName" type="xs:string"/>
                     <xs:attribute name="ID_Guild" type="xs:string"/>
                     <xs:attribute name="StartDate" type="xs:string"/>
-                    <xs:attribute name="status" type="xs:string"/>
+                    <xs:attribute name="Status" type="xs:string"/>
                 </xs:complexType>
             </xs:element>
             <xs:element name="GuildOut">
@@ -34,26 +34,26 @@
                     <xs:attribute name="GuildName" type="xs:string"/>
                     <xs:attribute name="ID_Guild" type="xs:string"/>
                     <xs:attribute name="StartDate" type="xs:string"/>
-                    <xs:attribute name="status" type="xs:string"/>
+                    <xs:attribute name="Status" type="xs:string"/>
                 </xs:complexType>
             </xs:element>
         </xs:schema>
     </wsdl:types>
     <wsdl:service name="Guild">
         <wsdl:port name="GuildPortGetEndpoint1" binding="tns:GuildPortGetEndpoint1Binding">
-            <soap:address location="http://192.168.0.84:8882/Service/Guild/Guild.serviceagent/GuildPortGetEndpoint1"/>
+            <soap:address location="http://localhost:8888/Service/Guild/Guild.serviceagent/GuildPortGetEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="GuildPortDeleteEndpoint1" binding="tns:GuildPortDeleteEndpoint1Binding">
-            <soap:address location="http://192.168.0.84:8882/Service/Guild/Guild.serviceagent/GuildPortDeleteEndpoint1"/>
+            <soap:address location="http://localhost:8888/Service/Guild/Guild.serviceagent/GuildPortDeleteEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="GuildPortCreateEndpoint1" binding="tns:GuildPortCreateEndpoint1Binding">
-            <soap:address location="http://192.168.0.84:8882/Service/Guild/Guild.serviceagent/GuildPortCreateEndpoint1"/>
+            <soap:address location="http://localhost:8888/Service/Guild/Guild.serviceagent/GuildPortCreateEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="GuildPortUpdateEndpoint1" binding="tns:GuildPortUpdateEndpoint1Binding">
-            <soap:address location="http://192.168.0.84:8882/Service/Guild/Guild.serviceagent/GuildPortUpdateEndpoint1"/>
+            <soap:address location="http://localhost:8888/Service/Guild/Guild.serviceagent/GuildPortUpdateEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="GuildPortGetAllEndpoint1" binding="tns:GuildPortGetAllEndpoint1Binding">
-            <soap:address location="http://192.168.0.84:8882/Service/Guild/Guild.serviceagent/GuildPortGetAllEndpoint1"/>
+            <soap:address location="http://localhost:8888/Service/Guild/Guild.serviceagent/GuildPortGetAllEndpoint1"/>
         </wsdl:port>
     </wsdl:service>
     <wsdl:portType name="GuildPortGet">

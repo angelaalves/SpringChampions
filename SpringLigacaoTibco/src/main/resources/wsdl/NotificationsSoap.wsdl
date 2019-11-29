@@ -19,6 +19,7 @@
             </xs:element>
             <xs:element name="NotificationsIn">
                 <xs:complexType>
+                    <xs:attribute name="Description" type="xs:string"/>
                     <xs:attribute name="ID_Event_FK" type="xs:string"/>
                     <xs:attribute name="ID_Guild_FK" type="xs:string"/>
                     <xs:attribute name="ID_Notification" type="xs:string"/>
@@ -28,6 +29,7 @@
             </xs:element>
             <xs:element name="NotificationsOut">
                 <xs:complexType>
+                    <xs:attribute name="Description" type="xs:string"/>
                     <xs:attribute name="ID_Event_FK" type="xs:string"/>
                     <xs:attribute name="ID_Guild_FK" type="xs:string"/>
                     <xs:attribute name="ID_Notification" type="xs:string"/>
