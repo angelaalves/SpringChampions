@@ -4,7 +4,6 @@ import com.academyproject.championsacademyleague.constants.NotificationView;
 import com.academyproject.championsacademyleague.constants.PlayerType;
 import com.academyproject.championsacademyleague.constants.Post;
 import com.academyproject.championsacademyleague.schemas.NotificationsDataInput;
-import com.academyproject.championsacademyleague.schemas.NotificationsDataOutput;
 import com.academyproject.championsacademyleague.schemas.NotificationsIn;
 import com.academyproject.championsacademyleague.schemas.NotificationsOut;
 import com.academyproject.championsacademyleague.services.NotificationService;
@@ -68,15 +67,15 @@ public class NotificationController {
     @RequestMapping("getAll")
     public List<NotificationsOut> getAllNotifications() {
         NotificationsDataInput dataIn = new NotificationsDataInput();
-        NotificationsIn notificationsIn = new NotificationsIn("","","","","");
+        NotificationsIn notificationsIn = new NotificationsIn("","","","","","");
         dataIn.getNotificationsIn().add(notificationsIn);
         return notificationService.getAll(dataIn);
     }
 
     @RequestMapping("Create")
-    public List<NotificationsOut> getCreateNotifications(String idEventFK, String idGuildFK, String ID_Notification, String ID_PlayerSender_FK, String idRewardFK) {
+    public List<NotificationsOut> getCreateNotifications(String idEventFK, String idGuildFK, String ID_Notification, String ID_PlayerSender_FK, String idRewardFK, String description) {
         NotificationsDataInput dataIn= new NotificationsDataInput();
-        NotificationsIn notificationsIn= new NotificationsIn(idEventFK,idGuildFK,ID_Notification,ID_PlayerSender_FK,idRewardFK);
+        NotificationsIn notificationsIn= new NotificationsIn(idEventFK,idGuildFK,ID_Notification,ID_PlayerSender_FK,idRewardFK, description);
         dataIn.getNotificationsIn().add(notificationsIn);
         return notificationService.create(dataIn);
     }
@@ -84,15 +83,15 @@ public class NotificationController {
     @RequestMapping("Get")
     public List<NotificationsOut> getGetNotifications(String idEventFK, String idGuildFK, String ID_Notification, String ID_PlayerSender_FK, String idRewardFK, String notificationSeen) {
         NotificationsDataInput dataIn= new NotificationsDataInput();
-        NotificationsIn notificationsIn= new NotificationsIn(idEventFK,idGuildFK,ID_Notification,ID_PlayerSender_FK,idRewardFK);
+        NotificationsIn notificationsIn= new NotificationsIn(idEventFK,idGuildFK,ID_Notification,ID_PlayerSender_FK,idRewardFK,"");
         dataIn.getNotificationsIn().add(notificationsIn);
         return notificationService.get(dataIn);
     }
 
     @RequestMapping("Delete")
-    public List<NotificationsOut> getDeleteNotifications(String idEventFK, String idGuildFK, String ID_Notification_FK, String ID_PlayerSender_FK, String idRewardFK) {
+    public List<NotificationsOut> getDeleteNotifications(String idEventFK, String idGuildFK, String ID_Notification, String ID_PlayerSender_FK, String idRewardFK) {
         NotificationsDataInput dataIn = new NotificationsDataInput();
-        NotificationsIn notificationsIn = new NotificationsIn(idEventFK, idGuildFK, ID_Notification_FK, ID_PlayerSender_FK, "");
+        NotificationsIn notificationsIn = new NotificationsIn(idEventFK, idGuildFK, ID_Notification, ID_PlayerSender_FK, "","");
         dataIn.getNotificationsIn().add(notificationsIn);
         return notificationService.delete(dataIn);
     }

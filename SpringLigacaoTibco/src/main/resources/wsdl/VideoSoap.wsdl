@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Created by TIBCO WSDL-->
-<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlns.example.com/1571063854585" xmlns:ns0="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Video/Schema.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap1="http://schemas.xmlsoap.org/wsdl/soap12/" name="Untitled" targetNamespace="http://xmlns.example.com/1571063854585">
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlns.example.com/1571063854585" xmlns:ns0="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Schemas/Schema.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap1="http://schemas.xmlsoap.org/wsdl/soap12/" name="Untitled" targetNamespace="http://xmlns.example.com/1571063854585">
     <wsdl:types>
-        <xs:schema xmlns="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Video/Schema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Video/Schema.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+        <xs:schema xmlns="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Schemas/Schema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.tibco.com/schemas/TheChampionsAcademyLeague/Schemas/Schema.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
             <xs:element name="VideoDataInput">
                 <xs:complexType>
                     <xs:sequence>
@@ -37,19 +37,19 @@
     </wsdl:types>
     <wsdl:service name="VideoService">
         <wsdl:port name="VideoPortUpdateEndpoint1" binding="tns:VideoPortUpdateEndpoint1Binding">
-            <soap:address location="http://192.168.0.84:8882/Service/Video/VideoService.serviceagent/VideoPortUpdateEndpoint1"/>
+            <soap:address location="http://localhost:8882/Service/Video/VideoService.serviceagent/VideoPortUpdateEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="VideoPortGetAllEndpoint1" binding="tns:VideoPortGetAllEndpoint1Binding">
-            <soap:address location="http://192.168.0.84:8882/Service/Video/VideoService.serviceagent/VideoPortGetAllEndpoint1"/>
+            <soap:address location="http://localhost:8882/Service/Video/VideoService.serviceagent/VideoPortGetAllEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="VideoPortCreateEndpoint1" binding="tns:VideoPortCreateEndpoint1Binding">
-            <soap:address location="http://192.168.0.84:8882/Service/Video/VideoService.serviceagent/VideoPortCreateEndpoint1"/>
+            <soap:address location="http://localhost:8882/Service/Video/VideoService.serviceagent/VideoPortCreateEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="VideoPortGetEndpoint1" binding="tns:VideoPortGetEndpoint1Binding">
-            <soap:address location="http://192.168.0.84:8882/Service/Video/VideoService.serviceagent/VideoPortGetEndpoint1"/>
+            <soap:address location="http://localhost:8882/Service/Video/VideoService.serviceagent/VideoPortGetEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="VideoPortDeleteEndpoint1" binding="tns:VideoPortDeleteEndpoint1Binding">
-            <soap:address location="http://192.168.0.84:8882/Service/Video/VideoService.serviceagent/VideoPortDeleteEndpoint1"/>
+            <soap:address location="http://localhost:8882/Service/Video/VideoService.serviceagent/VideoPortDeleteEndpoint1"/>
         </wsdl:port>
     </wsdl:service>
     <wsdl:portType name="VideoPortUpdate">
