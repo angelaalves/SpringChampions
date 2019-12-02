@@ -45,4 +45,10 @@ public class guildEventsController {
         dataIn.getGuildEventsIn().add(eventsIn);
         return guildEventsService.get(dataIn);
     }
+
+    @RequestMapping("CreateGuildEventsList")
+    public List<GuildEventsOut> createGuildEventsList(String guildName, String startDate){
+        return guildEventsService.createGuildEventsList(guildName, startDate);
+
+    }
 }

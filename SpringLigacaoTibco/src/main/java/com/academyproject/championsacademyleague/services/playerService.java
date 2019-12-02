@@ -96,8 +96,6 @@ public class playerService  extends WebServiceGatewaySupport {
                 receiver=playersList.get(i);
             }
         }
-        System.out.println(giver.toString());
-        System.out.println(receiver.getChampiesToGive());
         if((Integer.valueOf(giver.getChampiesToGive())-value)<0 || giver.getChampiesToGive()==null || receiver.getChampiesToGive()==null){
             return false;
         }else{

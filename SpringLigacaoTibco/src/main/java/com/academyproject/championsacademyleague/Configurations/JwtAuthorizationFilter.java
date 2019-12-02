@@ -13,7 +13,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
-import sun.security.util.SecurityConstants;
+
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
