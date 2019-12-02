@@ -28,42 +28,42 @@ public class playerController {
     public List<PlayerOut> getAllPlayers() {
 
         PlayerDataInput dataIn= new PlayerDataInput();
-        PlayerIn playerIn= new PlayerIn("","","","","","","","","","","");
+        PlayerIn playerIn= new PlayerIn("","","","","","","","","","");
         dataIn.getPlayerIn().add(playerIn);
         return playerService.getAll(dataIn);
 
     }
 
     @RequestMapping("Create")
-    public List<PlayerOut> getCreatePlayers(String idPlayer, String idGuildFK, String userName, String email, String password, String gender, String userType, String xp, String champiesToGive, String myChampies, String status) {
+        public List<PlayerOut> getCreatePlayers(String idPlayer, String userName, String email, String password, String gender, String userType, String xp, String champiesToGive, String myChampies, String status) {
 
         PlayerDataInput dataIn= new PlayerDataInput();
-        PlayerIn playerIn= new PlayerIn(idPlayer, idGuildFK, userName, email, passwordEncoder().encode(password), gender, userType, xp, champiesToGive, myChampies, status);
+        PlayerIn playerIn= new PlayerIn(idPlayer, userName, email, passwordEncoder().encode(password), gender, userType, xp, champiesToGive, myChampies, status);
         dataIn.getPlayerIn().add(playerIn);
         return playerService.create(dataIn);
 
     }
 
     @RequestMapping("Update")
-    public List<PlayerOut> getUpdatePlayers(String idPlayer, String idGuildFK, String userName, String email, String password, String gender, String userType, String xp, String champiesToGive, String myChampies, String status) {
+    public List<PlayerOut> getUpdatePlayers(String idPlayer, String userName, String email, String password, String gender, String userType, String xp, String champiesToGive, String myChampies, String status) {
         PlayerDataInput dataIn= new PlayerDataInput();
-        PlayerIn playerIn= new PlayerIn(idPlayer, idGuildFK, userName, email, passwordEncoder().encode(password), gender, userType, xp, champiesToGive, myChampies, status);
+        PlayerIn playerIn= new PlayerIn(idPlayer, userName, email, passwordEncoder().encode(password), gender, userType, xp, champiesToGive, myChampies, status);
         dataIn.getPlayerIn().add(playerIn);
         return playerService.update(dataIn);
 
     }
 
     @RequestMapping("Get")
-    public List<PlayerOut> getGetPlayers(String idPlayer, String idGuildFK, String userName, String email, String password, String gender, String userType, String xp, String champiesToGive, String myChampies, String status) {
+    public List<PlayerOut> getGetPlayers(String idPlayer, String userName, String email, String password, String gender, String userType, String xp, String champiesToGive, String myChampies, String status) {
         PlayerDataInput dataIn= new PlayerDataInput();
-        PlayerIn playerIn= new PlayerIn(idPlayer, idGuildFK, userName, email, password, gender, userType, xp, champiesToGive, myChampies, status);
+        PlayerIn playerIn= new PlayerIn(idPlayer, userName, email, password, gender, userType, xp, champiesToGive, myChampies, status);
         dataIn.getPlayerIn().add(playerIn);
         return playerService.get(dataIn);
     }
 
     @RequestMapping("Login")
     public PlayerOut verifyLogin(@RequestParam String email, @RequestParam String password){
-        List<PlayerOut> info=getGetPlayers("", "", "", email, "", "", "", "", "", "", "");
+        List<PlayerOut> info=getGetPlayers("", "", "", password, "", "", "", "", "", "");
         //String encodedPassword=passwordEncoder().encode(password);
         //System.out.println(passwordEncoder().matches(info.get(0).getPassword(),password));
         if(info.get(0).getPassword().equals(password)){

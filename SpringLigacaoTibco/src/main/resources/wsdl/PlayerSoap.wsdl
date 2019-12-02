@@ -22,7 +22,6 @@
                     <xs:attribute name="ChampiesToGive" type="xs:string"/>
                     <xs:attribute name="Email" type="xs:string"/>
                     <xs:attribute name="Gender" type="xs:string"/>
-                    <xs:attribute name="ID_Guild_FK" type="xs:string"/>
                     <xs:attribute name="ID_Player" type="xs:string"/>
                     <xs:attribute name="MyChampies" type="xs:string"/>
                     <xs:attribute name="UserName" type="xs:string"/>
@@ -37,7 +36,6 @@
                     <xs:attribute name="ChampiesToGive" type="xs:string"/>
                     <xs:attribute name="Email" type="xs:string"/>
                     <xs:attribute name="Gender" type="xs:string"/>
-                    <xs:attribute name="ID_Guild_FK" type="xs:string"/>
                     <xs:attribute name="ID_Player" type="xs:string"/>
                     <xs:attribute name="MyChampies" type="xs:string"/>
                     <xs:attribute name="UserName" type="xs:string"/>
@@ -51,16 +49,16 @@
     </wsdl:types>
     <wsdl:service name="PlayerService">
         <wsdl:port name="PlayerPortUpdateEndpoint1" binding="tns:PlayerPortUpdateEndpoint1Binding">
-            <soap:address location="http://localhost:8882/Service/Player/PlayerService.serviceagent/PlayerPortUpdateEndpoint1"/>
+            <soap:address location="http://localhost:8888/Service/Player/PlayerService.serviceagent/PlayerPortUpdateEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="PlayerPortGetEndpoint1" binding="tns:PlayerPortGetEndpoint1Binding">
-            <soap:address location="http://localhost:8882/Service/Player/PlayerService.serviceagent/PlayerPortGetEndpoint1"/>
+            <soap:address location="http://localhost:8888/Service/Player/PlayerService.serviceagent/PlayerPortGetEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="PlayerPortCreateEndpoint1" binding="tns:PlayerPortCreateEndpoint1Binding">
-            <soap:address location="http://localhost:8882/Service/Player/PlayerService.serviceagent/PlayerPortCreateEndpoint1"/>
+            <soap:address location="http://localhost:8888/Service/Player/PlayerService.serviceagent/PlayerPortCreateEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="PlayerPortGetAllEndpoint1" binding="tns:PlayerPortGetAllEndpoint1Binding">
-            <soap:address location="http://localhost:8882/Service/Player/PlayerService.serviceagent/PlayerPortGetAllEndpoint1"/>
+            <soap:address location="http://localhost:8888/Service/Player/PlayerService.serviceagent/PlayerPortGetAllEndpoint1"/>
         </wsdl:port>
     </wsdl:service>
     <wsdl:portType name="PlayerPortUpdate">
