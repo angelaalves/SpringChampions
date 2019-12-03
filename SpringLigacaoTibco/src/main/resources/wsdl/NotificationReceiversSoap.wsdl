@@ -39,19 +39,19 @@
     </wsdl:types>
     <wsdl:service name="Service">
         <wsdl:port name="notificationReceiversGetAllEndpoint1" binding="tns:notificationReceiversGetAllEndpoint1Binding">
-            <soap:address location="http://localhost:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetAllEndpoint1"/>
+            <soap:address location="http://localhost:8888/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetAllEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="notificationReceiversUpdateEndpoint1" binding="tns:notificationReceiversUpdateEndpoint1Binding">
-            <soap:address location="http://localhost:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversUpdateEndpoint1"/>
+            <soap:address location="http://localhost:8888/Service/NotificationReceivers/Service.serviceagent/notificationReceiversUpdateEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="notificationReceiversDeleteEndpoint1" binding="tns:notificationReceiversDeleteEndpoint1Binding">
-            <soap:address location="http://localhost:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversDeleteEndpoint1"/>
+            <soap:address location="http://localhost:8888/Service/NotificationReceivers/Service.serviceagent/notificationReceiversDeleteEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="notificationReceiversGetEndpoint1" binding="tns:notificationReceiversGetEndpoint1Binding">
-            <soap:address location="http://localhost:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetEndpoint1"/>
+            <soap:address location="http://localhost:8888/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="notificationReceiversCreateEndpoint1" binding="tns:notificationReceiversCreateEndpoint1Binding">
-            <soap:address location="http://localhost:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversCreateEndpoint1"/>
+            <soap:address location="http://localhost:8888/Service/NotificationReceivers/Service.serviceagent/notificationReceiversCreateEndpoint1"/>
         </wsdl:port>
     </wsdl:service>
     <wsdl:portType name="notificationReceiversGetAll">

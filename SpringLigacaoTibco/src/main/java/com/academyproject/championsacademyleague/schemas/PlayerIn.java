@@ -53,8 +53,6 @@ public class PlayerIn {
     protected String email;
     @XmlAttribute(name = "Gender")
     protected String gender;
-    @XmlAttribute(name = "ID_Guild_FK")
-    protected String idGuildFK;
     @XmlAttribute(name = "ID_Player")
     protected String idPlayer;
     @XmlAttribute(name = "MyChampies")
@@ -72,9 +70,8 @@ public class PlayerIn {
 
     public PlayerIn(){}
 
-    public PlayerIn(String idPlayer, String idGuildFK, String userName, String email, String password, String gender, String userType, String xp, String champiesToGive, String myChampies, String status) {
+    public PlayerIn(String idPlayer, String userName, String email, String password, String gender, String userType, String xp, String champiesToGive, String myChampies, String status) {
         this.idPlayer = idPlayer;
-        this.idGuildFK = idGuildFK;
         this.userName = userName;
         this.email = email;
         this.password = password;
@@ -158,31 +155,7 @@ public class PlayerIn {
         this.gender = value;
     }
 
-    /**
-     * Gets the value of the idGuildFK property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getIDGuildFK() {
-        return idGuildFK;
-    }
-
-    /**
-     * Sets the value of the idGuildFK property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setIDGuildFK(String value) {
-        this.idGuildFK = value;
-    }
-
-    /**
+    /*
      * Gets the value of the idPlayer property.
      * 
      * @return

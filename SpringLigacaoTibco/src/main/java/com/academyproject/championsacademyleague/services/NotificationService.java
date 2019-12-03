@@ -4,6 +4,7 @@ import com.academyproject.championsacademyleague.Configurations.timeValue;
 import com.academyproject.championsacademyleague.constants.Constants;
 import com.academyproject.championsacademyleague.constants.NotificationView;
 import com.academyproject.championsacademyleague.constants.Time;
+import com.academyproject.championsacademyleague.controllers.watchedVideosController;
 import com.academyproject.championsacademyleague.schemas.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

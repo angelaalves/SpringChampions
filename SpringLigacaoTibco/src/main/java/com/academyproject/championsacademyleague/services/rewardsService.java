@@ -80,7 +80,7 @@ public class rewardsService  extends WebServiceGatewaySupport {
         return response.getRewardsOut();
     }
 
-    public boolean registry(String playerGiver, String playerReceiver, Time time){
+    public boolean registry(String playerGiver, String playerReceiver, Time time, String justification){
         List<PlayerOut> playersList=playerService.getAll(new PlayerDataInput());
         RewardsDataInput registry=new RewardsDataInput();
         PlayerOut giver=new PlayerOut();
@@ -95,7 +95,7 @@ public class rewardsService  extends WebServiceGatewaySupport {
         }
         if(giver.getIDPlayer()==null || receiver.getIDPlayer()==null)
             return false;
-        RewardsIn registryInfo=new RewardsIn("", giver.getIDPlayer(), receiver.getIDPlayer(), String.valueOf(value), new dateFormatter().DateFormatter(), String.valueOf(0), String.valueOf(time));
+        RewardsIn registryInfo=new RewardsIn("", giver.getIDPlayer(), receiver.getIDPlayer(), String.valueOf(value), new dateFormatter().DateFormatter(), String.valueOf(0), String.valueOf(time), justification);
         registry.getRewardsIn().add(registryInfo);
         create(registry);
         return true;

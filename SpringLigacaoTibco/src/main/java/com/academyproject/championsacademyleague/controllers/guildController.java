@@ -23,7 +23,7 @@ public class guildController {
      */
 
     @RequestMapping("getAll")
-    public List<GuildOut> getAllCloset() {
+    public List<GuildOut> getAllGuilds() {
         GuildDataInput dataIn= new GuildDataInput();
         GuildIn guildIn= new GuildIn("","","","","","");
         dataIn.getGuildIn().add(guildIn);
@@ -64,8 +64,6 @@ public class guildController {
         GuildIn guildIn= new GuildIn(idGuild,guildName,startDate,endDate,guildFlag,status);
         dataIn.getGuildIn().add(guildIn);
         return guildService.get(dataIn);
-
-
     }
 
 }
