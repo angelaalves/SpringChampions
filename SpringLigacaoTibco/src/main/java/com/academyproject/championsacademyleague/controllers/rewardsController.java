@@ -74,7 +74,7 @@ public class rewardsController {
         return rewardsService.delete(dataIn);
     }
     @RequestMapping("Approve")
-    public boolean approveReward(@RequestParam String idReward){
+    public boolean approveReward(String idReward){
         List<RewardsOut> rewards=getGetRewards(idReward, "", "", "", "", "", "", "");
         String[] date=rewards.get(0).getDateOfReward().split("T");
         getUpdateRewards(rewards.get(0).getIDReward(), rewards.get(0).getIDPlayerGiverFK(), rewards.get(0).getIDPlayerReceiverFK(), rewards.get(0).getChampiesGiven(), date[0], "1", rewards.get(0).getTimeSpent(), rewards.get(0).getJustification());
@@ -84,9 +84,10 @@ public class rewardsController {
     }
 
     @RequestMapping("Disapprove")
-    public void disapprove(String idReward){
+    public List<RewardsOut> disapprove(String idReward){
         List<RewardsOut> rewards=getGetRewards(idReward, "", "", "", "", "", "","");
-        getUpdateRewards(rewards.get(0).getIDReward(), rewards.get(0).getIDPlayerGiverFK(), rewards.get(0).getIDPlayerReceiverFK(), "0", rewards.get(0).getDateOfReward(), "0", rewards.get(0).getTimeSpent(), rewards.get(0).getJustification());
+        String[] date=rewards.get(0).getDateOfReward().split("T");
+        return getUpdateRewards(rewards.get(0).getIDReward(), rewards.get(0).getIDPlayerGiverFK(), rewards.get(0).getIDPlayerReceiverFK(), "0", date[0], "0", rewards.get(0).getTimeSpent(), rewards.get(0).getJustification());
     }
 
     @RequestMapping("Reward")

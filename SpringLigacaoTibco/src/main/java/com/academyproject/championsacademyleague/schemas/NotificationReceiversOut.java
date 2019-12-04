@@ -45,7 +45,7 @@ public class NotificationReceiversOut {
     protected String idGuildFK;
     @XmlAttribute(name = "ID_Notification_FK")
     protected String idNotificationFK;
-    @XmlAttribute(name = "ID_Notification_Receivers")
+    @XmlAttribute(name = "ID_Notification_Receiver")
     protected String idNotificationReceiver;
     @XmlAttribute(name = "ID_Player_Receiver_FK")
     protected String idPlayerReceiverFK;
