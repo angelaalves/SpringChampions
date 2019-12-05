@@ -81,7 +81,7 @@ public class NotificationController {
     }
 
     @RequestMapping("Get")
-    public List<NotificationsOut> getGetNotifications(String idEventFK, String idGuildFK, String ID_Notification, String ID_PlayerSender_FK, String idRewardFK, String notificationSeen) {
+    public List<NotificationsOut> getGetNotifications(String idEventFK, String idGuildFK, String ID_Notification, String ID_PlayerSender_FK, String idRewardFK) {
         NotificationsDataInput dataIn= new NotificationsDataInput();
         NotificationsIn notificationsIn= new NotificationsIn(idEventFK,idGuildFK,ID_Notification,ID_PlayerSender_FK,idRewardFK,"");
         dataIn.getNotificationsIn().add(notificationsIn);

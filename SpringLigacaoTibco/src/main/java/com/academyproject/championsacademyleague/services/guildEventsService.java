@@ -11,6 +11,8 @@ import org.springframework.ws.client.core.WebServiceTemplate;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 import org.springframework.ws.soap.SoapMessage;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -63,26 +65,28 @@ public class guildEventsService extends WebServiceGatewaySupport {
         return response.getGuildEventsOut();
     }
 
-    public List<GuildEventsOut> createGuildEventsList(String guildName, String startDate) {
+    public void createGuildEventsList(String guildName, String startDate) throws ParseException {
+        SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
         GuildDataInput dataIn= new GuildDataInput();
         GuildIn guildIn= new GuildIn("",guildName,"","","","");
         dataIn.getGuildIn().add(guildIn);
         for(GuildOut guild: guildService.get(dataIn)){
-            if(guild.getStartDate().equals(startDate)){
+            String date=guild.getStartDate().split("T")[0];
+            if(date.equals(startDate)){
                 EventsDataInput eventsDataIn= new EventsDataInput();
                 EventsIn eventsIn= new EventsIn("","","","");
                 eventsDataIn.getEventsIn().add(eventsIn);
                 List<EventsOut> eventsList=eventsService.getAll(eventsDataIn);
                 for(EventsOut event: eventsList) {
-                    if(Date.parse(guild.getStartDate())<Date.parse(event.getEventDate())&& Date.parse(guild.getEndDate())>Date.parse(event.getEventDate())) {
+                    if(format.parse(guild.getStartDate().split("T")[0]).before(format.parse(event.getEventDate().split("T")[0]))&& format.parse(guild.getEndDate().split("T")[0]).after(format.parse(event.getEventDate().split("T")[0]))) {
                         GuildEventsDataInput infoIn = new GuildEventsDataInput();
                         GuildEventsIn guildEventsIn = new GuildEventsIn(guild.getIDGuild(), event.getIDEvent());
                         infoIn.getGuildEventsIn().add(guildEventsIn);
-                        return create(infoIn);
+                        create(infoIn);
                     }
                 }
             }
         }
-        return null;
+
     }
 }
