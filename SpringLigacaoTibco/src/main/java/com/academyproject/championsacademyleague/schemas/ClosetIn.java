@@ -53,6 +53,7 @@ public class ClosetIn {
         this.idPlayerFk=idPlayerFk;
         this.status=status;
     }
+
     /**
      * Gets the value of the idSkinFK property.
      * 

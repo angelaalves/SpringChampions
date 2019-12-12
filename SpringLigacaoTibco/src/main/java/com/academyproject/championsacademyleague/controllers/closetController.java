@@ -47,7 +47,7 @@ public class closetController {
         ClosetDataInput giving=new ClosetDataInput();
         ClosetIn closetIn=new ClosetIn(idSkinFK, idPlayerFk, status);
         giving.getClosetIn().add(closetIn);
-        return closetService.create(giving);
+        return closetService.update(giving);
     }
 
     @RequestMapping("Delete")
@@ -55,7 +55,7 @@ public class closetController {
         ClosetDataInput giving=new ClosetDataInput();
         ClosetIn closetIn=new ClosetIn(idSkinFK, idPlayerFk, "");
         giving.getClosetIn().add(closetIn);
-        return closetService.create(giving);
+        return closetService.delete(giving);
     }
 
     @RequestMapping("Get")
@@ -63,7 +63,7 @@ public class closetController {
         ClosetDataInput giving=new ClosetDataInput();
         ClosetIn closetIn=new ClosetIn(idSkinFK, idPlayerFk, status);
         giving.getClosetIn().add(closetIn);
-        return closetService.create(giving);
+        return closetService.get(giving);
     }
 
     @RequestMapping("activeSkins")
