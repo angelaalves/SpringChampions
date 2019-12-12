@@ -5,6 +5,7 @@ import com.academyproject.championsacademyleague.services.guildEventsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
 import java.util.List;
 
 @CrossOrigin
@@ -47,8 +48,8 @@ public class guildEventsController {
     }
 
     @RequestMapping("CreateGuildEventsList")
-    public List<GuildEventsOut> createGuildEventsList(String guildName, String startDate){
-        return guildEventsService.createGuildEventsList(guildName, startDate);
+    public void createGuildEventsList(String guildName, String startDate) throws ParseException {
+        guildEventsService.createGuildEventsList(guildName, startDate);
 
     }
 }
