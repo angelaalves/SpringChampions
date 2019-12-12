@@ -76,11 +76,13 @@ public class rewardsController {
     @RequestMapping("Approve")
     public boolean approveReward(String idReward){
         List<RewardsOut> rewards=getGetRewards(idReward, "", "", "", "", "", "", "");
+        System.out.println("Time " + rewards.get(0).getTimeSpent());
         String[] date=rewards.get(0).getDateOfReward().split("T");
         getUpdateRewards(rewards.get(0).getIDReward(), rewards.get(0).getIDPlayerGiverFK(), rewards.get(0).getIDPlayerReceiverFK(), rewards.get(0).getChampiesGiven(), date[0], "1", rewards.get(0).getTimeSpent(), rewards.get(0).getJustification());
         PlayerOut playerGiver=playerService.getPlayerByID(rewards.get(0).getIDPlayerGiverFK());
         PlayerOut playerReceiver=playerService.getPlayerByID(rewards.get(0).getIDPlayerReceiverFK());
-        return playerService.giveChampies(playerGiver.getUserName(), playerReceiver.getUserName(), Time.valueOf(rewards.get(0).getTimeSpent()));
+        System.out.println(Time.valueOf(rewards.get(0).getTimeSpent()));
+        return playerService.giveChampies(playerService.getPlayerByID(rewards.get(0).getIDPlayerGiverFK()).getUserName(), playerService.getPlayerByID(rewards.get(0).getIDPlayerReceiverFK()).getUserName(), Time.valueOf(rewards.get(0).getTimeSpent()));
     }
 
     @RequestMapping("Disapprove")
