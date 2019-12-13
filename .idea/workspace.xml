@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3f65d195-9eaa-4412-b9b2-4507da25a5cf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/SpringLigacaoTibco/src/main/java/com/academyproject/championsacademyleague/schemas/EventsDataInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringLigacaoTibco/src/main/java/com/academyproject/championsacademyleague/schemas/EventsDataInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringLigacaoTibco/src/main/java/com/academyproject/championsacademyleague/schemas/EventsDataOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringLigacaoTibco/src/main/java/com/academyproject/championsacademyleague/schemas/EventsDataOutput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringLigacaoTibco/src/main/java/com/academyproject/championsacademyleague/schemas/EventsIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringLigacaoTibco/src/main/java/com/academyproject/championsacademyleague/schemas/EventsIn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringLigacaoTibco/src/main/java/com/academyproject/championsacademyleague/schemas/EventsOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringLigacaoTibco/src/main/java/com/academyproject/championsacademyleague/schemas/EventsOut.java" afterDir="false" />
-    </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="3f65d195-9eaa-4412-b9b2-4507da25a5cf" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,22 +11,28 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1SpyRYlWUJ1AmMieG6NhObo6Bvp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>

@@ -74,4 +74,17 @@ public class playerController {
     }
 
     PasswordEncoder passwordEncoder(){return new BCryptPasswordEncoder();}
+
+    @RequestMapping("verifyPassword")
+    public boolean verifyPassword(@RequestParam String email, @RequestParam String password){
+        List<PlayerOut> players = getAllPlayers();
+        for(PlayerOut player: players){
+            if(email.equals(player.getEmail()) & passwordEncoder().matches(password, player.getPassword())){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        return false;
+    }
 }

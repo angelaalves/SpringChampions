@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
-@XmlRootElement(name = "eventsIn", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Events/Schema.xsd")
+@XmlRootElement(name = "EventsIn", namespace = "http://www.tibco.com/schemas/TheChampionsAcademyLeague/Service/Events/Schema.xsd")
 public class EventsIn {
 
     @XmlAttribute(name = "EventDate")
@@ -50,7 +50,6 @@ public class EventsIn {
     protected String idEvent;
 
     public EventsIn(){
-
     }
 
     public EventsIn(String idEvent, String eventName, String eventDate, String eventType){
