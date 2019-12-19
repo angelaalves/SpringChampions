@@ -45,19 +45,19 @@
     </wsdl:types>
     <wsdl:service name="Rewards">
         <wsdl:port name="RewardsPortGetEndpoint1" binding="tns:RewardsPortGetEndpoint1Binding">
-            <soap:address location="http://localhost:8888/Service/Rewards/Rewards.serviceagent/RewardsPortGetEndpoint1"/>
+            <soap:address location="http://192.168.0.76:8882/Service/Rewards/Rewards.serviceagent/RewardsPortGetEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="RewardsPortDeleteEndpoint1" binding="tns:RewardsPortDeleteEndpoint1Binding">
-            <soap:address location="http://localhost:8888/Service/Rewards/Rewards.serviceagent/RewardsPortDeleteEndpoint1"/>
+            <soap:address location="http://192.168.0.76:8882/Service/Rewards/Rewards.serviceagent/RewardsPortDeleteEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="RewardsPortUpdateEndpoint1" binding="tns:RewardsPortUpdateEndpoint1Binding">
-            <soap:address location="http://localhost:8888/Service/Rewards/Rewards.serviceagent/RewardsPortUpdateEndpoint1"/>
+            <soap:address location="http://192.168.0.76:8882/Service/Rewards/Rewards.serviceagent/RewardsPortUpdateEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="RewardsPortGetAllEndpoint1" binding="tns:RewardsPortGetAllEndpoint1Binding">
-            <soap:address location="http://localhost:8888/Service/Rewards/Rewards.serviceagent/RewardsPortGetAllEndpoint1"/>
+            <soap:address location="http://192.168.0.76:8882/Service/Rewards/Rewards.serviceagent/RewardsPortGetAllEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="RewardsPortCreateEndpoint1" binding="tns:RewardsPortCreateEndpoint1Binding">
-            <soap:address location="http://localhost:8888/Service/Rewards/Rewards.serviceagent/RewardsPortCreateEndpoint1"/>
+            <soap:address location="http://192.168.0.76:8882/Service/Rewards/Rewards.serviceagent/RewardsPortCreateEndpoint1"/>
         </wsdl:port>
     </wsdl:service>
     <wsdl:portType name="RewardsPortGet">

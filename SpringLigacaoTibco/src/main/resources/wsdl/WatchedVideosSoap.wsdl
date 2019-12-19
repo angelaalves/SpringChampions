@@ -33,16 +33,16 @@
     </wsdl:types>
     <wsdl:service name="WatchedVideos">
         <wsdl:port name="WatchedVideosPortDeleteEndpoint1" binding="tns:WatchedVideosPortDeleteEndpoint1Binding">
-            <soap:address location="http://localhost:8888/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortDeleteEndpoint1"/>
+            <soap:address location="http://192.168.0.76:8882/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortDeleteEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="WatchedVideosPortGetEndpoint1" binding="tns:WatchedVideosPortGetEndpoint1Binding">
-            <soap:address location="http://localhost:8888/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortGetEndpoint1"/>
+            <soap:address location="http://192.168.0.76:8882/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortGetEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="WatchedVideosPortCreateEndpoint1" binding="tns:WatchedVideosPortCreateEndpoint1Binding">
-            <soap:address location="http://localhost:8888/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortCreateEndpoint1"/>
+            <soap:address location="http://192.168.0.76:8882/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortCreateEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="WatchedVideosPortGetAllEndpoint1" binding="tns:WatchedVideosPortGetAllEndpoint1Binding">
-            <soap:address location="http://localhost:8888/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortGetAllEndpoint1"/>
+            <soap:address location="http://192.168.0.76:8882/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortGetAllEndpoint1"/>
         </wsdl:port>
     </wsdl:service>
     <wsdl:portType name="WatchedVideosPortDelete">
