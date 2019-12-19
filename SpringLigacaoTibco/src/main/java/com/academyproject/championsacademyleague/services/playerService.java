@@ -106,6 +106,7 @@ public class playerService  extends WebServiceGatewaySupport {
             update(inputGiver);
 
             receiver.setMyChampies(String.valueOf(Integer.valueOf(receiver.getMyChampies())+value));
+            receiver.setXP(String.valueOf(Integer.valueOf(receiver.getXP())+(200*value)));
             PlayerIn receiverIn=new PlayerIn(receiver.getIDPlayer(), receiver.getUserName(), receiver.getEmail(), receiver.getPassword(), receiver.getGender(), receiver.getUserType(), receiver.getXP(), receiver.getChampiesToGive(), receiver.getMyChampies(), receiver.getStatus());
             PlayerDataInput inputReceiver=new PlayerDataInput();
             inputReceiver.getPlayerIn().add(receiverIn);
