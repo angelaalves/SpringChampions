@@ -52,4 +52,6 @@ public class guildEventsController {
         guildEventsService.createGuildEventsList(guildName, startDate);
 
     }
+
+
 }
