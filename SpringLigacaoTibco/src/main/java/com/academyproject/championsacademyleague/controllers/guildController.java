@@ -32,9 +32,9 @@ public class guildController {
     }
 
     @RequestMapping("Create")
-    public List<GuildOut> getCreateGuild(String idGuild, String guildName, String startDate, String endDate, String guildFlag,String status) {
+    public List<GuildOut> getCreateGuild(String guildName, String startDate, String endDate, String guildFlag,String status) {
         GuildDataInput dataIn= new GuildDataInput();
-        GuildIn guildIn= new GuildIn(idGuild,guildName,startDate,endDate,guildFlag,status);
+        GuildIn guildIn= new GuildIn("",guildName,startDate,endDate,guildFlag,status);
         dataIn.getGuildIn().add(guildIn);
         return guildService.create(dataIn);
 
@@ -65,5 +65,6 @@ public class guildController {
         dataIn.getGuildIn().add(guildIn);
         return guildService.get(dataIn);
     }
+
 
 }

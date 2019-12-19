@@ -477,10 +477,10 @@ public class Constants {
 
     //Notifications
 
-    public String  notificationGetAllURL=  "http://localhost:8888/Service/Notifications/NotificationsService.serviceagent/notificationsGetAllEndpoint1";
-    public String  notificationGetURL=  "http://localhost:8888/Service/Notifications/NotificationsService.serviceagent/notificationsGetEndpoint1";
-    public String  notificationDeleteURL= "http://localhost:8888/Service/Notifications/NotificationsService.serviceagent/notificationsDeleteEndpoint1";
-    public String  notificationCreateURL= "http://localhost:8888/Service/Notifications/NotificationsService.serviceagent/notificationsCreateEndpoint1" ;
+    public String  notificationGetAllURL=  "http://192.168.0.76:8882/Service/Notifications/NotificationsService.serviceagent/notificationsGetAllEndpoint1";
+    public String  notificationGetURL=  "http://192.168.0.76:8882/Service/Notifications/NotificationsService.serviceagent/notificationsGetEndpoint1";
+    public String  notificationDeleteURL= "http://192.168.0.76:8882/Service/Notifications/NotificationsService.serviceagent/notificationsDeleteEndpoint1";
+    public String  notificationCreateURL= "http://192.168.0.76:8882/Service/Notifications/NotificationsService.serviceagent/notificationsCreateEndpoint1" ;
     public String  notificationSOAPGetAll = "/Service/Notifications/NotificationsService.serviceagent/notificationsGetAllEndpoint1/GetAll";
     public String  notificationSOAPGet = "/Service/Notifications/NotificationsService.serviceagent/notificationsGetEndpoint1/Get";
     public String  notificationSOAPDelete = "/Service/Notifications/NotificationsService.serviceagent/notificationsDeleteEndpoint1/Delete"  ;
@@ -519,11 +519,11 @@ public class Constants {
 
     //Notification receivers
 
-    public String  notificationReceiversGetAllURL=  "http://localhost:8888/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetAllEndpoint1";
-    public String  notificationReceiversGetURL=  "http://localhost:8888/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetEndpoint1";
-    public String  notificationReceiversDeleteURL= "http://localhost:8888/Service/NotificationReceivers/Service.serviceagent/notificationReceiversDeleteEndpoint1";
-    public String  notificationReceiversCreateURL= "http://localhost:8888/Service/NotificationReceivers/Service.serviceagent/notificationReceiversCreateEndpoint1";
-    public String  notificationReceiversUpdateURL= "http://localhost:8888/Service/NotificationReceivers/Service.serviceagent/notificationReceiversUpdateEndpoint1";
+    public String  notificationReceiversGetAllURL=  "http://192.168.0.76:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetAllEndpoint1";
+    public String  notificationReceiversGetURL=  "http://192.168.0.76:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetEndpoint1";
+    public String  notificationReceiversDeleteURL= "http://192.168.0.76:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversDeleteEndpoint1";
+    public String  notificationReceiversCreateURL= "http://192.168.0.76:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversCreateEndpoint1";
+    public String  notificationReceiversUpdateURL= "http://192.168.0.76:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversUpdateEndpoint1";
     public String  notificationReceiversSOAPGetAll = "/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetAllEndpoint1/GetAll";
     public String  notificationReceiversSOAPGet = "/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetEndpoint1/Get";
     public String  notificationReceiversSOAPDelete = "/Service/NotificationReceivers/Service.serviceagent/notificationReceiversDeleteEndpoint1/Delete";
@@ -567,10 +567,10 @@ public class Constants {
     public String getNotificationReceiversSOAPUpdate() { return notificationReceiversSOAPUpdate; }
 
 
-    public String  guildPlayersGetAllURL=  "http://localhost:8888/Service/GuildPlayers/Service.serviceagent/GuildPlayersGetAllEndpoint1";
-    public String  guildPlayersGetURL=  "http://localhost:8888/Service/GuildPlayers/Service.serviceagent/GuildPlayersGetEndpoint1";
-    public String  guildPlayersDeleteURL= "http://localhost:8888/Service/GuildPlayers/Service.serviceagent/GuildPlayersDeleteEndpoint1";
-    public String  guildPlayersCreateURL= "http://localhost:8888/Service/GuildPlayers/Service.serviceagent/GuildPlayersCreateEndpoint1";
+    public String  guildPlayersGetAllURL=  "http://192.168.0.76:8882/Service/GuildPlayers/Service.serviceagent/GuildPlayersGetAllEndpoint1";
+    public String  guildPlayersGetURL=  "http://192.168.0.76:8882/Service/GuildPlayers/Service.serviceagent/GuildPlayersGetEndpoint1";
+    public String  guildPlayersDeleteURL= "http://192.168.0.76:8882/Service/GuildPlayers/Service.serviceagent/GuildPlayersDeleteEndpoint1";
+    public String  guildPlayersCreateURL= "http://192.168.0.76:8882/Service/GuildPlayers/Service.serviceagent/GuildPlayersCreateEndpoint1";
     public String  guildPlayersSOAPGetAll = "/Service/GuildPlayers/Service.serviceagent/GuildPlayersGetAllEndpoint1/GetAll";
     public String  guildPlayersSOAPGet = "/Service/GuildPlayers/Service.serviceagent/GuildPlayersGetEndpoint1/Get";
     public String  guildPlayersSOAPDelete = "/Service/GuildPlayers/Service.serviceagent/GuildPlayersDeleteEndpoint1/Delete";
