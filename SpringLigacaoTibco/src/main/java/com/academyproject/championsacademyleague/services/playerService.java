@@ -84,11 +84,10 @@ public class playerService  extends WebServiceGatewaySupport {
         List<PlayerOut> player=get(request);
         return player.get(0);
     }
-    public boolean giveChampies(String playerGiver, String playerReceiver, Time time){
+    public boolean giveChampies(String playerGiver, String playerReceiver, int value){
         List<PlayerOut> playersList=getAll(new PlayerDataInput());
         PlayerOut giver=new PlayerOut();
         PlayerOut receiver=new PlayerOut();
-        int value=new timeValue().timeToValue(time);
         for(int i=0; i< playersList.size(); i++){
             if(playersList.get(i).getUserName().equals(playerGiver)){
                 giver=playersList.get(i);

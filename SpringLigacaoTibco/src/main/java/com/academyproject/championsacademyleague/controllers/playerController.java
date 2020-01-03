@@ -11,6 +11,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Random;
 
 @CrossOrigin
 @RestController
@@ -27,7 +28,6 @@ public class playerController {
 
     @RequestMapping("getAll")
     public List<PlayerOut> getAllPlayers() {
-
         PlayerDataInput dataIn= new PlayerDataInput();
         PlayerIn playerIn= new PlayerIn("","","","","","","","","","");
         dataIn.getPlayerIn().add(playerIn);
@@ -37,7 +37,6 @@ public class playerController {
 
     @RequestMapping("Create")
         public List<PlayerOut> getCreatePlayers(String idPlayer, String userName, String email, String password, String gender, String userType, String xp, String champiesToGive, String myChampies, String status) {
-
         PlayerDataInput dataIn= new PlayerDataInput();
         PlayerIn playerIn= new PlayerIn(idPlayer, userName, email, passwordEncoder().encode(password), gender, userType, xp, champiesToGive, myChampies, status);
         dataIn.getPlayerIn().add(playerIn);
@@ -86,5 +85,29 @@ public class playerController {
             }
         }
         return false;
+    }
+
+    @RequestMapping("forgotPassword")
+    public String forgotPassword(@RequestParam String email){
+        String randomPass="";
+        Random randomizer=new Random();
+        for(int i=0; i<10;i++){
+            int j=randomizer.nextInt()*(-1);
+            randomPass.concat(String.valueOf(randomizer.nextInt()*(-1)));
+        }
+        PlayerDataInput dataInGet= new PlayerDataInput();
+        PlayerIn playerInGet= new PlayerIn("", "", email, "", "", "", "", "", "", "");
+        dataInGet.getPlayerIn().add(playerInGet);
+        List<PlayerOut> player=playerService.get(dataInGet);
+
+        PlayerDataInput dataInUpdate= new PlayerDataInput();
+        PlayerIn playerInUpdate=new PlayerIn(player.get(0).getIDPlayer(), player.get(0).getUserName(), player.get(0).getEmail(), passwordEncoder().encode(randomPass), player.get(0).getGender(), player.get(0).getUserType(), player.get(0).getXP(), player.get(0).getChampiesToGive(), player.get(0).getMyChampies(), player.get(0).getStatus());
+        dataInUpdate.getPlayerIn().add(playerInUpdate);
+        playerService.update(dataInUpdate);
+
+        EmailSenders forgotPass=new EmailSenders();
+        forgotPass.forgotPasswordMail(email, randomPass);
+
+        return randomPass;
     }
 }
