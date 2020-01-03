@@ -92,8 +92,8 @@ public class playerController {
         String randomPass="";
         Random randomizer=new Random();
         for(int i=0; i<10;i++){
-            int j=randomizer.nextInt()*(-1);
-            randomPass.concat(String.valueOf(randomizer.nextInt()*(-1)));
+            int j=(randomizer.nextInt(10));
+            randomPass=randomPass+(String.valueOf(randomizer.nextInt(10)));
         }
         PlayerDataInput dataInGet= new PlayerDataInput();
         PlayerIn playerInGet= new PlayerIn("", "", email, "", "", "", "", "", "", "");
