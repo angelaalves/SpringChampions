@@ -66,12 +66,6 @@ public class playerController {
         return playerService.get(dataIn);
     }
 
-    @RequestMapping("SendEmail")
-    public boolean TestMail(String playerEmail){
-        EmailSenders email=new EmailSenders();
-        return email.sendEmail(playerEmail);
-    }
-
     PasswordEncoder passwordEncoder(){return new BCryptPasswordEncoder();}
 
     @RequestMapping("verifyPassword")
@@ -110,9 +104,26 @@ public class playerController {
 
         return randomPass;
     }
-    @RequestMapping("AlertPassword")
-    public void alertPassword(@RequestParam String email){
+
+    @RequestMapping("CreateNewPlayer")
+    public void createNewPlayer(String userName, String email, String gender, String userType){
+        String randomPass="";
+        Random randomizer=new Random();
+        for(int i=0; i<10;i++){
+            int j=(randomizer.nextInt(10));
+            randomPass=randomPass+(String.valueOf(randomizer.nextInt(10)));
+        }
+        PlayerDataInput dataIn= new PlayerDataInput();
+        PlayerIn playerIn= new PlayerIn("",userName, email, passwordEncoder().encode(randomPass), gender, userType, "0", "20", "0", "Active");
+        dataIn.getPlayerIn().add(playerIn);
+        playerService.create(dataIn);
         EmailSenders sender=new EmailSenders();
+        sender.sendEmail(email, randomPass);
+    }
+
+    @RequestMapping("AlertPassword")
+    public void alertPassword(@RequestParam String email) {
+        EmailSenders sender = new EmailSenders();
         sender.changedPasswordMail(email);
     }
 }

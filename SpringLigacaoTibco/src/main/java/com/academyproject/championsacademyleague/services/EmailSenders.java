@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.Properties;
 
 public class EmailSenders {
-    public boolean sendEmail(String playerEmail){
+    public boolean sendEmail(String playerEmail, String randomPass){
         Properties prop=System.getProperties();
         prop.put("mail.smtp.host", "smtp.gmail.com");
         prop.put("mail.smtp.ssl.trust", "smtp.gmail.com");
@@ -26,7 +26,7 @@ public class EmailSenders {
             msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(playerEmail, false));
             msg.setRecipients(Message.RecipientType.CC, InternetAddress.parse("", false));
             msg.setSubject("Welcome to the challenge");
-            msg.setText("Welcome to the Polarising League. Dare to be the champion");
+            msg.setText("Welcome to the Polarising League.\nYour account details are as follow:\nuserName: "+playerEmail+"\npassword: "+randomPass+"\nDare to be the champion");
             msg.setSentDate(new Date());
             SMTPTransport t= (SMTPTransport) session.getTransport("smtp");
             t.connect("smtp.gmail.com", "championspolarisingleague@gmail.com", "apasseeentrar");
