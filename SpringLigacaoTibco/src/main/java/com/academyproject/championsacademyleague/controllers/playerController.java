@@ -110,4 +110,9 @@ public class playerController {
 
         return randomPass;
     }
+    @RequestMapping("AlertPassword")
+    public void alertPassword(@RequestParam String email){
+        EmailSenders sender=new EmailSenders();
+        sender.changedPasswordMail(email);
+    }
 }
