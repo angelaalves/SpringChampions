@@ -106,7 +106,7 @@ public class playerController {
     }
 
     @RequestMapping("CreateNewPlayer")
-    public void createNewPlayer(String userName, String email, String gender, String userType){
+    public void createNewPlayer(String idPlayer, String userName, String email, String gender, String userType){
         String randomPass="";
         Random randomizer=new Random();
         for(int i=0; i<10;i++){
@@ -114,7 +114,7 @@ public class playerController {
             randomPass=randomPass+(String.valueOf(randomizer.nextInt(10)));
         }
         PlayerDataInput dataIn= new PlayerDataInput();
-        PlayerIn playerIn= new PlayerIn("",userName, email, passwordEncoder().encode(randomPass), gender, userType, "0", "20", "0", "Active");
+        PlayerIn playerIn= new PlayerIn(idPlayer,userName, email, passwordEncoder().encode(randomPass), gender, userType, "0", "20", "0", "Active");
         dataIn.getPlayerIn().add(playerIn);
         playerService.create(dataIn);
         EmailSenders sender=new EmailSenders();
