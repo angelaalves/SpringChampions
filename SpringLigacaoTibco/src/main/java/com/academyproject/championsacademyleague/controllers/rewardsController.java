@@ -1,5 +1,6 @@
 package com.academyproject.championsacademyleague.controllers;
 
+import com.academyproject.championsacademyleague.Configurations.timeValue;
 import com.academyproject.championsacademyleague.constants.PlayerType;
 import com.academyproject.championsacademyleague.constants.Time;
 import com.academyproject.championsacademyleague.schemas.*;
@@ -88,7 +89,6 @@ public class rewardsController {
             String[] date = rewards.get(0).getDateOfReward().split("T");
             getUpdateRewards(rewards.get(0).getIDReward(), rewards.get(0).getIDPlayerGiverFK(), rewards.get(0).getIDPlayerReceiverFK(), rewards.get(0).getChampiesGiven(), date[0], "1", rewards.get(0).getTimeSpent(), rewards.get(0).getJustification());
             playerGiver = playerService.getPlayerByID(rewards.get(0).getIDPlayerGiverFK());
-            playerReceiver = playerService.getPlayerByID(rewards.get(0).getIDPlayerReceiverFK());
             System.out.println(Time.valueOf(rewards.get(0).getTimeSpent()));
             playerService.giveChampies(playerService.getPlayerByID(rewards.get(0).getIDPlayerGiverFK()).getUserName(), playerService.getPlayerByID(rewards.get(0).getIDPlayerReceiverFK()).getUserName(), Integer.valueOf(rewards.get(0).getChampiesGiven()));
             notificationReceiversService.createNotificationsByID(rewards.get(0).getIDPlayerGiverFK(), rewards.get(0).getIDPlayerReceiverFK(), playerGiver.getUserName()+"gave you "+rewards.get(0).getChampiesGiven()+" for your work", "0", "1");
@@ -103,10 +103,20 @@ public class rewardsController {
             List<RewardsOut> rewards = getGetRewards(idReward[i], "", "", "", "", "", "", "");
             String[] date = rewards.get(0).getDateOfReward().split("T");
             getUpdateRewards(rewards.get(0).getIDReward(), rewards.get(0).getIDPlayerGiverFK(), rewards.get(0).getIDPlayerReceiverFK(), "0", date[0], "0", rewards.get(0).getTimeSpent(), rewards.get(0).getJustification());
+
+            PlayerOut giver=playerService.getPlayerByID(rewards.get(i).getIDPlayerGiverFK());
+            int value=new timeValue().timeToValue(Time.valueOf(rewards.get(i).getTimeSpent()));
+            giver.setChampiesToGive(String.valueOf(Integer.valueOf(giver.getChampiesToGive())+value));
+            PlayerDataInput champiesReturn=new PlayerDataInput();
+            PlayerIn giverIn=new PlayerIn(giver.getIDPlayer(), giver.getUserName(), giver.getEmail(), giver.getPassword(), giver.getGender(), giver.getUserType(), giver.getXP(), giver.getChampiesToGive(), giver.getMyChampies(), giver.getStatus());
+            champiesReturn.getPlayerIn().add(giverIn);
+            playerService.update(champiesReturn);
+
             PlayerDataInput dataIn=new PlayerDataInput();
             PlayerIn playerIn=new PlayerIn(rewards.get(0).getIDPlayerReceiverFK(),"","","","","","","","","");
             dataIn.getPlayerIn().add(playerIn);
             List<PlayerOut> receiver=playerService.get(dataIn);
+
             notificationReceiversService.createNotificationsByID(rewards.get(0).getIDPlayerGiverFK(), rewards.get(0).getIDPlayerGiverFK(), "your reward to "+receiver.get(0).getUserName()+" was disaproved", "0", "1");
         }
         return true;

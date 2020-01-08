@@ -83,6 +83,7 @@ public class rewardsService  extends WebServiceGatewaySupport {
     public boolean registry(String playerGiver, String playerReceiver, Time time, String justification){
         List<PlayerOut> playersList=playerService.getAll(new PlayerDataInput());
         RewardsDataInput registry=new RewardsDataInput();
+        PlayerDataInput payment=new PlayerDataInput();
         PlayerOut giver=new PlayerOut();
         PlayerOut receiver=new PlayerOut();
         int value=new timeValue().timeToValue(time);
@@ -95,6 +96,10 @@ public class rewardsService  extends WebServiceGatewaySupport {
         }
         if(giver.getIDPlayer()==null || receiver.getIDPlayer()==null)
             return false;
+        giver.setChampiesToGive(String.valueOf(Integer.valueOf(giver.getChampiesToGive())-value));
+        PlayerIn giverIn=new PlayerIn(giver.getIDPlayer(), giver.getUserName(), giver.getEmail(), giver.getPassword(), giver.getGender(), giver.getUserType(), giver.getXP(), giver.getChampiesToGive(), giver.getMyChampies(), giver.getStatus());
+        payment.getPlayerIn().add(giverIn);
+        playerService.update(payment);
         RewardsIn registryInfo=new RewardsIn("", giver.getIDPlayer(), receiver.getIDPlayer(), String.valueOf(value), new dateFormatter().DateFormatter(), String.valueOf(0), String.valueOf(time), justification);
         registry.getRewardsIn().add(registryInfo);
         create(registry);
