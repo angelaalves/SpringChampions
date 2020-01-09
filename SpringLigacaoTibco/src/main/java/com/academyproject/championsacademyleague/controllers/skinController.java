@@ -65,6 +65,5 @@ public class skinController {
         SkinIn deleteIn= new SkinIn(idSkin,"","","","","");
         dataIn.getSkinIn().add(deleteIn);
         return skinService.delete(dataIn);
-
     }
 }

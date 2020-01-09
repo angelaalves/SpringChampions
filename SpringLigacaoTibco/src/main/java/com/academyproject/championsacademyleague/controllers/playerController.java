@@ -72,8 +72,10 @@ public class playerController {
     public boolean verifyPassword(@RequestParam String email, @RequestParam String password){
         List<PlayerOut> players = getAllPlayers();
         for(PlayerOut player: players){
-            if(email.equals(player.getEmail()) & passwordEncoder().matches(password, player.getPassword())){
-                return true;
+            if(email.equals(player.getEmail())){
+                if(passwordEncoder().matches(password, player.getPassword())) {
+                    return true;
+                }
             }else{
                 return false;
             }

@@ -34,13 +34,13 @@ public class NotificationController {
     public SessionService sessionService;
 
 
-    URL url=new URL("http://localhost:4200");
+    URL url=new URL("http://192.168.0.76:4200");
     HttpURLConnection con=(HttpURLConnection) url.openConnection();
 
     private RestTemplate restTemplate = new RestTemplate();
 
     public Post warn(){
-        String url = "http://localhost:4200/";
+        String url = "http://192.168.0.76:4200/";
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
