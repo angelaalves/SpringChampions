@@ -67,7 +67,7 @@ public class guildPlayersController {
         GuildIn guildIn= new GuildIn("","",startDate,"","","");
         dataIn.getGuildIn().add(guildIn);
         List<GuildOut> guild=guildService.get(dataIn);
-        String idGuild=guild.get(0).getIDGuild();
+        String idGuild=guild.get(guild.size()-1).getIDGuild();
         for(int i=0; i<players.length;i++){
             getCreateGuildPlayers(guildmaster, idGuild, players[i]);
         }
