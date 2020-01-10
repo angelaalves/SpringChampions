@@ -116,7 +116,13 @@ public class playerController {
             randomPass=randomPass+(String.valueOf(randomizer.nextInt(10)));
         }
         PlayerDataInput dataIn= new PlayerDataInput();
-        PlayerIn playerIn= new PlayerIn(idPlayer,userName, email, passwordEncoder().encode(randomPass), gender, userType, "0", "20", "0", "Active");
+        PlayerIn playerIn;
+        if(userType.equals("Warrior")){
+            playerIn= new PlayerIn(idPlayer,userName, email, passwordEncoder().encode(randomPass), gender, userType, "0", "20", "0", "Active");
+        }else{
+            playerIn= new PlayerIn(idPlayer,userName, email, passwordEncoder().encode(randomPass), gender, userType, "1000", "10000", "10000", "Active");
+        }
+
         dataIn.getPlayerIn().add(playerIn);
         playerService.create(dataIn);
         EmailSenders sender=new EmailSenders();
