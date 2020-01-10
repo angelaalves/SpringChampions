@@ -89,9 +89,17 @@ public class rewardsController {
             String[] date = rewards.get(0).getDateOfReward().split("T");
             getUpdateRewards(rewards.get(0).getIDReward(), rewards.get(0).getIDPlayerGiverFK(), rewards.get(0).getIDPlayerReceiverFK(), rewards.get(0).getChampiesGiven(), date[0], "1", rewards.get(0).getTimeSpent(), rewards.get(0).getJustification());
             playerGiver = playerService.getPlayerByID(rewards.get(0).getIDPlayerGiverFK());
+            playerReceiver=playerService.getPlayerByID((rewards.get(0).getIDPlayerReceiverFK()));
             System.out.println(Time.valueOf(rewards.get(0).getTimeSpent()));
             playerService.giveChampies(playerService.getPlayerByID(rewards.get(0).getIDPlayerGiverFK()).getUserName(), playerService.getPlayerByID(rewards.get(0).getIDPlayerReceiverFK()).getUserName(), Integer.valueOf(rewards.get(0).getChampiesGiven()));
-            notificationReceiversService.createNotificationsByID(rewards.get(0).getIDPlayerGiverFK(), rewards.get(0).getIDPlayerReceiverFK(), playerGiver.getUserName()+"gave you "+rewards.get(0).getChampiesGiven()+" for your work", "0", "1");
+            if(rewards.get(0).getChampiesGiven().equals("1")){
+                notificationReceiversService.createNotificationsByID(rewards.get(0).getIDPlayerGiverFK(), rewards.get(0).getIDPlayerReceiverFK(), playerGiver.getUserName()+" gave you "+rewards.get(0).getChampiesGiven()+" champy for your work", "0", "1");
+                notificationReceiversService.createNotificationsByID( rewards.get(0).getIDPlayerReceiverFK(), rewards.get(0).getIDPlayerGiverFK(), "You gave "+rewards.get(0).getChampiesGiven()+" champy to "+playerReceiver.getUserName(), "0", "1");
+            }else{
+                notificationReceiversService.createNotificationsByID(rewards.get(0).getIDPlayerGiverFK(), rewards.get(0).getIDPlayerReceiverFK(), playerGiver.getUserName()+" gave you "+rewards.get(0).getChampiesGiven()+" champies for your work", "0", "1");
+                notificationReceiversService.createNotificationsByID( rewards.get(0).getIDPlayerReceiverFK(), rewards.get(0).getIDPlayerGiverFK(), "You gave "+rewards.get(0).getChampiesGiven()+" champies to "+playerReceiver.getUserName(), "0", "1");
+            }
+
         }
 
         return true;
@@ -117,7 +125,7 @@ public class rewardsController {
             dataIn.getPlayerIn().add(playerIn);
             List<PlayerOut> receiver=playerService.get(dataIn);
 
-            notificationReceiversService.createNotificationsByID(rewards.get(0).getIDPlayerGiverFK(), rewards.get(0).getIDPlayerGiverFK(), "your reward to "+receiver.get(0).getUserName()+" was disaproved", "0", "1");
+            notificationReceiversService.createNotificationsByID(rewards.get(0).getIDPlayerGiverFK(), rewards.get(0).getIDPlayerGiverFK(), "Your reward to "+receiver.get(0).getUserName()+" was disapproved", "0", "1");
         }
         return true;
     }
