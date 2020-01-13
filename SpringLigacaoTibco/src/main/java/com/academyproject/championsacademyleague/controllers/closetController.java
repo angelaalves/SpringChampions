@@ -116,4 +116,14 @@ public class closetController {
         activeSkinResults.add(others);
         return activeSkinResults;
     }
+
+    @RequestMapping("changeStatusSkins")
+    public void changeStatusSkins(String[] idSkins, String idPlayer, String status){
+        for(int i=0; i<idSkins.length; i++){
+            ClosetDataInput dataIn=new ClosetDataInput();
+            ClosetIn closetIn=new ClosetIn(idSkins[i], idPlayer, status);
+            dataIn.getClosetIn().add(closetIn);
+            closetService.update(dataIn);
+        }
+    }
 }

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @CrossOrigin
@@ -65,5 +66,17 @@ public class skinController {
         SkinIn deleteIn= new SkinIn(idSkin,"","","","","");
         dataIn.getSkinIn().add(deleteIn);
         return skinService.delete(dataIn);
+    }
+
+    @RequestMapping("getSkinList")
+    public List<SkinOut> getSkinList(String[] SkinIds){
+        List<SkinOut> skinList=new ArrayList<SkinOut>();
+        for(int i=0; i<=SkinIds.length; i++){
+            SkinDataInput dataIn=new SkinDataInput();
+            SkinIn skinIn=new SkinIn(SkinIds[i], "", "", "", "", "");
+            dataIn.getSkinIn().add(skinIn);
+            skinList.add(skinService.get(dataIn).get(0));
+        }
+        return skinList;
     }
 }
