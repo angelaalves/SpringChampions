@@ -65,5 +65,4 @@ public class eventsController {
         dataIn.getEventsIn().add(eventsIn);
         return eventsService.get(dataIn);
     }
-
 }

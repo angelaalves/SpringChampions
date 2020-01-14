@@ -117,7 +117,7 @@ public class playerController {
         }
         PlayerDataInput dataIn= new PlayerDataInput();
         PlayerIn playerIn;
-        if(userType.equals("Warrior")){
+        if(userType.equals("warrior")){
             playerIn= new PlayerIn(idPlayer,userName, email, passwordEncoder().encode(randomPass), gender, userType, "0", "20", "0", "Active");
         }else{
             playerIn= new PlayerIn(idPlayer,userName, email, passwordEncoder().encode(randomPass), gender, userType, "1000", "10000", "10000", "Active");
