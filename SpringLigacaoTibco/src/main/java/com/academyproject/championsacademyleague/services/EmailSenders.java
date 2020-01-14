@@ -24,19 +24,33 @@ public class EmailSenders {
         MimeMultipart multipart = new MimeMultipart("related");
         MimeBodyPart bodyPart = new MimeBodyPart();
         MimeBodyPart messageBodyPart = new MimeBodyPart();
-        String htmlMessage = "<html><body><img src=\"cid:image\"></body></html>";
+        //String htmlMessage = "<html><body><img src=\"cid:image\"></body></html>";
+        String htmlMessage = "<html>" +
+                "<body>" +
+                    "<div class=\"container\" style=\"position: relative; color: black;\">" +
+                        "Welcome to the Champions' Academy League!" + "<br>" +
+                        "Your account details are as follow: <br>" +
+                        "Username: "+ playerEmail + "<br>" +
+                        "Password: "+ randomPass + "<br>" +
+                        "Dare to be the Champion!" + "<br>" +
+                "<img src=\"cid:image\" >" +
+                "</div>" +
+                "</body>" +
+                "</html>";
         try{
             msg.setFrom(new InternetAddress("championspolarisingleague@gmail.com"));
             msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(playerEmail, false));
             msg.setRecipients(Message.RecipientType.CC, InternetAddress.parse("", false));
             msg.setSubject("Welcome to the challenge");
-            msg.setText("Welcome to the Polarising League.\nYour account details are as follow:\nuserName: "+playerEmail+"\npassword: "+randomPass+"\nDare to be the champion");
+            //msg.setText("Welcome to the Polarising League.\n Your account details are as follow:\nuserName: "+playerEmail+"\npassword: "+randomPass+"\nDare to be the champion \n");
             msg.setSentDate(new Date());
-            msg.setContent(htmlMessage, "text/html");
-            bodyPart.setContent(htmlMessage, "text/html");
+            //msg.setContent(htmlMessage, "text/html");
             FileDataSource fds = new FileDataSource("C:/Users/carolina.martins/OneDrive - P8G Group, Lda/SpringChampions/SpringLigacaoTibco/src/main/java/com/academyproject/championsacademyleague/services/emailbackground.jpg");
             messageBodyPart.setDataHandler(new DataHandler(fds));
             messageBodyPart.setHeader("Content-ID", "<image>");
+            //htmlMessage+="Welcome to the Polarising League.\n Your account details are as follow:\nuserName: "+playerEmail+"\npassword: "+randomPass+"\nDare to be the champion \n";
+            bodyPart.setContent(htmlMessage , "text/html; charset=utf-8");
+            //messageBodyPart.setContent("Welcome to the Polarising League.\n Your account details are as follow:\nuserName: "+playerEmail+"\npassword: "+randomPass+"\nDare to be the champion \n", "text/html; charset=UTF-8");
             bodyPart.setDisposition(MimeBodyPart.INLINE);
             multipart.addBodyPart(bodyPart);
             multipart.addBodyPart(messageBodyPart);
