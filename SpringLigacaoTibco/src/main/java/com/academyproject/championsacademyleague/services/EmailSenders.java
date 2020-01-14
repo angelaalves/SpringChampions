@@ -1,12 +1,12 @@
 package com.academyproject.championsacademyleague.services;
 import com.sun.mail.smtp.SMTPTransport;
 
+import javax.activation.DataHandler;
+import javax.activation.FileDataSource;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
+import javax.mail.internet.*;
 import java.util.Date;
 import java.util.Properties;
 
@@ -21,6 +21,10 @@ public class EmailSenders {
 
         Session session= Session.getInstance(prop, null);
         Message msg=new MimeMessage(session);
+        MimeMultipart multipart = new MimeMultipart("related");
+        MimeBodyPart bodyPart = new MimeBodyPart();
+        MimeBodyPart messageBodyPart = new MimeBodyPart();
+        String htmlMessage = "<html><body><img src=\"cid:image\"></body></html>";
         try{
             msg.setFrom(new InternetAddress("championspolarisingleague@gmail.com"));
             msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(playerEmail, false));
@@ -28,6 +32,15 @@ public class EmailSenders {
             msg.setSubject("Welcome to the challenge");
             msg.setText("Welcome to the Polarising League.\nYour account details are as follow:\nuserName: "+playerEmail+"\npassword: "+randomPass+"\nDare to be the champion");
             msg.setSentDate(new Date());
+            msg.setContent(htmlMessage, "text/html");
+            bodyPart.setContent(htmlMessage, "text/html");
+            FileDataSource fds = new FileDataSource("C:/Users/carolina.martins/OneDrive - P8G Group, Lda/SpringChampions/SpringLigacaoTibco/src/main/java/com/academyproject/championsacademyleague/services/emailbackground.jpg");
+            messageBodyPart.setDataHandler(new DataHandler(fds));
+            messageBodyPart.setHeader("Content-ID", "<image>");
+            bodyPart.setDisposition(MimeBodyPart.INLINE);
+            multipart.addBodyPart(bodyPart);
+            multipart.addBodyPart(messageBodyPart);
+            msg.setContent(multipart);
             SMTPTransport t= (SMTPTransport) session.getTransport("smtp");
             t.connect("smtp.gmail.com", "championspolarisingleague@gmail.com", "apasseeentrar");
             t.sendMessage(msg, msg.getAllRecipients());
@@ -102,5 +115,4 @@ public class EmailSenders {
         }
         return false;
     }
-
 }
