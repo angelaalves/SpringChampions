@@ -39,11 +39,10 @@ public class attendedEventsController {
     }
 
     @RequestMapping("Get")
-    public List<AttendedEventsOut> getGetAttendedEvents(String idEventsFK, String idPlayerFK) {
+        public List<AttendedEventsOut> getGetAttendedEvents(String idEventsFK, String idPlayerFK) {
         AttendedEventsDataInput dataIn= new AttendedEventsDataInput();
         AttendedEventsIn attendedEventsIn= new AttendedEventsIn(idEventsFK,idPlayerFK);
         dataIn.getAttendedEventsIn().add(attendedEventsIn);
         return attendedEventsService.get(dataIn);
     }
-
 }

@@ -35,16 +35,16 @@
     </wsdl:types>
     <wsdl:service name="Service">
         <wsdl:port name="GuildPlayersGetEndpoint1" binding="tns:GuildPlayersGetEndpoint1Binding">
-            <soap:address location="http://192.168.0.76:8882/Service/GuildPlayers/Service.serviceagent/GuildPlayersGetEndpoint1"/>
+            <soap:address location="http://192.168.0.84:8882/Service/GuildPlayers/Service.serviceagent/GuildPlayersGetEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="GuildPlayersGetAllEndpoint1" binding="tns:GuildPlayersGetAllEndpoint1Binding">
-            <soap:address location="http://192.168.0.76:8882/Service/GuildPlayers/Service.serviceagent/GuildPlayersGetAllEndpoint1"/>
+            <soap:address location="http://192.168.0.84:8882/Service/GuildPlayers/Service.serviceagent/GuildPlayersGetAllEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="GuildPlayersCreateEndpoint1" binding="tns:GuildPlayersCreateEndpoint1Binding">
-            <soap:address location="http://192.168.0.76:8882/Service/GuildPlayers/Service.serviceagent/GuildPlayersCreateEndpoint1"/>
+            <soap:address location="http://192.168.0.84:8882/Service/GuildPlayers/Service.serviceagent/GuildPlayersCreateEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="GuildPlayersDeleteEndpoint1" binding="tns:GuildPlayersDeleteEndpoint1Binding">
-            <soap:address location="http://192.168.0.76:8882/Service/GuildPlayers/Service.serviceagent/GuildPlayersDeleteEndpoint1"/>
+            <soap:address location="http://192.168.0.84:8882/Service/GuildPlayers/Service.serviceagent/GuildPlayersDeleteEndpoint1"/>
         </wsdl:port>
     </wsdl:service>
     <wsdl:portType name="GuildPlayersGet">

@@ -4,11 +4,11 @@ public class Constants {
 
     //Videos:
 
-    public String  videoGetAllURL=  "http://192.168.0.76:8882/Service/Video/VideoService.serviceagent/VideoPortGetAllEndpoint1";
-    public String  videoGetURL=  "http://192.168.0.76:8882/Service/Video/VideoService.serviceagent/VideoPortGetEndpoint1";
-    public String  videoUpdateURL=  "http://192.168.0.76:8882/Service/Video/VideoService.serviceagent/VideoPortUpdateEndpoint1";
-    public String  videoDeleteURL= "http://192.168.0.76:8882/Service/Video/VideoService.serviceagent/VideoPortDeleteEndpoint1" ;
-    public String  videoCreateURL= "http://192.168.0.76:8882/Service/Video/VideoService.serviceagent/VideoPortCreateEndpoint1" ;
+    public String  videoGetAllURL=  "http://192.168.0.84:8882/Service/Video/VideoService.serviceagent/VideoPortGetAllEndpoint1";
+    public String  videoGetURL=  "http://192.168.0.84:8882/Service/Video/VideoService.serviceagent/VideoPortGetEndpoint1";
+    public String  videoUpdateURL=  "http://192.168.0.84:8882/Service/Video/VideoService.serviceagent/VideoPortUpdateEndpoint1";
+    public String  videoDeleteURL= "http://192.168.0.84:8882/Service/Video/VideoService.serviceagent/VideoPortDeleteEndpoint1" ;
+    public String  videoCreateURL= "http://192.168.0.84:8882/Service/Video/VideoService.serviceagent/VideoPortCreateEndpoint1" ;
     public String  videoSOAPGetAll = "/Service/Video/VideoService.serviceagent/VideoPortGetAllEndpoint1/GetAll";
     public String  videoSOAPGet = "/Service/Video/VideoService.serviceagent/VideoPortGetEndpoint1/Get";
     public String  videoSOAPUpdate = "/Service/Video/VideoService.serviceagent/VideoPortUpdateEndpoint1/Update";
@@ -57,10 +57,10 @@ public class Constants {
 
     //Player:
 
-    public String  playerGetAllURL= "http://192.168.0.76:8882/Service/Player/PlayerService.serviceagent/PlayerPortGetAllEndpoint1";
-    public String  playerGetURL= "http://192.168.0.76:8882/Service/Player/PlayerService.serviceagent/PlayerPortGetEndpoint1";
-    public String  playerUpdateURL= "http://192.168.0.76:8882/Service/Player/PlayerService.serviceagent/PlayerPortUpdateEndpoint1";
-    public String  playerCreateURL= "http://192.168.0.76:8882/Service/Player/PlayerService.serviceagent/PlayerPortCreateEndpoint1";
+    public String  playerGetAllURL= "http://192.168.0.84:8882/Service/Player/PlayerService.serviceagent/PlayerPortGetAllEndpoint1";
+    public String  playerGetURL= "http://192.168.0.84:8882/Service/Player/PlayerService.serviceagent/PlayerPortGetEndpoint1";
+    public String  playerUpdateURL= "http://192.168.0.84:8882/Service/Player/PlayerService.serviceagent/PlayerPortUpdateEndpoint1";
+    public String  playerCreateURL= "http://192.168.0.84:8882/Service/Player/PlayerService.serviceagent/PlayerPortCreateEndpoint1";
     public String  playerSOAPGetAll = "/Service/Player/PlayerService.serviceagent/PlayerPortGetAllEndpoint1/GetAll";
     public String  playerSOAPGet = "/Service/Player/PlayerService.serviceagent/PlayerPortGetEndpoint1/Get";
     public String  playerSOAPUpdate = "/Service/Player/PlayerService.serviceagent/PlayerPortUpdateEndpoint1/Update";
@@ -100,11 +100,11 @@ public class Constants {
 
 //Closet:
 
-    public String  closetGetAllURL=  "http://192.168.0.76:8882/Service/Closet/Closet.serviceagent/ClosetPortGetAllEndpoint1";
-    public String  closetGetURL=  "http://192.168.0.76:8882/Service/Closet/Closet.serviceagent/ClosetPortGetEndpoint1";
-    public String  closetUpdateURL=  "http://192.168.0.76:8882/Service/Closet/Closet.serviceagent/ClosetPortUpdateEndpoint1";
-    public String  closetDeleteURL= "http://192.168.0.76:8882/Service/Closet/Closet.serviceagent/ClosetPortDeleteEndpoint1" ;
-    public String  closetCreateURL= "http://192.168.0.76:8882/Service/Closet/Closet.serviceagent/ClosetPortCreateEndpoint1" ;
+    public String  closetGetAllURL=  "http://192.168.0.84:8882/Service/Closet/Closet.serviceagent/ClosetPortGetAllEndpoint1";
+    public String  closetGetURL=  "http://192.168.0.84:8882/Service/Closet/Closet.serviceagent/ClosetPortGetEndpoint1";
+    public String  closetUpdateURL=  "http://192.168.0.84:8882/Service/Closet/Closet.serviceagent/ClosetPortUpdateEndpoint1";
+    public String  closetDeleteURL= "http://192.168.0.84:8882/Service/Closet/Closet.serviceagent/ClosetPortDeleteEndpoint1" ;
+    public String  closetCreateURL= "http://192.168.0.84:8882/Service/Closet/Closet.serviceagent/ClosetPortCreateEndpoint1" ;
     public String  closetSOAPGetAll = "/Service/Closet/Closet.serviceagent/ClosetPortGetAllEndpoint1/GetAll";
     public String  closetSOAPGet = "/Service/Closet/Closet.serviceagent/ClosetPortGetEndpoint1/Get";
     public String  closetSOAPUpdate = "/Service/Closet/Closet.serviceagent/ClosetPortUpdateEndpoint1/Update";
@@ -153,9 +153,9 @@ public class Constants {
 
     //AttendedEvents:
 
-    public String  attendedEventsGetURL=  "http://192.168.0.76:8882/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsPortGetEndpoint1";
-    public String  attendedEventsDeleteURL= "http://192.168.0.76:8882/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsPortDeleteEndpoint1" ;
-    public String  attendedEventsCreateURL= "http://192.168.0.76:8882/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsCreateEndpoint1" ;
+    public String  attendedEventsGetURL=  "http://192.168.0.84:8882/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsPortGetEndpoint1";
+    public String  attendedEventsDeleteURL= "http://192.168.0.84:8882/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsPortDeleteEndpoint1" ;
+    public String  attendedEventsCreateURL= "http://192.168.0.84:8882/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsCreateEndpoint1" ;
     public String  attendedEventsSOAPGet = "/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsPortGetEndpoint1/Get";
     public String  attendedEventsSOAPDelete = "/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsPortDeleteEndpoint1/Delete";
     public String  attendedEventsSOAPCreate ="/Service/AttendedEvents/AttendedEventsService.serviceagent/attendedEventsCreateEndpoint1/Create";
@@ -187,11 +187,11 @@ public class Constants {
 
     //Rewards:
 
-    public String  rewardsGetAllURL=  "http://192.168.0.76:8882/Service/Rewards/Rewards.serviceagent/RewardsPortGetAllEndpoint1";
-    public String  rewardsGetURL=  "http://192.168.0.76:8882/Service/Rewards/Rewards.serviceagent/RewardsPortGetEndpoint1";
-    public String  rewardsUpdateURL=  "http://192.168.0.76:8882/Service/Rewards/Rewards.serviceagent/RewardsPortUpdateEndpoint1";
-    public String  rewardsDeleteURL= "http://192.168.0.76:8882/Service/Rewards/Rewards.serviceagent/RewardsPortDeleteEndpoint1" ;
-    public String  rewardsCreateURL= "http://192.168.0.76:8882/Service/Rewards/Rewards.serviceagent/RewardsPortCreateEndpoint1" ;
+    public String  rewardsGetAllURL=  "http://192.168.0.84:8882/Service/Rewards/Rewards.serviceagent/RewardsPortGetAllEndpoint1";
+    public String  rewardsGetURL=  "http://192.168.0.84:8882/Service/Rewards/Rewards.serviceagent/RewardsPortGetEndpoint1";
+    public String  rewardsUpdateURL=  "http://192.168.0.84:8882/Service/Rewards/Rewards.serviceagent/RewardsPortUpdateEndpoint1";
+    public String  rewardsDeleteURL= "http://192.168.0.84:8882/Service/Rewards/Rewards.serviceagent/RewardsPortDeleteEndpoint1" ;
+    public String  rewardsCreateURL= "http://192.168.0.84:8882/Service/Rewards/Rewards.serviceagent/RewardsPortCreateEndpoint1" ;
     public String  rewardsSOAPGetAll = "/Service/Rewards/Rewards.serviceagent/RewardsPortGetAllEndpoint1/GetAll";
     public String  rewardsSOAPGet = "/Service/Rewards/Rewards.serviceagent/RewardsPortGetEndpoint1/Get";
     public String  rewardsSOAPUpdate = "/Service/Rewards/Rewards.serviceagent/RewardsPortUpdateEndpoint1/Update";
@@ -240,11 +240,11 @@ public class Constants {
 
     //Skin:
 
-    public String  skinGetAllURL=  "http://192.168.0.76:8882/Service/Skin/SkinService.serviceagent/SkinPortGetAllEndpoint1";
-    public String  skinGetURL=  "http://192.168.0.76:8882/Service/Skin/SkinService.serviceagent/SkinPortGetEndpoint1";
-    public String  skinUpdateURL=  "http://192.168.0.76:8882/Service/Skin/SkinService.serviceagent/SkinPortUpdateEndpoint1";
-    public String  skinDeleteURL= "http://192.168.0.76:8882/Service/Skin/SkinService.serviceagent/SkinPortDeleteEndpoint1" ;
-    public String  skinCreateURL= "http://192.168.0.76:8882/Service/Skin/SkinService.serviceagent/SkinPortCreateEndpoint1" ;
+    public String  skinGetAllURL=  "http://192.168.0.84:8882/Service/Skin/SkinService.serviceagent/SkinPortGetAllEndpoint1";
+    public String  skinGetURL=  "http://192.168.0.84:8882/Service/Skin/SkinService.serviceagent/SkinPortGetEndpoint1";
+    public String  skinUpdateURL=  "http://192.168.0.84:8882/Service/Skin/SkinService.serviceagent/SkinPortUpdateEndpoint1";
+    public String  skinDeleteURL= "http://192.168.0.84:8882/Service/Skin/SkinService.serviceagent/SkinPortDeleteEndpoint1" ;
+    public String  skinCreateURL= "http://192.168.0.84:8882/Service/Skin/SkinService.serviceagent/SkinPortCreateEndpoint1" ;
     public String  skinSOAPGetAll = "/Service/Skin/SkinService.serviceagent/SkinPortGetAllEndpoint1/GetAll";
     public String  skinSOAPGet = "/Service/Skin/SkinService.serviceagent/SkinPortGetEndpoint1/Get";
     public String  skinSOAPUpdate = "/Service/Skin/SkinService.serviceagent/SkinPortUpdateEndpoint1/Update";
@@ -293,10 +293,10 @@ public class Constants {
 
     //Watched Videos:
 
-    public String  watchedVideosGetAllURL=  "http://192.168.0.76:8882/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortGetAllEndpoint1";
-    public String  watchedVideosGetURL=  "http://192.168.0.76:8882/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortGetEndpoint1";
-    public String  watchedVideosDeleteURL= "http://192.168.0.76:8882/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortDeleteEndpoint1" ;
-    public String  watchedVideosCreateURL= "http://192.168.0.76:8882/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortCreateEndpoint1" ;
+    public String  watchedVideosGetAllURL=  "http://192.168.0.84:8882/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortGetAllEndpoint1";
+    public String  watchedVideosGetURL=  "http://192.168.0.84:8882/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortGetEndpoint1";
+    public String  watchedVideosDeleteURL= "http://192.168.0.84:8882/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortDeleteEndpoint1" ;
+    public String  watchedVideosCreateURL= "http://192.168.0.84:8882/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortCreateEndpoint1" ;
     public String  watchedVideosSOAPGetAll = "/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortGetAllEndpoint1/GetAll";
     public String  watchedVideosSOAPGet = "/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortGetEndpoint1/Get";
     public String  watchedVideosSOAPDelete = "/Service/WatchedVideos/WatchedVideos.serviceagent/WatchedVideosPortDeleteEndpoint1/Delete";
@@ -336,11 +336,11 @@ public class Constants {
 
     //Events:
 
-    public String  eventsGetAllURL=  "http://192.168.0.76:8882/Service/Events/EventsService.serviceagent/EventsPortGetAllEndpoint1";
-    public String  eventsGetURL=  "http://192.168.0.76:8882/Service/Events/EventsService.serviceagent/EventsPortGetEndpoint1";
-    public String  eventsUpdateURL=  "http://192.168.0.76:8882/Service/Events/EventsService.serviceagent/EventsPortUpdateEndpoint1";
-    public String  eventsDeleteURL= "http://192.168.0.76:8882/Service/Events/EventsService.serviceagent/EventsPortDeleteEndpoint1" ;
-    public String  eventsCreateURL= "http://192.168.0.76:8882/Service/Events/EventsService.serviceagent/EventsPortCreateEndpoint1" ;
+    public String  eventsGetAllURL=  "http://192.168.0.84:8882/Service/Events/EventsService.serviceagent/EventsPortGetAllEndpoint1";
+    public String  eventsGetURL=  "http://192.168.0.84:8882/Service/Events/EventsService.serviceagent/EventsPortGetEndpoint1";
+    public String  eventsUpdateURL=  "http://192.168.0.84:8882/Service/Events/EventsService.serviceagent/EventsPortUpdateEndpoint1";
+    public String  eventsDeleteURL= "http://192.168.0.84:8882/Service/Events/EventsService.serviceagent/EventsPortDeleteEndpoint1" ;
+    public String  eventsCreateURL= "http://192.168.0.84:8882/Service/Events/EventsService.serviceagent/EventsPortCreateEndpoint1" ;
     public String  eventsSOAPGetAll = "/Service/Events/EventsService.serviceagent/EventsPortGetAllEndpoint1/GetAll";
     public String  eventsSOAPGet = "/Service/Events/EventsService.serviceagent/EventsPortGetEndpoint1/Get";
     public String  eventsSOAPUpdate = "/Service/Events/EventsService.serviceagent/EventsPortUpdateEndpoint1/Update";
@@ -390,9 +390,9 @@ public class Constants {
 
     //GuildEvents:
 
-    public String  guildEventsGetURL=  "http://192.168.0.76:8882/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortGetEndpoint1";
-    public String  guildEventsDeleteURL= "http://192.168.0.76:8882/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortDeleteEndpoint1" ;
-    public String  guildEventsCreateURL= "http://192.168.0.76:8882/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortCreateEndpoint1" ;
+    public String  guildEventsGetURL=  "http://192.168.0.84:8882/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortGetEndpoint1";
+    public String  guildEventsDeleteURL= "http://192.168.0.84:8882/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortDeleteEndpoint1" ;
+    public String  guildEventsCreateURL= "http://192.168.0.84:8882/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortCreateEndpoint1" ;
     public String  guildEventsSOAPGet = "/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortGetEndpoint1/Get";
     public String  guildEventsSOAPDelete = "/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortDeleteEndpoint1/Delete";
     public String  guildEventsSOAPCreate ="/Service/GuildEvents/GuildEvents.serviceagent/GuildEventsPortCreateEndpoint1/Create";
@@ -424,11 +424,11 @@ public class Constants {
 
     //Guild:
 
-    public String  guildGetAllURL=  "http://192.168.0.76:8882/Service/Guild/Guild.serviceagent/GuildPortGetAllEndpoint1";
-    public String  guildGetURL=  "http://192.168.0.76:8882/Service/Guild/Guild.serviceagent/GuildPortGetEndpoint1";
-    public String  guildUpdateURL=  "http://192.168.0.76:8882/Service/Guild/Guild.serviceagent/GuildPortUpdateEndpoint1";
-    public String  guildDeleteURL= "http://192.168.0.76:8882/Service/Guild/Guild.serviceagent/GuildPortDeleteEndpoint1" ;
-    public String  guildCreateURL= "http://192.168.0.76:8882/Service/Guild/Guild.serviceagent/GuildPortCreateEndpoint1" ;
+    public String  guildGetAllURL=  "http://192.168.0.84:8882/Service/Guild/Guild.serviceagent/GuildPortGetAllEndpoint1";
+    public String  guildGetURL=  "http://192.168.0.84:8882/Service/Guild/Guild.serviceagent/GuildPortGetEndpoint1";
+    public String  guildUpdateURL=  "http://192.168.0.84:8882/Service/Guild/Guild.serviceagent/GuildPortUpdateEndpoint1";
+    public String  guildDeleteURL= "http://192.168.0.84:8882/Service/Guild/Guild.serviceagent/GuildPortDeleteEndpoint1" ;
+    public String  guildCreateURL= "http://192.168.0.84:8882/Service/Guild/Guild.serviceagent/GuildPortCreateEndpoint1" ;
     public String  guildSOAPGetAll = "/Service/Guild/Guild.serviceagent/GuildPortGetAllEndpoint1/GetAll";
     public String  guildSOAPGet = "/Service/Guild/Guild.serviceagent/GuildPortGetEndpoint1/Get";
     public String  guildSOAPUpdate = "/Service/Guild/Guild.serviceagent/GuildPortUpdateEndpoint1/Update";
@@ -477,10 +477,10 @@ public class Constants {
 
     //Notifications
 
-    public String  notificationGetAllURL=  "http://192.168.0.76:8882/Service/Notifications/NotificationsService.serviceagent/notificationsGetAllEndpoint1";
-    public String  notificationGetURL=  "http://192.168.0.76:8882/Service/Notifications/NotificationsService.serviceagent/notificationsGetEndpoint1";
-    public String  notificationDeleteURL= "http://192.168.0.76:8882/Service/Notifications/NotificationsService.serviceagent/notificationsDeleteEndpoint1";
-    public String  notificationCreateURL= "http://192.168.0.76:8882/Service/Notifications/NotificationsService.serviceagent/notificationsCreateEndpoint1" ;
+    public String  notificationGetAllURL=  "http://192.168.0.84:8882/Service/Notifications/NotificationsService.serviceagent/notificationsGetAllEndpoint1";
+    public String  notificationGetURL=  "http://192.168.0.84:8882/Service/Notifications/NotificationsService.serviceagent/notificationsGetEndpoint1";
+    public String  notificationDeleteURL= "http://192.168.0.84:8882/Service/Notifications/NotificationsService.serviceagent/notificationsDeleteEndpoint1";
+    public String  notificationCreateURL= "http://192.168.0.84:8882/Service/Notifications/NotificationsService.serviceagent/notificationsCreateEndpoint1" ;
     public String  notificationSOAPGetAll = "/Service/Notifications/NotificationsService.serviceagent/notificationsGetAllEndpoint1/GetAll";
     public String  notificationSOAPGet = "/Service/Notifications/NotificationsService.serviceagent/notificationsGetEndpoint1/Get";
     public String  notificationSOAPDelete = "/Service/Notifications/NotificationsService.serviceagent/notificationsDeleteEndpoint1/Delete"  ;
@@ -519,11 +519,11 @@ public class Constants {
 
     //Notification receivers
 
-    public String  notificationReceiversGetAllURL=  "http://192.168.0.76:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetAllEndpoint1";
-    public String  notificationReceiversGetURL=  "http://192.168.0.76:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetEndpoint1";
-    public String  notificationReceiversDeleteURL= "http://192.168.0.76:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversDeleteEndpoint1";
-    public String  notificationReceiversCreateURL= "http://192.168.0.76:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversCreateEndpoint1";
-    public String  notificationReceiversUpdateURL= "http://192.168.0.76:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversUpdateEndpoint1";
+    public String  notificationReceiversGetAllURL=  "http://192.168.0.84:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetAllEndpoint1";
+    public String  notificationReceiversGetURL=  "http://192.168.0.84:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetEndpoint1";
+    public String  notificationReceiversDeleteURL= "http://192.168.0.84:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversDeleteEndpoint1";
+    public String  notificationReceiversCreateURL= "http://192.168.0.84:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversCreateEndpoint1";
+    public String  notificationReceiversUpdateURL= "http://192.168.0.84:8882/Service/NotificationReceivers/Service.serviceagent/notificationReceiversUpdateEndpoint1";
     public String  notificationReceiversSOAPGetAll = "/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetAllEndpoint1/GetAll";
     public String  notificationReceiversSOAPGet = "/Service/NotificationReceivers/Service.serviceagent/notificationReceiversGetEndpoint1/Get";
     public String  notificationReceiversSOAPDelete = "/Service/NotificationReceivers/Service.serviceagent/notificationReceiversDeleteEndpoint1/Delete";
@@ -567,10 +567,10 @@ public class Constants {
     public String getNotificationReceiversSOAPUpdate() { return notificationReceiversSOAPUpdate; }
 
 
-    public String  guildPlayersGetAllURL=  "http://192.168.0.76:8882/Service/GuildPlayers/Service.serviceagent/GuildPlayersGetAllEndpoint1";
-    public String  guildPlayersGetURL=  "http://192.168.0.76:8882/Service/GuildPlayers/Service.serviceagent/GuildPlayersGetEndpoint1";
-    public String  guildPlayersDeleteURL= "http://192.168.0.76:8882/Service/GuildPlayers/Service.serviceagent/GuildPlayersDeleteEndpoint1";
-    public String  guildPlayersCreateURL= "http://192.168.0.76:8882/Service/GuildPlayers/Service.serviceagent/GuildPlayersCreateEndpoint1";
+    public String  guildPlayersGetAllURL=  "http://192.168.0.84:8882/Service/GuildPlayers/Service.serviceagent/GuildPlayersGetAllEndpoint1";
+    public String  guildPlayersGetURL=  "http://192.168.0.84:8882/Service/GuildPlayers/Service.serviceagent/GuildPlayersGetEndpoint1";
+    public String  guildPlayersDeleteURL= "http://192.168.0.84:8882/Service/GuildPlayers/Service.serviceagent/GuildPlayersDeleteEndpoint1";
+    public String  guildPlayersCreateURL= "http://192.168.0.84:8882/Service/GuildPlayers/Service.serviceagent/GuildPlayersCreateEndpoint1";
     public String  guildPlayersSOAPGetAll = "/Service/GuildPlayers/Service.serviceagent/GuildPlayersGetAllEndpoint1/GetAll";
     public String  guildPlayersSOAPGet = "/Service/GuildPlayers/Service.serviceagent/GuildPlayersGetEndpoint1/Get";
     public String  guildPlayersSOAPDelete = "/Service/GuildPlayers/Service.serviceagent/GuildPlayersDeleteEndpoint1/Delete";

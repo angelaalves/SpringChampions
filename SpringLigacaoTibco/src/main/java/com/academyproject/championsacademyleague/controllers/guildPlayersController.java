@@ -33,7 +33,6 @@ public class guildPlayersController {
         GuildPlayersIn guildPlayersIn= new GuildPlayersIn("","","");
         dataIn.getGuildPlayersIn().add(guildPlayersIn);
         return guildPlayersService.getAll(dataIn);
-
     }
 
     @RequestMapping("Create")
@@ -42,15 +41,14 @@ public class guildPlayersController {
         GuildPlayersIn guildPlayersIn= new GuildPlayersIn(idGuildMasterFK, idGuildFK, idWarriorFK);
         dataIn.getGuildPlayersIn().add(guildPlayersIn);
         return guildPlayersService.create(dataIn);
-
     }
+
     @RequestMapping("Delete")
     public List<GuildPlayersOut> getDeleteGuildPlayer(String idGuildFK) {
         GuildPlayersDataInput dataIn= new GuildPlayersDataInput();
         GuildPlayersIn guildPlayersIn= new GuildPlayersIn("",idGuildFK,"");
         dataIn.getGuildPlayersIn().add(guildPlayersIn);
         return guildPlayersService.delete(dataIn);
-
     }
 
     @RequestMapping("Get")
@@ -72,11 +70,13 @@ public class guildPlayersController {
             getCreateGuildPlayers(guildmaster, idGuild, players[i]);
         }
     }
+
     @RequestMapping("getGuildMaster")
     public String getGuildMaster(String idGuild){
         List<GuildPlayersOut> playerList=getGetGuildPlayers("", idGuild, "");
         return playerList.get(0).getIDGuildMasterFK();
     }
+
     @RequestMapping("getMembers")
     public List<String> getMembers(String idGuild){
         List<GuildPlayersOut> playerList=getGetGuildPlayers("", idGuild, "");

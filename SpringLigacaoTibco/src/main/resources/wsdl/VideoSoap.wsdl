@@ -37,19 +37,19 @@
     </wsdl:types>
     <wsdl:service name="VideoService">
         <wsdl:port name="VideoPortUpdateEndpoint1" binding="tns:VideoPortUpdateEndpoint1Binding">
-            <soap:address location="http://192.168.0.76:8882/Service/Video/VideoService.serviceagent/VideoPortUpdateEndpoint1"/>
+            <soap:address location="http://192.168.0.84:8882/Service/Video/VideoService.serviceagent/VideoPortUpdateEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="VideoPortGetAllEndpoint1" binding="tns:VideoPortGetAllEndpoint1Binding">
-            <soap:address location="http://192.168.0.76:8882/Service/Video/VideoService.serviceagent/VideoPortGetAllEndpoint1"/>
+            <soap:address location="http://192.168.0.84:8882/Service/Video/VideoService.serviceagent/VideoPortGetAllEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="VideoPortCreateEndpoint1" binding="tns:VideoPortCreateEndpoint1Binding">
-            <soap:address location="http://192.168.0.76:8882/Service/Video/VideoService.serviceagent/VideoPortCreateEndpoint1"/>
+            <soap:address location="http://192.168.0.84:8882/Service/Video/VideoService.serviceagent/VideoPortCreateEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="VideoPortGetEndpoint1" binding="tns:VideoPortGetEndpoint1Binding">
-            <soap:address location="http://192.168.0.76:8882/Service/Video/VideoService.serviceagent/VideoPortGetEndpoint1"/>
+            <soap:address location="http://192.168.0.84:8882/Service/Video/VideoService.serviceagent/VideoPortGetEndpoint1"/>
         </wsdl:port>
         <wsdl:port name="VideoPortDeleteEndpoint1" binding="tns:VideoPortDeleteEndpoint1Binding">
-            <soap:address location="http://192.168.0.76:8882/Service/Video/VideoService.serviceagent/VideoPortDeleteEndpoint1"/>
+            <soap:address location="http://192.168.0.84:8882/Service/Video/VideoService.serviceagent/VideoPortDeleteEndpoint1"/>
         </wsdl:port>
     </wsdl:service>
     <wsdl:portType name="VideoPortUpdate">
