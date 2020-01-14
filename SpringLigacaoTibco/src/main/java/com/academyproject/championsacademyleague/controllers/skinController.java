@@ -71,7 +71,7 @@ public class skinController {
     @RequestMapping("getSkinList")
     public List<SkinOut> getSkinList(String[] SkinIds){
         List<SkinOut> skinList=new ArrayList<SkinOut>();
-        for(int i=0; i<=SkinIds.length; i++){
+        for(int i=0; i<=SkinIds.length-1; i++){
             SkinDataInput dataIn=new SkinDataInput();
             SkinIn skinIn=new SkinIn(SkinIds[i], "", "", "", "", "");
             dataIn.getSkinIn().add(skinIn);
