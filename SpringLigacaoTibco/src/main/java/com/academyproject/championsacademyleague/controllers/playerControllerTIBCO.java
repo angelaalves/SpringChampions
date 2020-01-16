@@ -1,14 +1,16 @@
 package com.academyproject.championsacademyleague.controllers;
 
-import com.academyproject.championsacademyleague.Configurations.JwtAuthenticationFilter;
-import com.academyproject.championsacademyleague.constants.Time;
-import com.academyproject.championsacademyleague.schemas.*;
+import com.academyproject.championsacademyleague.schemas.PlayerDataInput;
+import com.academyproject.championsacademyleague.schemas.PlayerIn;
+import com.academyproject.championsacademyleague.schemas.PlayerOut;
 import com.academyproject.championsacademyleague.services.EmailSenders;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Random;
@@ -16,7 +18,7 @@ import java.util.Random;
 @CrossOrigin
 @RestController
 @RequestMapping("players")
-public class playerController {
+public class playerControllerTIBCO {
 
     @Autowired
     public com.academyproject.championsacademyleague.services.playerService playerService;

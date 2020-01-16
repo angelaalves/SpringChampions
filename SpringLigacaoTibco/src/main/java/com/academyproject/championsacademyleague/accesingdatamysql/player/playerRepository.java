@@ -1,4 +1,4 @@
-package com.academyproject.championsacademyleague.accesingdatamysql;
+package com.academyproject.championsacademyleague.accesingdatamysql.player;
 
 import org.springframework.data.repository.CrudRepository;
 

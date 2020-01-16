@@ -1,4 +1,4 @@
-package com.academyproject.championsacademyleague.accesingdatamysql;
+package com.academyproject.championsacademyleague.accesingdatamysql.player;
 
 import javax.persistence.*;
 
