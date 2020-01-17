@@ -11,14 +11,24 @@ import java.util.Date;
 import java.util.Properties;
 
 public class EmailSenders {
-    public boolean sendEmail(String playerEmail, String randomPass){
-        Properties prop=System.getProperties();
+    private Properties prop;
+    public EmailSenders(){
+        prop=System.getProperties();
         prop.put("mail.smtp.host", "smtp.gmail.com");
         prop.put("mail.smtp.ssl.trust", "smtp.gmail.com");
         prop.put("mail_smtp.auth", "true");
         prop.put("mail.smtp.port", "25");
         prop.put("mail.smtp.starttls.enable", "true");
-
+    }
+    public EmailSenders(String smtpHost, String sslTrust, String auth, String port, String enableStartTLS){
+        prop=System.getProperties();
+        prop.put("mail.smtp.host", smtpHost);
+        prop.put("mail.smtp.ssl.trust", sslTrust);
+        prop.put("mail_smtp.auth", auth);
+        prop.put("mail.smtp.port", port);
+        prop.put("mail.smtp.starttls.enable", enableStartTLS);
+    }
+    public boolean sendEmail(String playerEmail, String randomPass){
         Session session= Session.getInstance(prop, null);
         Message msg=new MimeMessage(session);
         MimeMultipart multipart = new MimeMultipart("related");
@@ -54,7 +64,6 @@ public class EmailSenders {
             SMTPTransport t= (SMTPTransport) session.getTransport("smtp");
             t.connect("smtp.gmail.com", "championspolarisingleague@gmail.com", "apasseeentrar");
             t.sendMessage(msg, msg.getAllRecipients());
-            System.out.println("Response: "+t.getLastServerResponse());
             t.close();
             return true;
         } catch (AddressException e) {
@@ -65,13 +74,6 @@ public class EmailSenders {
         return false;
     }
     public boolean forgotPasswordMail(String playerEmail, String randomPass){
-        Properties prop=System.getProperties();
-        prop.put("mail.smtp.host", "smtp.gmail.com");
-        prop.put("mail.smtp.ssl.trust", "smtp.gmail.com");
-        prop.put("mail_smtp.auth", "true");
-        prop.put("mail.smtp.port", "25");
-        prop.put("mail.smtp.starttls.enable", "true");
-
         Session session= Session.getInstance(prop, null);
         Message msg=new MimeMessage(session);
         try{
@@ -96,13 +98,6 @@ public class EmailSenders {
     }
 
     public boolean changedPasswordMail(String playerEmail){
-        Properties prop=System.getProperties();
-        prop.put("mail.smtp.host", "smtp.gmail.com");
-        prop.put("mail.smtp.ssl.trust", "smtp.gmail.com");
-        prop.put("mail_smtp.auth", "true");
-        prop.put("mail.smtp.port", "25");
-        prop.put("mail.smtp.starttls.enable", "true");
-
         Session session= Session.getInstance(prop, null);
         Message msg=new MimeMessage(session);
         try{

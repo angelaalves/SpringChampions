@@ -1,14 +1,11 @@
 package com.academyproject.championsacademyleague.Configurations;
 
 import com.academyproject.championsacademyleague.constants.LoginViewModel;
-import com.academyproject.championsacademyleague.controllers.NotificationController;
 import com.academyproject.championsacademyleague.services.SessionService;
-import com.academyproject.championsacademyleague.services.dateFormatter;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
