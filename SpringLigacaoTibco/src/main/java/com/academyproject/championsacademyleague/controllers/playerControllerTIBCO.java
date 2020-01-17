@@ -78,8 +78,6 @@ public class playerControllerTIBCO {
                 if(passwordEncoder().matches(password, player.getPassword())) {
                     return true;
                 }
-            }else{
-                return false;
             }
         }
         return false;

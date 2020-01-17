@@ -42,7 +42,8 @@ public class EmailSenders {
             msg.setRecipients(Message.RecipientType.CC, InternetAddress.parse("", false));
             msg.setSubject("Welcome to the challenge");
             msg.setSentDate(new Date());
-            FileDataSource fds = new FileDataSource("C:/Users/carolina.martins/OneDrive - P8G Group, Lda/SpringChampions/SpringLigacaoTibco/src/main/java/com/academyproject/championsacademyleague/services/emailbackground.jpg");
+            //msg.setContent(htmlMessage, "text/html");
+            FileDataSource fds = new FileDataSource("C:/Users/tiago.martins.santos/OneDrive/GitSpring/SpringChampions/SpringLigacaoTibco/src/main/java/com/academyproject/championsacademyleague/services/emailbackground.jpg");
             messageBodyPart.setDataHandler(new DataHandler(fds));
             messageBodyPart.setHeader("Content-ID", "<image>");
             bodyPart.setContent(htmlMessage , "text/html; charset=utf-8");
