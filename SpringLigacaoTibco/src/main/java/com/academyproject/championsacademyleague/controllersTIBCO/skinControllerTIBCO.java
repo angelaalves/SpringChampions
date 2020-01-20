@@ -15,7 +15,7 @@ import java.util.List;
 @CrossOrigin
 @RestController
 @RequestMapping("skins")
-public class skinController {
+public class skinControllerTIBCO {
 
     @Autowired
     public com.academyproject.championsacademyleague.services.skinService skinService;

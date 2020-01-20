@@ -14,7 +14,7 @@ import java.util.List;
 @CrossOrigin
 @RestController
 @RequestMapping("videos")
-public class videoController {
+public class videoControllerTIBCO {
 
     @Autowired
     public com.academyproject.championsacademyleague.services.videoService videoService;

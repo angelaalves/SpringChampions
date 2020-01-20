@@ -2,7 +2,7 @@ package com.academyproject.championsacademyleague.accesingdatamysql.notification
 
 import javax.persistence.*;
 
-@Entity
+/*@Entity
 @Table(name="notifications")
 public class Notification {
     @Id
@@ -57,4 +57,4 @@ public class Notification {
     public void setDescription(String description) {
         Description = description;
     }
-}
+}*/

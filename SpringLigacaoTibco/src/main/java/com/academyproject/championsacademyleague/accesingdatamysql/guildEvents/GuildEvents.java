@@ -1,7 +1,7 @@
 package com.academyproject.championsacademyleague.accesingdatamysql.guildEvents;
 
 import javax.persistence.*;
-
+/*
 @Entity
 @Table(name="guildevents")
 public class GuildEvents {
@@ -27,4 +27,4 @@ public class GuildEvents {
     public void setIDEventFK(Integer IDEventFK) {
         this.IDEventFK = IDEventFK;
     }
-}
+}*/

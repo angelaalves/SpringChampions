@@ -2,7 +2,7 @@ package com.academyproject.championsacademyleague.accesingdatamysql.guildPlayers
 
 import javax.persistence.*;
 
-@Entity
+/*@Entity
 @Table(name="guildplayer")
 public class GuildPlayers {
     @Id
@@ -37,4 +37,4 @@ public class GuildPlayers {
     public void setIDWarriorFK(Integer IDWarriorFK) {
         this.IDWarriorFK = IDWarriorFK;
     }
-}
+}*/

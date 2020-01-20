@@ -13,7 +13,7 @@ import java.util.List;
 @CrossOrigin
 @RestController
 @RequestMapping("watchedVideos")
-public class watchedVideosController {
+public class watchedVideosControllerTIBCO {
 
     @Autowired
     public com.academyproject.championsacademyleague.services.watchedVideosService watchedVideosService;

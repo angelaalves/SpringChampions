@@ -1,10 +1,8 @@
 package com.academyproject.championsacademyleague.accesingdatamysql.rewards;
 
-import com.sun.tools.javac.comp.Resolve;
-
 import javax.persistence.*;
 
-@Entity
+/*@Entity
 @Table(name="rewards")
 public class Reward {
     @Id
@@ -89,4 +87,4 @@ public class Reward {
     public void setJustification(String justification) {
         Justification = justification;
     }
-}
+}*/

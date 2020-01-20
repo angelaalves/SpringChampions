@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.persistence.GeneratedValue;
 
-@Controller
+/*@Controller
 @RequestMapping(path = "reward")
 public class RewardController {
     @Autowired
@@ -20,4 +20,4 @@ public class RewardController {
         // This returns a JSON or XML with the players
         return rewardRepository.findAll();
     }
-}
+}*/

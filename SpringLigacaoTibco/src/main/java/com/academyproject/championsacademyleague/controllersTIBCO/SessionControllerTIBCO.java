@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin
 @RestController
 @RequestMapping("session")
-public class SessionController {
+public class SessionControllerTIBCO {
     @Autowired
     public SessionService sessionService;
 

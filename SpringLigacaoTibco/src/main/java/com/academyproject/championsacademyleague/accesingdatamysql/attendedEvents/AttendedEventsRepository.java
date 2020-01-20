@@ -2,5 +2,5 @@ package com.academyproject.championsacademyleague.accesingdatamysql.attendedEven
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface AttendedEventsRepository extends CrudRepository<AttendedEvents, Integer> {
+public interface AttendedEventsRepository{
 }

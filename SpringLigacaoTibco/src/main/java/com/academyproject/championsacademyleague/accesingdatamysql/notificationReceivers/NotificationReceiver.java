@@ -2,7 +2,7 @@ package com.academyproject.championsacademyleague.accesingdatamysql.notification
 
 import javax.persistence.*;
 
-@Entity
+/*@Entity
 @Table(name="notification_receivers")
 public class NotificationReceiver {
 
@@ -58,4 +58,4 @@ public class NotificationReceiver {
     public void setNotificationSeen(Integer notificationSeen) {
         this.notificationSeen = notificationSeen;
     }
-}
+}*/
