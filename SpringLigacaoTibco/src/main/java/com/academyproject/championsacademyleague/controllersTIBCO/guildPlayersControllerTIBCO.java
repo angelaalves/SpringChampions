@@ -13,7 +13,7 @@ import java.util.List;
 @CrossOrigin
 @RestController
 @RequestMapping("guildPlayers")
-public class guildPlayersController {
+public class guildPlayersControllerTIBCO {
 
     @Autowired
     public com.academyproject.championsacademyleague.services.guildPlayersService guildPlayersService;

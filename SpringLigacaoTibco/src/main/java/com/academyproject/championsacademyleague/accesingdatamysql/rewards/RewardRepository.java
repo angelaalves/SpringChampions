@@ -1,4 +1,6 @@
 package com.academyproject.championsacademyleague.accesingdatamysql.rewards;
 
-public interface RewardRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface RewardRepository extends CrudRepository<Reward, Integer> {
 }

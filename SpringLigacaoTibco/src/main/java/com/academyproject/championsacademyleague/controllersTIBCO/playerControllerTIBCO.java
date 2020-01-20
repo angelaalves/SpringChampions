@@ -1,4 +1,4 @@
-package com.academyproject.championsacademyleague.controllers;
+package com.academyproject.championsacademyleague.controllersTIBCO;
 
 import com.academyproject.championsacademyleague.schemas.PlayerDataInput;
 import com.academyproject.championsacademyleague.schemas.PlayerIn;

@@ -15,7 +15,7 @@ import java.util.List;
 @CrossOrigin
 @RestController
 @RequestMapping("events")
-public class eventsController {
+public class eventsControllerTIBCO {
 
     @Autowired
     public com.academyproject.championsacademyleague.services.eventsService eventsService;

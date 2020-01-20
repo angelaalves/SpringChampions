@@ -6,8 +6,10 @@ import javax.persistence.*;
 @Table(name="attendedevents")
 
 public class AttendedEvents {
-    @JoinColumn(name="ID_Event_FK", referencedColumnName = "ID_Event", foreignKey = @ForeignKey(ConstraintMode.NO_CONSTRAINT))
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "ID_Event_FK")
     private Integer IDEventFK;
-    @JoinColumn(name="ID_Player_FK", referencedColumnName = "ID_Player", foreignKey = @ForeignKey(ConstraintMode.NO_CONSTRAINT))
+    @Column(name = "ID_Player_FK")
     private Integer IDPlayerFK;
 }

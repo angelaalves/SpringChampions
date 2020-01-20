@@ -9,7 +9,7 @@ import java.util.List;
 @CrossOrigin
 @RestController
 @RequestMapping("attendedEvents")
-public class attendedEventsController {
+public class attendedEventsControllerTIBCO {
 
     @Autowired
     public com.academyproject.championsacademyleague.services.attendedEventsService attendedEventsService;

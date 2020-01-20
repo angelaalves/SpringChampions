@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("closet")
 
-public class closetController {
+public class closetControllerTIBCO {
 
     @Autowired
     public closetService closetService;

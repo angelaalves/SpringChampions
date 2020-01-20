@@ -13,7 +13,7 @@ import java.util.List;
 @CrossOrigin
 @RestController
 @RequestMapping("guild")
-public class guildController {
+public class guildControllerTIBCO {
     @Autowired
     public guildService guildService;
 

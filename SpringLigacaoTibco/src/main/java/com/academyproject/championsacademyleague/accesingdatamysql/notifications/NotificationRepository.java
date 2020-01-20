@@ -1,4 +1,6 @@
 package com.academyproject.championsacademyleague.accesingdatamysql.notifications;
 
-public interface NotificationRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface NotificationRepository extends CrudRepository<Notification, Integer> {
 }
