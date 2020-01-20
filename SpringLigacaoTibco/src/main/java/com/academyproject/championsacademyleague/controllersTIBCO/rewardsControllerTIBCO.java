@@ -14,7 +14,7 @@ import java.util.List;
 @CrossOrigin
 @RestController
 @RequestMapping("rewards")
-public class rewardsController {
+public class rewardsControllerTIBCO {
     @Autowired
     public com.academyproject.championsacademyleague.services.rewardsService rewardsService;
     @Autowired
