@@ -1,6 +1,8 @@
 package com.academyproject.championsacademyleague.accesingdatamysql.events;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name="events")

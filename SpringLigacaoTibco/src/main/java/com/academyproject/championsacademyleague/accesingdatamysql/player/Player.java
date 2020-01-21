@@ -1,6 +1,8 @@
 package com.academyproject.championsacademyleague.accesingdatamysql.player;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity // This tells Hibernate to make a table out of this class
 @Table(name="player")
@@ -21,7 +23,7 @@ public class Player {
     private String usertype;
     @Column(name="XP")
     private Integer xp;
-    @Column(name="ChampiesToGive")
+    @Column(name="Champiestogive")
     private Integer champiesToGive;
     @Column(name="Mychampies")
     private Integer myChampies;

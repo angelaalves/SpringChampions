@@ -7,16 +7,15 @@ import javax.persistence.*;
 
 /*@Entity
 @Table(name="attendedevents")
-
 public class AttendedEvents {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="ID_Event_FK")
-    /*@ManyToMany
-    @JoinColumn(name = "ID_Event_FK")
-    private Events EventFK;
-    /*@ManyToMany
-    @JoinColumn(name = "ID_Player_FK")
-    @Column(name = "ID_Player_FK")
-    private Player PlayerFK;
+    @EmbeddedId
+    private AttendedEventsId id;
+
+    public AttendedEventsId getId() {
+        return id;
+    }
+
+    public void setId(AttendedEventsId id) {
+        this.id = id;
+    }
 }*/

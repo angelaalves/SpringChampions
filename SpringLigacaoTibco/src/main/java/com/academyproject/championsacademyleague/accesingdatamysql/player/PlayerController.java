@@ -72,4 +72,5 @@ public class PlayerController {
         // This returns a JSON or XML with the players
         return playerRepository.findAll();
     }
+
 }

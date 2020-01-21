@@ -1,18 +1,22 @@
 package com.academyproject.championsacademyleague.accesingdatamysql.rewards;
 
+import com.academyproject.championsacademyleague.accesingdatamysql.player.Player;
+
 import javax.persistence.*;
 
-/*@Entity
+@Entity
 @Table(name="rewards")
 public class Reward {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID_Reward")
     private Integer IDReward;
-    @Column(name = "ID_Playergiver_FK")
-    private Integer IDPlayerGiverFK;
-    @Column(name = "ID_PlayerReceiver_FK")
-    private Integer IDPlayerReceiverFK;
+    @ManyToOne
+    @JoinColumn(name = "ID_Playergiver_FK", referencedColumnName = "ID_Player")
+    private Player IDPlayerGiverFK;
+    @ManyToOne
+    @JoinColumn(name="ID_Playerreceiver_FK", referencedColumnName = "ID_Player")
+    private Player IDPlayerReceiverFK;
     @Column(name = "Champiesgiven")
     private Integer ChampiesGiven;
     @Column(name = "Dateofreward")
@@ -28,11 +32,11 @@ public class Reward {
         return IDReward;
     }
 
-    public Integer getIDPlayerGiverFK() {
+    public Player getIdplayergiverfk() {
         return IDPlayerGiverFK;
     }
 
-    public Integer getIDPlayerReceiverFK() {
+    public Player getIdplayerreceiverfk() {
         return IDPlayerReceiverFK;
     }
 
@@ -60,12 +64,12 @@ public class Reward {
         this.IDReward = IDReward;
     }
 
-    public void setIDPlayerGiverFK(Integer IDPlayerGiverFK) {
-        this.IDPlayerGiverFK = IDPlayerGiverFK;
+    public void setIdplayergiverfk(Player idplayergiverfk) {
+        this.IDPlayerGiverFK = idplayergiverfk;
     }
 
-    public void setIDPlayerReceiverFK(Integer IDPlayerReceiverFK) {
-        this.IDPlayerReceiverFK = IDPlayerReceiverFK;
+    public void setIdplayerreceiverfk(Player idplayerreceiverfk) {
+        this.IDPlayerReceiverFK = idplayerreceiverfk;
     }
 
     public void setChampiesGiven(Integer champiesGiven) {
@@ -87,4 +91,4 @@ public class Reward {
     public void setJustification(String justification) {
         Justification = justification;
     }
-}*/
+}
