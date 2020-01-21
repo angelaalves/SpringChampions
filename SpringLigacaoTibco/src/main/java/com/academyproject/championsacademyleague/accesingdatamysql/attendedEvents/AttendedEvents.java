@@ -5,7 +5,7 @@ import com.academyproject.championsacademyleague.accesingdatamysql.player.Player
 
 import javax.persistence.*;
 
-/*@Entity
+@Entity
 @Table(name="attendedevents")
 public class AttendedEvents {
     @EmbeddedId
@@ -18,4 +18,4 @@ public class AttendedEvents {
     public void setId(AttendedEventsId id) {
         this.id = id;
     }
-}*/
+}

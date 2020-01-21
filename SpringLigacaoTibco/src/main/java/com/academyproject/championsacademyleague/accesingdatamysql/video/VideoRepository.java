@@ -1,4 +1,6 @@
 package com.academyproject.championsacademyleague.accesingdatamysql.video;
 
-public interface VideoRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface VideoRepository extends CrudRepository<Video, Integer> {
 }

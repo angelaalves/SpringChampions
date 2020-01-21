@@ -1,4 +1,6 @@
 package com.academyproject.championsacademyleague.accesingdatamysql.watchedVideos;
 
-public interface WatchedVideosRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface WatchedVideosRepository extends CrudRepository<WatchedVideos, Integer> {
 }

@@ -5,33 +5,21 @@ import javax.persistence.*;
 @Entity
 @Table(name="closet")
 public class Closet {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="ID_Skin_FK")
-    private Integer IDSkinFK;
-    @Column(name="ID_Player_FK")
-    private Integer IDPlayerFK;
+    @EmbeddedId
+    private ClosetId id;
     @Column(name="Status")
     private String status;
 
-    public Integer getIDSkinFK() {
-        return IDSkinFK;
-    }
-
-    public Integer getIDPlayerFK() {
-        return IDPlayerFK;
+    public ClosetId getId() {
+        return id;
     }
 
     public String getStatus() {
         return status;
     }
 
-    public void setIDSkinFK(Integer IDSkinFK) {
-        this.IDSkinFK = IDSkinFK;
-    }
-
-    public void setIDPlayerFK(Integer IDPlayerFK) {
-        this.IDPlayerFK = IDPlayerFK;
+    public void setId(ClosetId id) {
+        this.id = id;
     }
 
     public void setStatus(String status) {

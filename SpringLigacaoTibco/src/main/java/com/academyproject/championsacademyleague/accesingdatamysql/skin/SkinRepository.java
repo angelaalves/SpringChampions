@@ -1,4 +1,6 @@
 package com.academyproject.championsacademyleague.accesingdatamysql.skin;
 
-public interface SkinRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface SkinRepository extends CrudRepository<Skin, Integer> {
 }

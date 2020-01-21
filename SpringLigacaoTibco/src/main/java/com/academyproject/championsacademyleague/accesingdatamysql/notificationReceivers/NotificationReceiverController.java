@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-/*@Controller
+@Controller
 @RequestMapping(path="notificationReceivers")
 public class NotificationReceiverController {
     @Autowired
@@ -18,4 +18,4 @@ public class NotificationReceiverController {
         // This returns a JSON or XML with the players
         return notificationReceiverRepository.findAll();
     }
-}*/
+}

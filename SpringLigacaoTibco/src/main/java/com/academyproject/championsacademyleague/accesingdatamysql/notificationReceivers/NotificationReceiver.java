@@ -1,8 +1,12 @@
 package com.academyproject.championsacademyleague.accesingdatamysql.notificationReceivers;
 
+import com.academyproject.championsacademyleague.accesingdatamysql.guild.Guild;
+import com.academyproject.championsacademyleague.accesingdatamysql.notifications.Notification;
+import com.academyproject.championsacademyleague.accesingdatamysql.player.Player;
+
 import javax.persistence.*;
 
-/*@Entity
+@Entity
 @Table(name="notification_receivers")
 public class NotificationReceiver {
 
@@ -10,12 +14,15 @@ public class NotificationReceiver {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="ID_Notification_Receivers")
     private Integer IDNotificationReceivers;
-    @Column(name="ID_Player_Receiver_FK")
-    private Integer IDPlayerReceiverFK;
-    @Column(name="ID_Notification_FK")
-    private Integer IDNotificationFK;
-    @Column(name="ID_Guild_FK")
-    private Integer IDGuildFK;
+    @ManyToOne
+    @JoinColumn(name="ID_Player_Receiver_FK", referencedColumnName = "ID_Player")
+    private Player IDPlayerReceiverFK;
+    @ManyToOne
+    @JoinColumn(name="ID_Notification_FK", referencedColumnName = "ID_Notification")
+    private Notification IDNotificationFK;
+    @ManyToOne
+    @JoinColumn(name="ID_Guild_FK", referencedColumnName = "ID_Guild")
+    private Guild IDGuildFK;
     @Column(name="Notification_Seen")
     private Integer notificationSeen;
 
@@ -23,15 +30,15 @@ public class NotificationReceiver {
         return IDNotificationReceivers;
     }
 
-    public Integer getIDPlayerReceiverFK() {
+    public Player getIDPlayerReceiverFK() {
         return IDPlayerReceiverFK;
     }
 
-    public Integer getIDNotificationFK() {
+    public Notification getIDNotificationFK() {
         return IDNotificationFK;
     }
 
-    public Integer getIDGuildFK() {
+    public Guild getIDGuildFK() {
         return IDGuildFK;
     }
 
@@ -43,19 +50,19 @@ public class NotificationReceiver {
         this.IDNotificationReceivers = IDNotificationReceivers;
     }
 
-    public void setIDPlayerReceiverFK(Integer IDPlayerReceiverFK) {
+    public void setIDPlayerReceiverFK(Player IDPlayerReceiverFK) {
         this.IDPlayerReceiverFK = IDPlayerReceiverFK;
     }
 
-    public void setIDNotificationFK(Integer IDNotificationFK) {
+    public void setIDNotificationFK(Notification IDNotificationFK) {
         this.IDNotificationFK = IDNotificationFK;
     }
 
-    public void setIDGuildFK(Integer IDGuildFK) {
+    public void setIDGuildFK(Guild IDGuildFK) {
         this.IDGuildFK = IDGuildFK;
     }
 
     public void setNotificationSeen(Integer notificationSeen) {
         this.notificationSeen = notificationSeen;
     }
-}*/
+}

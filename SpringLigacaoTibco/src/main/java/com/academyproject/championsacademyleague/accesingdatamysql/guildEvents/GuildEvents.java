@@ -1,30 +1,18 @@
 package com.academyproject.championsacademyleague.accesingdatamysql.guildEvents;
 
 import javax.persistence.*;
-/*
+
 @Entity
 @Table(name="guildevents")
 public class GuildEvents {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="ID_Guild_FK")
-    private Integer IDGuildFK;
-    @Column(name="ID_Event_FK")
-    private Integer IDEventFK;
+    @EmbeddedId
+    private GuildEventsId id;
 
-    public Integer getIDGuildFK() {
-        return IDGuildFK;
+    public GuildEventsId getId() {
+        return id;
     }
 
-    public Integer getIDEventFK() {
-        return IDEventFK;
+    public void setId(GuildEventsId id) {
+        this.id = id;
     }
-
-    public void setIDGuildFK(Integer IDGuildFK) {
-        this.IDGuildFK = IDGuildFK;
-    }
-
-    public void setIDEventFK(Integer IDEventFK) {
-        this.IDEventFK = IDEventFK;
-    }
-}*/
+}

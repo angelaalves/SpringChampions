@@ -5,19 +5,19 @@ import com.academyproject.championsacademyleague.accesingdatamysql.player.Player
 
 import javax.persistence.Embeddable;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import java.io.Serializable;
 import java.util.Objects;
 
-/*@Embeddable
+@Embeddable
 public class AttendedEventsId implements Serializable {
 
-    @ManyToMany(targetEntity = Events.class)
-    @JoinColumn(name = "ID_Event_FK")
+    @ManyToOne
+    @JoinColumn(name = "ID_Event_FK", referencedColumnName = "ID_Event")
     private Events IDEventFK;
 
-    @ManyToMany(targetEntity = Player.class)
-    @JoinColumn(name="ID_Player_FK")
+    @ManyToOne
+    @JoinColumn(name="ID_Player_FK", referencedColumnName = "ID_Player")
     private Player IDPlayerFK;
 
     public Events getIDEventFK() {
@@ -48,4 +48,4 @@ public class AttendedEventsId implements Serializable {
     public int hashCode() {
         return Objects.hash(getIDEventFK(), getIDPlayerFK());
     }
-}*/
+}
