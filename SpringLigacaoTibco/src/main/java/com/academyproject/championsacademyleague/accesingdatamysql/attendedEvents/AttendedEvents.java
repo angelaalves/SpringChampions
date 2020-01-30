@@ -1,15 +1,21 @@
 package com.academyproject.championsacademyleague.accesingdatamysql.attendedEvents;
 
-import com.academyproject.championsacademyleague.accesingdatamysql.events.Events;
-import com.academyproject.championsacademyleague.accesingdatamysql.player.Player;
-
-import javax.persistence.*;
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
 @Table(name="attendedevents")
 public class AttendedEvents {
     @EmbeddedId
     private AttendedEventsId id;
+
+    public AttendedEvents(AttendedEventsId id) {
+        this.id = id;
+    }
+
+    public AttendedEvents() {
+    }
 
     public AttendedEventsId getId() {
         return id;

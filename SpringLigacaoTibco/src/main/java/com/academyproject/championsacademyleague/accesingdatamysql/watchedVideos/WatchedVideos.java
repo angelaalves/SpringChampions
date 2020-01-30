@@ -10,6 +10,13 @@ public class WatchedVideos {
     @EmbeddedId
     private WatchedVideosId id;
 
+    public WatchedVideos() {
+    }
+
+    public WatchedVideos(WatchedVideosId id) {
+        this.id = id;
+    }
+
     public WatchedVideosId getId() {
         return id;
     }

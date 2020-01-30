@@ -8,6 +8,13 @@ public class GuildEvents {
     @EmbeddedId
     private GuildEventsId id;
 
+    public GuildEvents() {
+    }
+
+    public GuildEvents(GuildEventsId id) {
+        this.id = id;
+    }
+
     public GuildEventsId getId() {
         return id;
     }

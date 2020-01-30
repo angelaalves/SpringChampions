@@ -12,57 +12,68 @@ public class NotificationReceiver {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="ID_Notification_Receivers")
-    private Integer IDNotificationReceivers;
+    @Column(name = "ID_Notification_Receivers")
+    private int idnotificationreceivers;
     @ManyToOne
-    @JoinColumn(name="ID_Player_Receiver_FK", referencedColumnName = "ID_Player")
-    private Player IDPlayerReceiverFK;
+    @JoinColumn(name = "ID_Player_Receiver_FK", referencedColumnName = "ID_Player")
+    private Player idplayerreceiver;
     @ManyToOne
-    @JoinColumn(name="ID_Notification_FK", referencedColumnName = "ID_Notification")
-    private Notification IDNotificationFK;
+    @JoinColumn(name = "ID_Notification_FK", referencedColumnName = "ID_Notification")
+    private Notification idnotification;
     @ManyToOne
-    @JoinColumn(name="ID_Guild_FK", referencedColumnName = "ID_Guild")
-    private Guild IDGuildFK;
-    @Column(name="Notification_Seen")
-    private Integer notificationSeen;
+    @JoinColumn(name = "ID_Guild_FK", referencedColumnName = "ID_Guild")
+    private Guild idguild;
+    @Column(name = "Notification_Seen")
+    private int notificationseen;
 
-    public Integer getIDNotificationReceivers() {
-        return IDNotificationReceivers;
+    public NotificationReceiver() {
     }
 
-    public Player getIDPlayerReceiverFK() {
-        return IDPlayerReceiverFK;
+    public NotificationReceiver(int idnotificationReceivers, Player idplayerreceiver, Notification idnotification, Guild idguild, int notificationSeen) {
+        this.idnotificationreceivers = idnotificationReceivers;
+        this.idplayerreceiver = idplayerreceiver;
+        this.idnotification = idnotification;
+        this.idguild = idguild;
+        this.notificationseen = notificationSeen;
     }
 
-    public Notification getIDNotificationFK() {
-        return IDNotificationFK;
+    public int getIdnotificationReceivers() {
+        return idnotificationreceivers;
     }
 
-    public Guild getIDGuildFK() {
-        return IDGuildFK;
+    public Player getIdplayerreceiver() {
+        return idplayerreceiver;
     }
 
-    public Integer getNotificationSeen() {
-        return notificationSeen;
+    public Notification getIdnotification() {
+        return idnotification;
     }
 
-    public void setIDNotificationReceivers(Integer IDNotificationReceivers) {
-        this.IDNotificationReceivers = IDNotificationReceivers;
+    public Guild getIdguild() {
+        return idguild;
     }
 
-    public void setIDPlayerReceiverFK(Player IDPlayerReceiverFK) {
-        this.IDPlayerReceiverFK = IDPlayerReceiverFK;
+    public int getNotificationSeen() {
+        return notificationseen;
     }
 
-    public void setIDNotificationFK(Notification IDNotificationFK) {
-        this.IDNotificationFK = IDNotificationFK;
+    public void setIdnotificationReceivers(int idnotificationReceivers) {
+        this.idnotificationreceivers = idnotificationReceivers;
     }
 
-    public void setIDGuildFK(Guild IDGuildFK) {
-        this.IDGuildFK = IDGuildFK;
+    public void setIdplayerreceiver(Player idplayerreceiver) {
+        this.idplayerreceiver = idplayerreceiver;
     }
 
-    public void setNotificationSeen(Integer notificationSeen) {
-        this.notificationSeen = notificationSeen;
+    public void setIdnotification(Notification idnotification) {
+        this.idnotification = idnotification;
+    }
+
+    public void setIdguild(Guild idguild) {
+        this.idguild = idguild;
+    }
+
+    public void setNotificationSeen(int notificationSeen) {
+        this.notificationseen = notificationSeen;
     }
 }

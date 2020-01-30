@@ -10,7 +10,7 @@ public class Reward {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID_Reward")
-    private Integer IDReward;
+    private int IDReward;
     @ManyToOne
     @JoinColumn(name = "ID_Playergiver_FK", referencedColumnName = "ID_Player")
     private Player IDPlayerGiverFK;
@@ -18,29 +18,42 @@ public class Reward {
     @JoinColumn(name="ID_Playerreceiver_FK", referencedColumnName = "ID_Player")
     private Player IDPlayerReceiverFK;
     @Column(name = "Champiesgiven")
-    private Integer ChampiesGiven;
+    private int ChampiesGiven;
     @Column(name = "Dateofreward")
     private String DateOfReward;
     @Column(name = "Approved")
-    private Integer Approved;
-    @Column(name = "Timespent")
-    private String TimeSpent;
+    private int approved;
+    @Column(name = "TimeSpent")
+    private String timeSpent;
     @Column(name = "Justification")
-    private String Justification;
+    private String justification;
 
-    public Integer getIDReward() {
+    public Reward() {}
+
+    public Reward(int IDReward, Player IDPlayerGiverFK, Player IDPlayerReceiverFK, int champiesGiven, String dateOfReward, int approved, String timeSpent, String justification) {
+        this.IDReward = IDReward;
+        this.IDPlayerGiverFK = IDPlayerGiverFK;
+        this.IDPlayerReceiverFK = IDPlayerReceiverFK;
+        ChampiesGiven = champiesGiven;
+        DateOfReward = dateOfReward;
+        this.approved = approved;
+        this.timeSpent = timeSpent;
+        this.justification = justification;
+    }
+
+    public int getIDReward() {
         return IDReward;
     }
 
-    public Player getIdplayergiverfk() {
+    public Player getIDPlayerGiverFK() {
         return IDPlayerGiverFK;
     }
 
-    public Player getIdplayerreceiverfk() {
+    public Player getIDPlayerReceiverFK() {
         return IDPlayerReceiverFK;
     }
 
-    public Integer getChampiesGiven() {
+    public int getChampiesGiven() {
         return ChampiesGiven;
     }
 
@@ -48,31 +61,31 @@ public class Reward {
         return DateOfReward;
     }
 
-    public Integer getApproved() {
-        return Approved;
+    public int getApproved() {
+        return approved;
     }
 
     public String getTimeSpent() {
-        return TimeSpent;
+        return timeSpent;
     }
 
     public String getJustification() {
-        return Justification;
+        return justification;
     }
 
-    public void setIDReward(Integer IDReward) {
+    public void setIDReward(int IDReward) {
         this.IDReward = IDReward;
     }
 
-    public void setIdplayergiverfk(Player idplayergiverfk) {
-        this.IDPlayerGiverFK = idplayergiverfk;
+    public void setIDPlayerGiverFK(Player IDPlayerGiverFK) {
+        this.IDPlayerGiverFK = IDPlayerGiverFK;
     }
 
-    public void setIdplayerreceiverfk(Player idplayerreceiverfk) {
-        this.IDPlayerReceiverFK = idplayerreceiverfk;
+    public void setIDPlayerReceiverFK(Player IDPlayerReceiverFK) {
+        this.IDPlayerReceiverFK = IDPlayerReceiverFK;
     }
 
-    public void setChampiesGiven(Integer champiesGiven) {
+    public void setChampiesGiven(int champiesGiven) {
         ChampiesGiven = champiesGiven;
     }
 
@@ -80,15 +93,15 @@ public class Reward {
         DateOfReward = dateOfReward;
     }
 
-    public void setApproved(Integer approved) {
-        Approved = approved;
+    public void setApproved(int approved) {
+        this.approved = approved;
     }
 
     public void setTimeSpent(String timeSpent) {
-        TimeSpent = timeSpent;
+        this.timeSpent = timeSpent;
     }
 
     public void setJustification(String justification) {
-        Justification = justification;
+        this.justification = justification;
     }
 }

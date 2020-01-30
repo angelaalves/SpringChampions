@@ -1,13 +1,12 @@
 package com.academyproject.championsacademyleague.Configurations;
 
+import com.academyproject.championsacademyleague.accesingdatamysql.player.PlayerController;
 import com.academyproject.championsacademyleague.services.PlayerDetailsService;
-import com.academyproject.championsacademyleague.services.playerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
-import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -16,6 +15,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
@@ -24,13 +24,14 @@ import java.util.Arrays;
 
 
 @Configuration
-@EnableWebSecurity
+ @EnableWebSecurity
+@CrossOrigin
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private PlayerDetailsService playerDetailsService;
     @Autowired
-    private playerService playerService;
+    private PlayerController playerService;
     private BasicAuthenticationEntryPoint authenticationEntryPoint= new BasicAuthenticationEntryPoint();
 
     public SecurityConfiguration() {

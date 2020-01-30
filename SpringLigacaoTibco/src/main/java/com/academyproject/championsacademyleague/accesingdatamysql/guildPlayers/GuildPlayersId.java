@@ -20,6 +20,15 @@ public class GuildPlayersId implements Serializable {
     @JoinColumn(name="ID_Warrior_FK", referencedColumnName = "ID_Player")
     private Player IDWarriorFK;
 
+    public GuildPlayersId() {
+    }
+
+    public GuildPlayersId(Guild IDGuildFK, Player IDGuildMasterFK, Player IDWarriorFK) {
+        this.IDGuildFK = IDGuildFK;
+        this.IDGuildMasterFK = IDGuildMasterFK;
+        this.IDWarriorFK = IDWarriorFK;
+    }
+
     public Guild getIDGuildFK() {
         return IDGuildFK;
     }

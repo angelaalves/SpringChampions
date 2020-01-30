@@ -1,6 +1,5 @@
 package com.academyproject.championsacademyleague.accesingdatamysql.player;
 
-
 import com.academyproject.championsacademyleague.services.EmailSenders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -48,29 +47,114 @@ public class PlayerController {
         EmailSenders sender=new EmailSenders();
         sender.sendEmail(email, randomPass);
         playerRepository.save(player);
-        return "player created";
+        return "player added";
     }
 
-    @PostMapping(path="/create")
-    public @ResponseBody String addNewPlayer(@RequestParam String name, @RequestParam String email, @RequestParam String password, @RequestParam String gender, @RequestParam String usertype, @RequestParam Integer xp, @RequestParam Integer champiesToGive, @RequestParam Integer myChampies, @RequestParam String status){
+    @RequestMapping(path="/create")
+    public @ResponseBody String createNewPlayer(@RequestParam String name, @RequestParam String email, @RequestParam String password, @RequestParam String gender, @RequestParam String usertype, @RequestParam String xp, @RequestParam String champiestogive, @RequestParam String mychampies, @RequestParam String status){
         Player player = new Player();
         player.setUsername(name);
         player.setEmail(email);
         player.setPassword(passwordEncoder().encode(password));
         player.setGender(gender);
         player.setUsertype(usertype);
-        player.setXp(xp);
-        player.setChampiesToGive(champiesToGive);
-        player.setMyChampies(myChampies);
+        player.setXp(Integer.parseInt(xp));
+        player.setChampiesToGive(Integer.parseInt(champiestogive));
+        player.setMyChampies(Integer.parseInt(mychampies));
         player.setStatus(status);
         playerRepository.save(player);
         return "player created. every field is forced";
     }
 
+    @PostMapping(path="/update")
+    public @ResponseBody String update(@RequestParam String name, @RequestParam String email, @RequestParam String password, @RequestParam String gender, @RequestParam String usertype, @RequestParam String xp, @RequestParam String champiestogive, @RequestParam String mychampies, @RequestParam String status){
+        Player player = (Player) playerRepository.findByEmail(email);
+        player.setUsername(name);
+        player.setEmail(email);
+        player.setGender(gender);
+        player.setUsertype(usertype);
+        player.setXp(Integer.parseInt(xp));
+        player.setChampiesToGive(Integer.parseInt(champiestogive));
+        player.setMyChampies(Integer.parseInt(mychampies));
+        player.setStatus(status);
+        if(password.contains("$2a$")){
+            player.setPassword(password);
+        }else{
+            player.setPassword(passwordEncoder().encode(password));
+        }
+        playerRepository.save(player);
+        return "player updated";
+    }
+
+    @GetMapping(path="/getPlayerById")
+    public @ResponseBody Player getPlayerById(@RequestParam String idplayer){
+        return playerRepository.findByIdCustom(idplayer);
+    }
+
+    @GetMapping(path="/getPlayerByEmail")
+    public @ResponseBody Player getPlayerByEmail(@RequestParam String email){
+        return playerRepository.findByEmail(email);
+    }
+
+    @GetMapping(path="/getPlayerByUsername")
+    public @ResponseBody Player getPlayerByUsername(@RequestParam String username){
+        return playerRepository.findByUsername(username);
+    }
+
+    @GetMapping(path="/getPlayerByGender")
+    public @ResponseBody Iterable<Player> getByGender(@RequestParam String gender){
+        return playerRepository.findByGender(gender);
+    }
+
+    @GetMapping(path="/getPlayerByUserType")
+    public @ResponseBody Iterable<Player> getPlayerByUserType(@RequestParam String usertype){
+        return playerRepository.findByUsertype(usertype);
+    }
+
+    @GetMapping(path="/getPlayerByStatus")
+    public @ResponseBody Iterable<Player> getPlayerByStatus(@RequestParam String status){
+        return playerRepository.findByStatus(status);
+    }
+
+    @GetMapping(path="/verifyPassword")
+    public @ResponseBody boolean verifyPassword(@RequestParam String email, @RequestParam String password){
+        Iterable<Player> players = getAllPlayers();
+        for(Player player: players){
+            if(email.equals(player.getEmail())){
+                if(passwordEncoder().matches(password, player.getPassword())) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    @GetMapping(path="/forgotPassword")
+    public @ResponseBody String forgotPassword(@RequestParam String email){
+        String randomPass="";
+        Random randomizer=new Random();
+        for(int i=0; i<10;i++){
+            int j=(randomizer.nextInt(10));
+            randomPass=randomPass+(String.valueOf(randomizer.nextInt(10)));
+        }
+        Player result = (Player) playerRepository.findByEmail(email);
+        result.setPassword(passwordEncoder().encode(randomPass));
+        playerRepository.save(result);
+
+        EmailSenders forgotPass=new EmailSenders();
+        forgotPass.forgotPasswordMail(email, randomPass);
+        return randomPass;
+    }
+
+    @GetMapping(path="/alertPassword")
+    public @ResponseBody void alertPassword(@RequestParam String email){
+        EmailSenders sender = new EmailSenders();
+        sender.changedPasswordMail(email);
+    }
+
     @GetMapping(path="/getall")
-    public @ResponseBody Iterable<Player> getAllUsers() {
+    public @ResponseBody Iterable<Player> getAllPlayers() {
         // This returns a JSON or XML with the players
         return playerRepository.findAll();
     }
-
 }

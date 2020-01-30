@@ -18,6 +18,14 @@ public class WatchedVideosId implements Serializable {
     @JoinColumn(name="ID_Player_FK", referencedColumnName = "ID_Player")
     private Player IDPlayer;
 
+    public WatchedVideosId() {
+    }
+
+    public WatchedVideosId(Video IDVideo, Player IDPlayer) {
+        this.IDVideo = IDVideo;
+        this.IDPlayer = IDPlayer;
+    }
+
     public Video getIDVideo() {
         return IDVideo;
     }

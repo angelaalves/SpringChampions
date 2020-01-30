@@ -8,7 +8,7 @@ public class Guild {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     @Column(name="ID_Guild")
-    private Integer IDGuild;
+    private int IDGuild;
     @Column(name="Guildname")
     private String guildName;
     @Column(name="Startdate")
@@ -20,7 +20,22 @@ public class Guild {
     @Column(name="Status")
     private String status;
 
-    public Integer getIDGuild() {
+    public Guild() {}
+
+    public Guild(int IDGuild) {
+        this.IDGuild = IDGuild;
+    }
+
+    public Guild(int IDGuild, String guildName, String startDate, String endDate, String guildFlag, String status) {
+        this.IDGuild = IDGuild;
+        this.guildName = guildName;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.guildFlag = guildFlag;
+        this.status = status;
+    }
+
+    public int getIDGuild() {
         return IDGuild;
     }
 
@@ -44,7 +59,7 @@ public class Guild {
         return status;
     }
 
-    public void setIDGuild(Integer IDGuild) {
+    public void setIDGuild(int IDGuild) {
         this.IDGuild = IDGuild;
     }
 

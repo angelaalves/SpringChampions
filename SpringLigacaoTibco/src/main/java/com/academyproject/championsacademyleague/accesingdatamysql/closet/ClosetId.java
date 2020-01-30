@@ -18,6 +18,14 @@ public class ClosetId implements Serializable {
     @JoinColumn(name="ID_Player_FK", referencedColumnName = "ID_Player")
     private Player IDPlayerFK;
 
+    public ClosetId() {
+    }
+
+    public ClosetId(Skin IDSkinFK, Player IDPlayerFK) {
+        this.IDSkinFK = IDSkinFK;
+        this.IDPlayerFK = IDPlayerFK;
+    }
+
     public Skin getIDSkinFK() {
         return IDSkinFK;
     }

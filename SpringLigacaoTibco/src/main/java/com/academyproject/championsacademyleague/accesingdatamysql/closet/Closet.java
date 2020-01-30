@@ -10,6 +10,14 @@ public class Closet {
     @Column(name="Status")
     private String status;
 
+    public Closet() {
+    }
+
+    public Closet(ClosetId id, String status) {
+        this.id = id;
+        this.status = status;
+    }
+
     public ClosetId getId() {
         return id;
     }

@@ -29,7 +29,7 @@ public class ConfigController {
     @PostMapping(path="saveConfigFile")
     public String saveConfigFile(@RequestParam("IP") String IP, @RequestParam("port") String port,@RequestParam("DBip") String DBip, @RequestParam("DBport") String DBport, @RequestParam("DBAdmin") String DBAdmin, @RequestParam("DBPassword") String DBPassword){
         try {
-            configService.saveConfigFile(IP, port, DBip, DBport, DBAdmin, DBPassword);
+            configService.saveConfigFile(IP, port, DBport, DBAdmin, DBPassword);
             return "Success";
         }catch(IOException e){
             return "saveConfigFile Error: The save of the file was not successful";

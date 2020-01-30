@@ -1,8 +1,8 @@
 package com.academyproject.championsacademyleague.accesingdatamysql.player;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity // This tells Hibernate to make a table out of this class
 @Table(name="player")
@@ -10,32 +10,51 @@ public class Player {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name="ID_Player")
-    private Integer idPlayer;
+    private int idplayer;
     @Column(name="Username")
     private String username;
     @Column(name="Email")
     private String email;
-    @Column(name="password")
+    @Column(name="Password")
     private String password;
     @Column(name="Gender")
     private String gender;
     @Column(name="Usertype")
     private String usertype;
     @Column(name="XP")
-    private Integer xp;
+    private int xp;
     @Column(name="Champiestogive")
-    private Integer champiesToGive;
+    private int champiestogive;
     @Column(name="Mychampies")
-    private Integer myChampies;
+    private int mychampies;
     @Column(name="Status")
     private String status;
 
-    public Integer getIdPlayer() {
-        return idPlayer;
+    public Player() {}
+
+    public Player(Integer idPlayer) {
+        this.idplayer = idPlayer;
     }
 
-    public void setIdPlayer(Integer idPlayer) {
-        this.idPlayer = idPlayer;
+    public Player(Integer idPlayer, String username, String email, String password, String gender, String usertype, int xp, int champiesToGive, int myChampies, String status) {
+        this.idplayer = idPlayer;
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.gender = gender;
+        this.usertype = usertype;
+        this.xp = xp;
+        this.champiestogive = champiesToGive;
+        this.mychampies = myChampies;
+        this.status = status;
+    }
+
+    public int getIdPlayer() {
+        return idplayer;
+    }
+
+    public void setIdPlayer(int idPlayer) {
+        this.idplayer = idPlayer;
     }
 
     public String getUsername() {
@@ -78,28 +97,28 @@ public class Player {
         this.usertype = usertype;
     }
 
-    public Integer getXp() {
+    public int getXp() {
         return xp;
     }
 
-    public void setXp(Integer xp) {
+    public void setXp(int xp) {
         this.xp = xp;
     }
 
-    public Integer getChampiesToGive() {
-        return champiesToGive;
+    public int getChampiesToGive() {
+        return champiestogive;
     }
 
-    public void setChampiesToGive(Integer champiesToGive) {
-        this.champiesToGive = champiesToGive;
+    public void setChampiesToGive(int champiesToGive) {
+        this.champiestogive = champiesToGive;
     }
 
-    public Integer getMyChampies() {
-        return myChampies;
+    public int getMyChampies() {
+        return mychampies;
     }
 
-    public void setMyChampies(Integer myChampies) {
-        this.myChampies = myChampies;
+    public void setMyChampies(int myChampies) {
+        this.mychampies = myChampies;
     }
 
     public String getStatus() {

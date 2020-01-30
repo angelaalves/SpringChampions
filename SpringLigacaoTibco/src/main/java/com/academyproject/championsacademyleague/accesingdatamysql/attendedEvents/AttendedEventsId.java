@@ -1,6 +1,6 @@
 package com.academyproject.championsacademyleague.accesingdatamysql.attendedEvents;
 
-import com.academyproject.championsacademyleague.accesingdatamysql.events.Events;
+import com.academyproject.championsacademyleague.accesingdatamysql.events.Event;
 import com.academyproject.championsacademyleague.accesingdatamysql.player.Player;
 
 import javax.persistence.Embeddable;
@@ -14,13 +14,21 @@ public class AttendedEventsId implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "ID_Event_FK", referencedColumnName = "ID_Event")
-    private Events IDEventFK;
+    private Event IDEventFK;
 
     @ManyToOne
     @JoinColumn(name="ID_Player_FK", referencedColumnName = "ID_Player")
     private Player IDPlayerFK;
 
-    public Events getIDEventFK() {
+    public AttendedEventsId() {
+    }
+
+    public AttendedEventsId(Event IDEventFK, Player IDPlayerFK) {
+        this.IDEventFK = IDEventFK;
+        this.IDPlayerFK = IDPlayerFK;
+    }
+
+    public Event getIDEventFK() {
         return IDEventFK;
     }
 
@@ -28,7 +36,7 @@ public class AttendedEventsId implements Serializable {
         return IDPlayerFK;
     }
 
-    public void setIDEventFK(Events IDEventFK) {
+    public void setIDEventFK(Event IDEventFK) {
         this.IDEventFK = IDEventFK;
     }
 
@@ -44,6 +52,7 @@ public class AttendedEventsId implements Serializable {
         return Objects.equals(getIDEventFK(), that.getIDEventFK()) &&
                 Objects.equals(getIDPlayerFK(), that.getIDPlayerFK());
     }
+
     @Override
     public int hashCode() {
         return Objects.hash(getIDEventFK(), getIDPlayerFK());

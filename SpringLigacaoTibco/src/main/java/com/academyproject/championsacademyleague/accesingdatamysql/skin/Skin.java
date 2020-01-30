@@ -3,68 +3,84 @@ package com.academyproject.championsacademyleague.accesingdatamysql.skin;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Skin")
+@Table(name = "skin")
 public class Skin {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="ID_Skin")
-    private Integer IDSkin;
+    private int IDSkin;
     @Column(name="Skinname")
-    private String SkinName;
+    private String Skinname;
     @Column(name = "Imagepath")
-    private String ImagePath;
+    private String Imagepath;
     @Column(name = "Minxp")
-    private Integer MinXP;
+    private int Minxp;
     @Column(name = "Champiescost")
-    private Integer ChampiesCost;
+    private int Champiescost;
     @Column(name = "Skintype")
-    private String SkinType;
+    private String Skintype;
 
-    public Integer getIDSkin() {
-        return IDSkin;
+    public Skin() {
     }
 
-    public String getSkinName() {
-        return SkinName;
-    }
-
-    public String getImagePath() {
-        return ImagePath;
-    }
-
-    public Integer getMinXP() {
-        return MinXP;
-    }
-
-    public Integer getChampiesCost() {
-        return ChampiesCost;
-    }
-
-    public String getSkinType() {
-        return SkinType;
-    }
-
-    public void setIDSkin(Integer IDSkin) {
+    public Skin(int IDSkin) {
         this.IDSkin = IDSkin;
     }
 
-    public void setSkinName(String skinName) {
-        SkinName = skinName;
+    public Skin(int IDSkin, String skinname, String imagepath, int minXP, int champiecCost, String skintype) {
+        this.IDSkin = IDSkin;
+        this.Skinname = Skinname;
+        this.Imagepath = Imagepath;
+        this.Minxp = Minxp;
+        this.Champiescost = Champiescost;
+        this.Skintype = Skintype;
     }
 
-    public void setImagePath(String imagePath) {
-        ImagePath = imagePath;
+    public int getIDSkin() {
+        return IDSkin;
     }
 
-    public void setMinXP(Integer minXP) {
-        MinXP = minXP;
+    public String getSkinname() {
+        return Skinname;
     }
 
-    public void setChampiesCost(Integer champiesCost) {
-        ChampiesCost = champiesCost;
+    public String getImagepath() {
+        return Imagepath;
     }
 
-    public void setSkinType(String skinType) {
-        SkinType = skinType;
+    public int getMinxp() {
+        return Minxp;
+    }
+
+    public int getChampiescost() {
+        return Champiescost;
+    }
+
+    public String getSkintype() {
+        return Skintype;
+    }
+
+    public void setIDSkin(int IDSkin) {
+        this.IDSkin = IDSkin;
+    }
+
+    public void setSkinname(String skinname) {
+        Skinname = skinname;
+    }
+
+    public void setImagepath(String imagepath) {
+        Imagepath = imagepath;
+    }
+
+    public void setMinxp(int minxp) {
+        Minxp = minxp;
+    }
+
+    public void setChampiescost(int champiescost) {
+        Champiescost = champiescost;
+    }
+
+    public void setSkintype(String skintype) {
+        Skintype = skintype;
     }
 }
